@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Megrim&display=swap');
+
+/*
+ =============================== 
+ General 
+ =============================== 
+ */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    background-image: url("../images/wat.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -37,13 +37,12 @@ body {
 
 .navbar-brand {
     font-family: 'Megrim';
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
 }
 
 .navbar {
     background-color: rgba(0, 0, 0, 0);
-    position: absolute;
 }
 
 a,
@@ -52,7 +51,10 @@ li {
     font-size: 18px;
     font-weight: 400;
     color: #ea5128;
-    text-align: center;
     text-decoration: none;
     list-style: none;
+}
+
+a:hover {
+    color: #7e1919;
 }

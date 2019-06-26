@@ -1,6 +1,6 @@
 <p>What a Track<br>
 <a href="https://andreeaiosip.github.io/what-a-track">View website in GitHub Pages</a></p>
-<p>What a Track is a website for lyrics finder and look up for upcoming gigs for the band</p>
+<p>What a Track is a website for lyrics finder and look up for upcoming gigs.</p>
 <h3><a id="The_need_5"></a>The need:</h3>
 <p>Music lovers want to know the exact lyrics of a song they listen,</p>
 <h3><a id="The_goals_of_this_website_are_8"></a>The goals of this website are:</h3>

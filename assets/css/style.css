@@ -37,8 +37,9 @@ body {
 
 .navbar-brand {
     font-family: 'Megrim';
-    font-size: 30px;
+    font-size: 18px;
     font-weight: 700;
+    display: inline-block;
 }
 
 .navbar {
@@ -48,13 +49,33 @@ body {
 a,
 li {
     font-family: 'Comfortaa';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #ea5128;
     text-decoration: none;
     list-style: none;
+    text-align: center;
 }
 
 a:hover {
     color: #7e1919;
+}
+
+.wrapper {
+    width: 70%;
+    margin: 40px auto;
+}
+
+.form-control {
+    font-size: 14px;
+    color: #ea5128 !important;
+}
+
+
+/* Landscape phones and portrait tablets */
+
+@media screen and (min-width: 767px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
 }

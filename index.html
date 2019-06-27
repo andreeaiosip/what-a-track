@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>What A Track</title>
@@ -13,16 +14,40 @@
 <body>
 
     <div class="bg">
-        <nav class="navbar">
+        <div class="navbar">
             <a class="navbar-brand" href="index.html">
                 <img src="assets/images/watlogo.png" height="70" class="d-inline-block align-top logo" alt="what-a-track logo"><strong> What a Track</strong>
             </a>
-            <ul class="navbar-nav text-right ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="modal" data-target="#helpModal">HELP</a>
-                </li>
-            </ul>
-        </nav>
+            <a data-toggle="modal" data-target="#exampleModal">
+                HELP
+            </a>
+        </div>
+
+
+        <!-- Modal -->
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Instructions</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal ends -->
 
         <div class="wrapper">
             <div class="form-check-inline">
@@ -37,7 +62,6 @@
             </div>
 
             <div class="form-group">
-                <span class="fa fa-search"></span>
                 <input type="text" class="form-control" placeholder="Search for the lyrics you love ...">
             </div>
         </div>
@@ -45,34 +69,25 @@
         </div>
 
         <!-- Footer -->
-        <footer class="container-fluid">
-            <div class="row footer-top justify-content-around">
-                <div class="col-sm-4">
-                    <p class="terms">
-                        Privacy
+        <div>
+            <footer>
+                <div class="row justify-content-around">
+                    <p>
+                        Privacy | T & C
                     </p>
-                </div>
-                <div class="col-sm-4">
-                    <p class="terms">
-                        Terms & Conditions
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <div class="container-fluid social-icons ">
+                    <div class="social-icons ">
                         <a href="https://www.facebook.com" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://twitter.com" rel="noopener"><i class="fab fa-twitter-square"></i></a>
-
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-12 footer-text copyright">
-                    <p>Copyright @ What a Track 2019</p>
-                </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
 </body>
+
 
 </html>

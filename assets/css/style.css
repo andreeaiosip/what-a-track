@@ -36,7 +36,6 @@
     
     .navbar-brand {
         font-family: 'Megrim';
-        font-size: 18px;
         font-weight: 700;
         display: inline-block;
     }
@@ -48,7 +47,6 @@
     a,
     li {
         font-family: 'Comfortaa';
-        font-size: 16px;
         font-weight: 400;
         color: #ea5128;
         text-decoration: none;
@@ -67,7 +65,7 @@
     
     .form-control,
     label.form-check-label {
-        font-size: 14px;
+        font-size: 0.87rem;
         color: #ea5128 !important;
     }
     /* 
@@ -77,44 +75,41 @@ styling for placeholder text in the search box
 */
     /* all */
     
-    ::-webkit-input-placeholder {
+     ::-webkit-input-placeholder {
         color: #ea5128 !important;
     }
     /* Chrome/Opera/Safari */
     
-    ::-webkit-input-placeholder {
+     ::-webkit-input-placeholder {
         color: #ea5128 !important;
     }
     /* Chrome/Opera/Safari */
     
-    ::-moz-placeholder {
+     ::-moz-placeholder {
         color: #ea5128 !important;
     }
     /* firefox 19+ */
     
-    ::-ms-input-placeholder {
+     ::-ms-input-placeholder {
         color: #ea5128 !important;
     }
     /* ie */
     
-    ::-moz-placeholder {
+     ::-moz-placeholder {
         color: #ea5128 !important;
     }
     
     footer {
         background-color: #06212c00;
-        color: #ea5128;
+        color: #201e1d;
         text-align: center;
     }
     
     footer>ul>li {
-        display: inline-block;
         text-decoration: none;
     }
-    /* Landscape phones and portrait tablets */
     
-    @media screen and (min-width: 767px) {
-        .navbar-brand {
-            font-size: 20px;
-        }
+    .fab {
+        margin: 10px;
+        font-size: 1.3rem;
     }

@@ -1,81 +1,120 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Megrim&display=swap');
-
-/*
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa|Megrim&display=swap');
+    /*
  =============================== 
  General 
  =============================== 
  */
-
-body,
-html {
-    height: 100%;
-    margin: 0;
-}
-
-.row,
-.container,
-.container-fluid {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 1rem;
-}
-
-.bg {
-    background-image: url("../images/wat-bg2.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.navbar-brand {
-    font-family: 'Megrim';
-    font-size: 18px;
-    font-weight: 700;
-    display: inline-block;
-}
-
-.navbar {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-a,
-li {
-    font-family: 'Comfortaa';
-    font-size: 16px;
-    font-weight: 400;
-    color: #ea5128;
-    text-decoration: none;
-    list-style: none;
-    text-align: center;
-}
-
-a:hover {
-    color: #7e1919;
-}
-
-.wrapper {
-    width: 70%;
-    margin: 40px auto;
-}
-
-.form-control {
-    font-size: 14px;
-    color: #ea5128 !important;
-}
-
-
-/* Landscape phones and portrait tablets */
-
-@media screen and (min-width: 767px) {
-    .navbar-brand {
-        font-size: 20px;
+    
+    body,
+    html {
+        height: 100%;
+        margin: 0;
     }
-}
+    
+    .row,
+    .container,
+    .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    
+    .bg {
+        background-image: url("../images/wat-bg2.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .navbar-brand {
+        font-family: 'Megrim';
+        font-size: 18px;
+        font-weight: 700;
+        display: inline-block;
+    }
+    
+    .navbar {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    a,
+    li {
+        font-family: 'Comfortaa';
+        font-size: 16px;
+        font-weight: 400;
+        color: #ea5128;
+        text-decoration: none;
+        list-style: none;
+        text-align: center;
+    }
+    
+    a:hover {
+        color: #7e1919;
+    }
+    
+    .wrapper {
+        width: 70%;
+        margin: 40px auto;
+    }
+    
+    .form-control,
+    label.form-check-label {
+        font-size: 14px;
+        color: #ea5128 !important;
+    }
+    /* 
+==============================================
+styling for placeholder text in the search box
+============================================= 
+*/
+    /* all */
+    
+    ::-webkit-input-placeholder {
+        color: #ea5128 !important;
+    }
+    /* Chrome/Opera/Safari */
+    
+    ::-webkit-input-placeholder {
+        color: #ea5128 !important;
+    }
+    /* Chrome/Opera/Safari */
+    
+    ::-moz-placeholder {
+        color: #ea5128 !important;
+    }
+    /* firefox 19+ */
+    
+    ::-ms-input-placeholder {
+        color: #ea5128 !important;
+    }
+    /* ie */
+    
+    ::-moz-placeholder {
+        color: #ea5128 !important;
+    }
+    
+    footer {
+        background-color: #06212c00;
+        color: #ea5128;
+        text-align: center;
+    }
+    
+    footer>ul>li {
+        display: inline-block;
+        text-decoration: none;
+    }
+    /* Landscape phones and portrait tablets */
+    
+    @media screen and (min-width: 767px) {
+        .navbar-brand {
+            font-size: 20px;
+        }
+    }

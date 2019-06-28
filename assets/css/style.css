@@ -131,6 +131,9 @@ styling for placeholder text in the search box
         .modal-help {
             margin-right: 20px;
         }
+        .slogan {
+            margin-left: 0;
+        }
         .fab {
             font-size: 1.8rem;
             color: #ea5128;

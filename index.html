@@ -14,25 +14,24 @@
 <body>
 
     <div class="bg">
-        <div class="navbar justify-content-around">
-
-            <div class="social-media-icons d-none d-md-block col-sm-2.5">
-                <a href="https://www.facebook.com" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com" rel="noopener"><i class="fab fa-twitter-square"></i></a>
-
-            </div>
-            <div class="slogan">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/watlogo.png" height="70" class="align-top logo" alt="what-a-track logo">
-                </a>
-                <p><strong> WHAT A TRACK</strong></p>
-            </div>
-
+        <div id="top-navbar" class="navbar justify-content-around">
 
             <!-- Link trigger modal -->
             <div class="d-none d-md-block">
                 <a data-toggle="modal" data-target="#helpModal" class="modal-help ">
                FAQs
+            </a>
+            </div>
+
+            <div class="slogan">
+                <a class="navbar-brand" href="#homepage">
+                    <img src="assets/images/watlogo.png" height="70" class="align-top logo" alt="what-a-track logo">
+                </a>
+                <p><strong> WHAT A TRACK</strong></p>
+            </div>
+            <div class="d-none d-md-block contact">
+                <a href="#contact">
+               CONTACT
             </a>
             </div>
         </div>
@@ -59,7 +58,7 @@
         </div>
         <!-- Modal ends -->
 
-        <div class="wrapper">
+        <div id="content" class="wrapper">
             <div class="form-check-inline">
                 <label class="form-check-label">
                   <input type="radio" class="form-check-input options-search" value="">By artist

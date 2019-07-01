@@ -1,80 +1,80 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Sarpanch:700&display=swap');
-
-/*
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa|Megrim&display=swap');
+    /*
  =============================== 
  General 
  =============================== 
  */
-
-body,
-html {
-    height: 100%;
-    margin: 0;
-}
-
-.row,
-.container,
-.container-fluid {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    padding: 0;
-    min-height: 100vh;
-    font-size: 1rem;
-}
-
-.bg {
-    background-image: url("../images/wat-bg2.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.logo {
-    text-align: inline-block;
-}
-
-.slogan {
-    text-align: center;
-    font-family: 'Sarpanch', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #ea5128;
-}
-
-.navbar {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-a {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    color: #ea5128 !important;
-    text-decoration: none;
-    list-style: none;
-    text-align: center;
-    cursor: pointer;
-}
-
-.wrapper {
-    width: 70%;
-    margin: 10px auto;
-}
-
-.form-control,
-label.form-check-label {
-    color: #ea5128;
-}
-
-
-/* 
+    
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+    
+    .row,
+    .container,
+    .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        padding: 0;
+        min-height: 100vh;
+        font-size: 1rem;
+    }
+    
+    .bg {
+        background-image: url("../images/wat-bg2.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .slogan {
+        font-family: 'Megrim';
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #ea5128;
+        text-align: left;
+    }
+    
+    .navbar {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    
+    a {
+        font-family: 'Comfortaa';
+        font-weight: 400;
+        color: #ea5128 !important;
+        text-decoration: none;
+        list-style: none;
+        text-align: center;
+        cursor: pointer;
+        margin: 20px;
+    }
+    
+    .wrapper {
+        width: 70%;
+        margin: 10px auto;
+    }
+    
+    .form-control,
+    label.form-check-label {
+        font-size: 0.87rem;
+        color: #ea5128;
+    }
+    
+    .modal-help {
+        padding-right: 10px;
+    }
+    /* 
 ==============================================
 styling for placeholder text in the search box
 ============================================= 
 */
+<<<<<<< HEAD
 
 
 /* all */
@@ -149,11 +149,75 @@ footer {
         margin: 20px;
         margin-top: 10px;
         font-size: 1.6rem;
+=======
+    /* all */
+    
+     ::-webkit-input-placeholder {
+        color: #ea5228b0 !important;
+>>>>>>> parent of d94d516... FAQ tab from navbar was removed for the mobile version and font family was changed
     }
-    .modal-help {
-        margin-right: 20px;
+    /* Chrome/Opera/Safari */
+    
+     ::-webkit-input-placeholder {
+        color: #ea5228b0 !important;
     }
+<<<<<<< HEAD
     a {
         font-size: 1.4rem;
+=======
+    /* Chrome/Opera/Safari */
+    
+     ::-moz-placeholder {
+        color: #ea5228b0 !important;
     }
-}
+    /* firefox 19+ */
+    
+     ::-ms-input-placeholder {
+        color: #ea5228b0 !important;
+    }
+    /* ie */
+    
+     ::-moz-placeholder {
+        color: #ea5228b0 !important;
+    }
+    
+    .upcoming>p {
+        color: #ea5128;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    footer {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        background-color: #06212c00;
+        color: #fafafa;
+        text-align: center;
+    }
+    
+    .fab {
+        margin: 10px;
+        font-size: 1.3rem;
+        color: #fafafa;
+>>>>>>> parent of d94d516... FAQ tab from navbar was removed for the mobile version and font family was changed
+    }
+    /* Landscape phones and portrait tablets */
+    
+    @media screen and (min-width: 767px) {
+        .slogan {
+            margin-right: 30px;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        .modal-help {
+            margin-right: 20px;
+        }
+        .slogan {
+            margin-left: 0;
+        }
+        .fab {
+            font-size: 1.8rem;
+            color: #ea5128;
+        }
+    }

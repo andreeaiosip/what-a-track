@@ -126,10 +126,19 @@ footer {
     text-align: center;
 }
 
+.footer-content {
+    color: #fafafa !important;
+}
+
 .fab {
     margin: 10px;
     font-size: 1.3rem;
     color: #fafafa;
+}
+
+.footer-wrapper {
+    flex-wrap: nowrap !important;
+    padding-bottom: 5px;
 }
 
 
@@ -143,10 +152,6 @@ footer {
     }
     .modal-help {
         margin-right: 20px;
-    }
-    .fab {
-        font-size: 1.8rem;
-        color: #ea5128;
     }
     a {
         font-size: 1.4rem;

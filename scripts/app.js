@@ -8,12 +8,18 @@
 
 // xhr.open("GET", )
 
-
+//Gets the appropriate content for the given fragment identifier
+function getContent(fragmentId) {
+    return fragmentId;
+}
 
 console.log(location.hash);
 
 window.addEventListener("hashchange", function() {
-        var contentDiv = document.getElementById("content");
+        var contentDiv = document.getElementById("content"),
+            //Isolate the fragment identifier using substr.
+            //This gets rid of the "#" character.
+            fragmentId = location.hash.substr(1);
 
         //Set the "content" div innerHTML based on the fragment identifier.
         contentDiv.innerHTML = location.hash;

@@ -126,7 +126,7 @@ footer {
     text-align: center;
 }
 
-.footer-content {
+.footer-wrapper a {
     color: #fafafa !important;
 }
 

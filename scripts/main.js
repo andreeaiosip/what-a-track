@@ -1,5 +1,4 @@
-  // Create a new AJAX request for fetching the partial HTML file.
-  var xhr = newHXMLHttpRequest();
+  // Invoke function expression, so no global variable are introduced.
 
   // Load page when readyState is 4 and status is 200
   xhr.onreadystatechange = function() {
@@ -7,6 +6,7 @@
           $("#data").innerHTML = this.responseText;
       }
   };
+  (function() {
 
   // Call the callback with the content loaded from the file.
   xhr.onload = function() {
@@ -22,4 +22,4 @@
 
       // "Data" div will have the current hash value.
       dataDiv.innerHTML = location.hash;
-  });
+  });      };

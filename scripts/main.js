@@ -27,13 +27,34 @@
               };
 
 
+
+              //Updates dynamic content based on the identifier.
+              function navigate() {
+
+                  // Get a reference to the "data" div.
+                  var dataDiv = $("#data"),
+              }
               // Listen for the href value changes.
               window.addEventListener("hashchange", function() {
 
-                  // Target the div with the id of "data".
-                  var dataDiv = $("#data");
+                  //This gets rid of the "#" character.
+                  fragmentId = location.hash.substr(1);
 
-                  // "Data" div will have the current hash value.
-                  dataDiv.innerHTML = location.hash;
+                  //Set the "data" div innerHTML based on the fragment identifier.
+                  getContent(fragmentId, function(data) {
+                      dataDiv.innerHTML = data;
+                  });
+
+                  //If no fragment identifier is provided,
+                  if (!location.hash) {
+                      location.hash = "#home";
+                  }
+
+                  //Navigate once to the initial hash value.
+                  navigate();
+
+                  //Navigate whenever the fragment identifier value changes.
+                  window.addEventListener("hashchange", navigate);
+
               });
           };

@@ -114,6 +114,12 @@ styling for placeholder text in the search box
     color: #ea5228b0 !important;
 }
 
+.upcoming {
+    height: 400px;
+    width: 50%;
+    margin: auto;
+}
+
 .upcoming>p {
     color: #ea5128;
     font-weight: 400;

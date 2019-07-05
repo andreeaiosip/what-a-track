@@ -22,9 +22,8 @@
                     </a>
             </div>
             <div class="slogan">
-
                 <a href="#home" class="navbar-brand">
-                    <img src="assets/images/watlogo2.png" height="70" class="align-top logo" alt="what-a-track logo"
+                    <img src="assets/images/watlogo.png" height="70" class="align-top logo" alt="what-a-track logo">
                 </a>
                 <p><strong> WHAT A TRACK</strong></p>
             </div>
@@ -35,10 +34,8 @@
             </a>
             </div>
         </div>
-
         <!--Home page section-->
         <section id="home" class="wrapper active">
-
             <div class="form-check-inline">
                 <label class="form-check-label">
                   <input type="radio" class="form-check-input options-search" value="">By artist
@@ -50,13 +47,14 @@
                 </label>
             </div>
 
-            <div class="center-form">
-                <input type="text" class="form-control options-search" id="lyrics-search" oninput="fetchMusixmatch()" placeholder="Search for the lyrics you love ...">
+            <div class="form-group">
+                <input type="text" class="form-control options-search" id="lyrics-search" placeholder="Search for the lyrics you love ...">
             </div>
-            <div id="song-name">
-            </div>
-            <div id="artist"></div>
-            <div id="song-lyrics">
+            <div id="lyrics-display" class="card-body">
+                <h4 class="card-title">
+                    Song Lyrics
+                </h4>
+                <p id="lyrics-text">
 
                 </p>
             </div>
@@ -117,7 +115,6 @@
             <div class="row footer-wrapper justify-content-center align-items-center">
                 <div class="col-sm-4 d-sm-block d-md-none">
                     <a href="#faqs">
-
                    FAQs
                 </a>
                 </div>
@@ -131,19 +128,15 @@
                 </a>
                 </div>
 
-            <div class="row">
-                <div class="col-sm-12 ">
-                    <p>Powered by</p>
-                    <a href="http://musixmatch.com" target="_blank"><img src="assets/images/musixmatch2.png" class="musixmatch" alt="Musixmatch - lyrics website logo"></a>
-                </div>
+
             </div>
         </footer>
     </div>
-    <script src="scripts/musixmatch.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-    <script src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
+
 </body>
 
 

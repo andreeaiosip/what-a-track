@@ -26,7 +26,7 @@ body {
 }
 
 .bg {
-    background-image: url("../images/wat-bg3.jpg");
+    background-image: url("../images/wat-bg2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -126,6 +126,7 @@ styling for placeholder text in the search box
 }
 
 footer {
+    position: fixed;
     width: 100%;
     bottom: 0;
     background-color: #06212c00;
@@ -159,12 +160,6 @@ footer {
     margin: 15px 0px 15px 35px;
 }
 
-.musixmatch {
-    height: 50px;
-    width: 180px;
-    padding: 0px 5px 10px 5px;
-}
-
 
 /* Landscape phones and portrait tablets */
 
@@ -184,3 +179,4 @@ footer {
         font-size: 1.8rem;
         padding: 6px;
     }
+}

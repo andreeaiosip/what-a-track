@@ -65,13 +65,15 @@ a {
 
 .form-control,
 label.form-check-label {
-    color: #ea5128; 
+    color: #ea5128;
 }
 
 .btn-success {
     background-color: #ea5128 !important;
     border: none;
 }
+
+
 /* 
 ==============================================
 styling for placeholder text in the search box
@@ -113,12 +115,6 @@ styling for placeholder text in the search box
     color: #ea5228b0 !important;
 }
 
-.upcoming {
-    height: 400px;
-    width: 50%;
-    margin: auto;
-}
-
 .upcoming>p {
     color: #ea5128;
     font-weight: 400;
@@ -126,7 +122,6 @@ styling for placeholder text in the search box
 }
 
 footer {
-    position: fixed;
     width: 100%;
     bottom: 0;
     background-color: #06212c00;
@@ -144,20 +139,19 @@ footer {
     color: #fafafa;
 }
 
+#faqs {
+    padding: 15px;
+}
+
 .footer-wrapper {
     flex-wrap: nowrap !important;
     padding-bottom: 5px;
     font-size: 1.2rem;
 }
 
-
 .contact-form {
     margin: auto;
     padding-top: 40px;
-}
-
-#faqs {
-    margin: 15px 0px 15px 35px;
 }
 
 
@@ -168,9 +162,6 @@ footer {
         margin: 20px;
         margin-top: 10px;
         font-size: 1.6rem;
-    }
-    .modal-help {
-        margin-right: 20px;
     }
     a {
         font-size: 1.4rem;

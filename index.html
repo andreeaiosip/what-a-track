@@ -17,13 +17,14 @@
         <div class="navbar justify-content-around">
 
             <div class="d-none d-md-block">
-                <a href="#faq">
+                <a href="#faqs">
                        FAQs
                     </a>
             </div>
             <div class="slogan">
-                <a class="navbar-brand" href="#homepage">
-                    <img src="assets/images/watlogo.png" height="70" class="align-top logo" alt="what-a-track logo">
+
+                <a href="#home" class="navbar-brand">
+                    <img src="assets/images/watlogo2.png" height="70" class="align-top logo" alt="what-a-track logo"
                 </a>
                 <p><strong> WHAT A TRACK</strong></p>
             </div>
@@ -35,7 +36,9 @@
             </div>
         </div>
 
-        <div class="wrapper">
+        <!--Home page section-->
+        <section id="home" class="wrapper active">
+
             <div class="form-check-inline">
                 <label class="form-check-label">
                   <input type="radio" class="form-check-input options-search" value="">By artist
@@ -47,25 +50,74 @@
                 </label>
             </div>
 
-            <div class="form-group">
-                <input type="text" class="form-control options-search" placeholder="Search for the lyrics you love ...">
+            <div class="center-form">
+                <input type="text" class="form-control options-search" id="lyrics-search" oninput="fetchMusixmatch()" placeholder="Search for the lyrics you love ...">
             </div>
-        </div>
-        <div class="upcoming options-search">
-            <p>Happening in your area ...</p>
-
-            <div>
-
+            <div id="song-name">
             </div>
-        </div>
+            <div id="artist"></div>
+            <div id="song-lyrics">
 
+                </p>
+            </div>
+            <div class="upcoming options-search">
+                <p>Happening in your area ...</p>
+            </div>
+        </section>
+
+        <!--Contact section-->
+        <section id="contact">
+            <!-- Contact form -->
+            <div class="col-sm-9 col-md-7 contact-form">
+                <form>
+                    <h4 class="form-title text-align-center">Get in touch.</h3>
+                        <br>
+                        <div class="form-group">
+                            <label for="name">
+                    Name
+                </label>
+                            <input type="text" class="form-control" name="name" placeholder="Name" required />
+                        </div>
+                        <div class="form-group">
+
+                            <label for="Email">
+                    Email address
+                </label>
+                            <input type="email" class="form-control" name="email-address" placeholder="Email address" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number">
+                    Phone number
+                </label>
+                            <input type="tel" class="form-control" name="phone-number" placeholder="Phone number" />
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Message:</label>
+                            <textarea class="form-control" rows="5" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <button type="submit" class="btn btn-success submit-button ">
+                  Send
+                  </button>
+                        </div>
+                </form>
+            </div>
+        </section>
+
+        <!--FAQs section-->
+        <section id="faqs">
+            <h2>FAQs</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil a incidunt perferendis. <br> Veniam quis eveniet doloremque enim quidem veritatis fuga vitae voluptatem dicta. Facilis fugit cupiditate accusamus eveniet commodi rerum!
+            </p>
+        </section>
         <!-- Footer -->
 
 
         <footer>
             <div class="row footer-wrapper justify-content-center align-items-center">
                 <div class="col-sm-4 d-sm-block d-md-none">
-                    <a href="#faq">
+                    <a href="#faqs">
+
                    FAQs
                 </a>
                 </div>
@@ -79,15 +131,19 @@
                 </a>
                 </div>
 
-
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <p>Powered by</p>
+                    <a href="http://musixmatch.com" target="_blank"><img src="assets/images/musixmatch2.png" class="musixmatch" alt="Musixmatch - lyrics website logo"></a>
+                </div>
             </div>
         </footer>
     </div>
-
+    <script src="scripts/musixmatch.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-
+    <script src="http://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
 </body>
 
 

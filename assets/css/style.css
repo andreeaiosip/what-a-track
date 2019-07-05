@@ -160,6 +160,12 @@ footer {
     margin: 15px 0px 15px 35px;
 }
 
+.musixmatch {
+    height: 50px;
+    width: 180px;
+    padding: 0px 5px 10px 5px;
+}
+
 
 /* Landscape phones and portrait tablets */
 

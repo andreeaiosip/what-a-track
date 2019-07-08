@@ -58,9 +58,9 @@ a {
     cursor: pointer;
 }
 
-.wrapper {
+.center-form {
     width: 70%;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 .form-control,

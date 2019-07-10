@@ -75,7 +75,6 @@ label.form-check-label {
     margin: 10px;
 }
 
-
 /* 
 ==============================================
 styling for placeholder text in the search box
@@ -117,11 +116,6 @@ styling for placeholder text in the search box
     color: #ea5228b0 !important;
 }
 
-.upcoming>p {
-    color: #ea5128;
-    font-weight: 400;
-    text-align: center;
-}
 
 footer {
     width: 100%;

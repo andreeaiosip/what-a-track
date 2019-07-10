@@ -71,6 +71,8 @@ label.form-check-label {
 .btn-success {
     background-color: #ea5128 !important;
     border: none;
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
 }
 
 

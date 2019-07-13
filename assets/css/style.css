@@ -53,18 +53,16 @@ label.form-check-label {
     color: #ea5128;
 }
 
-.btn-success {
-    background-color: #ea5128 !important;
-    border: none;
-    padding: 5px 10px 5px 10px;
-    margin: 10px;
-}
-
-
-/* 
+    .search-content {
+        display: inline-block;
+    }
     .musixmatch-logo {
         height: 35px;
         max-width: 50%;
+    }
+    .form-control,
+    label.form-check-label {
+        color: #ea5128;
     }
     .form-control {
         display: inline-block;
@@ -72,6 +70,25 @@ label.form-check-label {
         -moz-box-shadow: 10px 10px 5px -4px rgba(130, 126, 130, 0.57);
         box-shadow: 10px 10px 5px -4px rgba(130, 126, 130, 0.57);
     }
+    
+    .btn-success {
+        background-color: #ea5128 !important;
+        border: none;
+        padding: 5px 10px 5px 10px;
+        margin: 10px;
+    }
+    
+    .btn-outline-primary:hover {
+        color: #fff !important;
+        background-color: #ea5128 !important;
+        border-color: #ea5128 !important;
+    }
+    
+    .btn-outline-primary {
+        color: #ea5128 !important;
+        border-color: #ea5128 !important;
+    }
+    /* 
 ==============================================
 styling for placeholder text in the search box
 ============================================= 

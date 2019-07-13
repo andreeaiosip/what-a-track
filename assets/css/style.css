@@ -5,18 +5,6 @@
  =============================== 
  */
 
-.logo {
-    text-align: inline-block;
-}
-
-.slogan {
-    text-align: center;
-    font-family: 'Sarpanch', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #ea5128;
-}
-
 
 a {
     font-family: 'Open Sans', sans-serif;
@@ -61,9 +49,26 @@ label.form-check-label {
         background-repeat: no-repeat;
         background-size: cover;
     }
+    
+    .slogan>p {
+        text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    }
+    
+    .logo {
+        text-align: inline-block;
+    }
     .search-content {
         display: inline-block;
     }
+    
+    .slogan {
+        text-align: center;
+        font-family: 'Sarpanch', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #ea5128;
+    }
+    
     .musixmatch-logo {
         height: 35px;
         max-width: 50%;
@@ -72,6 +77,7 @@ label.form-check-label {
     label.form-check-label {
         color: #ea5128;
     }
+    
     .form-control {
         display: inline-block;
         -webkit-box-shadow: 10px 10px 5px -4px rgba(130, 126, 130, 0.57);

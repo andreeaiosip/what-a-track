@@ -26,7 +26,7 @@ body {
 }
 
 .bg {
-    background-image: url("../images/wat-bg2.jpg");
+    background-image: url("../images/wat-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,6 +75,7 @@ label.form-check-label {
     margin: 10px;
 }
 
+
 /* 
 ==============================================
 styling for placeholder text in the search box
@@ -116,7 +117,6 @@ styling for placeholder text in the search box
     color: #ea5228b0 !important;
 }
 
-
 footer {
     width: 100%;
     bottom: 0;
@@ -133,10 +133,6 @@ footer {
     margin: 10px;
     font-size: 1.3rem;
     color: #fafafa;
-}
-
-#faqs {
-    padding: 15px;
 }
 
 .footer-wrapper {
@@ -163,6 +159,7 @@ footer {
         font-size: 1.4rem;
     }
     .fab {
+        color: #ea5128;
         font-size: 1.8rem;
         padding: 6px;
     }

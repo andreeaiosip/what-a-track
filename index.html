@@ -12,14 +12,12 @@
 </head>
 
 <body>
-
     <div class="bg">
         <div class="navbar justify-content-around">
 
             <div class="d-none d-md-block">
-                <a href="#faqs">
-                       FAQs
-                    </a>
+                <div class="social-icons col-sm-4 col-md-12">
+                </div>
             </div>
             <div class="slogan">
                 <a href="#home" class="navbar-brand">
@@ -36,9 +34,19 @@
         </div>
         <!--Home page section-->
         <section id="home" class="container-fluid">
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                          <input type="radio" class="form-check-input options-search" value="">By artist
+                        </label>
+            </div>
+            <div class="form-check-inline">
+                <label class="form-check-label">
+                          <input type="radio" class="form-check-input options-search" value="">By song
+                        </label>
+            </div>
             <div class="center-form">
                 <input type="text" name="lyrics-search" class="form-control options-search" id="q" placeholder="Search for lyrics that your love...">
-                <input type="button" value="Search" onclick="getArtist();" class="btn btn-success btn-md">
+                <input type="button" value="Search" onclick="getData();" class="btn btn-success btn-md">
             </div>
         </section>
         <!--Contact section-->
@@ -79,19 +87,11 @@
         </section>
 
         <!--FAQs section-->
-        <section id="faqs">
-            <h2>FAQs</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil a incidunt perferendis. <br> Veniam quis eveniet doloremque enim quidem veritatis fuga vitae voluptatem dicta. Facilis fugit cupiditate accusamus eveniet commodi rerum!
-            </p>
-        </section>
+
         <!-- Footer -->
         <footer>
             <div class="row footer-wrapper justify-content-center align-items-center">
-                <div class="col-sm-4 d-sm-block d-md-none">
-                    <a href="#faqs">
-                   FAQs
-                </a>
-                </div>
+
                 <div class="social-icons col-sm-4 col-md-12">
                     <a href="https://www.facebook.com" rel="noopener"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://twitter.com" rel="noopener"><i class="fab fa-twitter-square"></i></a>
@@ -106,7 +106,7 @@
     </div>
 
     <script src="scripts/main.js"></script>
-    <!-- <script type="text/javascript" src="https://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script> -->
+    <script src="https://tracking.musixmatch.com/t1.0/AMa6hJCIEzn1v8RuOP"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>

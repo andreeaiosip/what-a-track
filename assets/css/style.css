@@ -163,8 +163,12 @@ footer {
         font-size: 1.4rem;
     }
     .fab {
-        color: #ea5128;
-        font-size: 1.8rem;
-        padding: 6px;
+        margin: 10px;
+        font-size: 1.3rem;
+        color: #fafafa;
     }
-}
+    }
+}        .fab {
+            font-size: 1.4rem;
+            padding: 6px;
+        }

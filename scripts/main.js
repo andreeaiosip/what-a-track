@@ -3,6 +3,9 @@ const apiURL = "https://api.musixmatch.com/ws/1.1/";
 let userSearched = $("#q").val();
 
 function getData(userSearched) {
+    fetch(apiURL + "track.search?q=" + userSearched + "&apikey=" + apiKey, {
+            mode: 'no-cors'
+        })
         .then(res => res.json())
         .then(data => {
             console.log(data);

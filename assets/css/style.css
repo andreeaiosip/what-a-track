@@ -16,16 +16,6 @@ a {
     cursor: pointer;
 }
 
-.center-form {
-    width: 70%;
-    margin: 0 auto;
-}
-
-.form-control,
-label.form-check-label {
-    color: #ea5128;
-}
-
     
     body,
     html {
@@ -57,6 +47,11 @@ label.form-check-label {
     .logo {
         text-align: inline-block;
     }
+    
+    #home {
+        text-align: center;
+    }
+    
     .search-content {
         display: inline-block;
     }
@@ -73,6 +68,11 @@ label.form-check-label {
         height: 35px;
         max-width: 50%;
     }
+    .center-form {
+        width: 70%;
+        margin: 0 auto;
+    }
+    
     .form-control,
     label.form-check-label {
         color: #ea5128;
@@ -163,3 +163,4 @@ styling for placeholder text in the search box
             font-size: 1.4rem;
             padding: 6px;
         }
+    }

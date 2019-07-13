@@ -90,18 +90,6 @@ label.form-check-label {
 styling for placeholder text in the search box
 ============================================= 
 */
-footer {
-    width: 100%;
-    bottom: 0;
-    background-color: #06212c00;
-    color: #fafafa;
-    text-align: center;
-}
-
-.footer-wrapper a {
-    color: #fafafa !important;
-}
-
     /* all */
     
      ::-webkit-input-placeholder {
@@ -133,6 +121,15 @@ footer {
         font-size: 1.3rem;
         color: #fafafa;
     }
+    
+    footer {
+        margin: auto;
+        padding-top: 40px;
+        flex-wrap: nowrap !important;
+        padding-bottom: 5px;
+        font-size: 1rem;
+        color: #fafafa !important;
+        text-align: center;
     }
     /* Landscape phones and portrait tablets */
     

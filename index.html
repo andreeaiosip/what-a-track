@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="bg">
+    <main>
         <div class="navbar justify-content-around">
             <div class="slogan">
                 <a href="#home" class="navbar-brand">
@@ -36,26 +36,26 @@
                 </div>
                 <div class="center-form">
                     <input type="text" name="lyrics-search" class="form-control options-search" id="q" placeholder="Search for the lyrics you love...">
-                    <input type="button" value="Search" onclick="getData();" class="btn btn-success btn-md">
-                    <input type="button" value="Clear" onclick="clearData();" class="btn btn-outline-primary">
+                    <input type="button" value="Search" onclick="getData();" class="btn btn-success">
                 </div>
             </div>
         </section>
-        <!-- Footer -->
-        <footer>
-            <div class="row footer-wrapper justify-content-center align-items-center">
-                <div class="social-icons col-sm-6">
-                    <a href="https://www.facebook.com" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" rel="noopener"><i class="fab fa-twitter-square"></i></a>
-                </div>
-                <div class="col-sm-6 footer-content musixmatch-tagline">
-                    <p>Lyrics powered by</p>
-                    <a href="https://www.musixmatch.com" target="_blank">
-                        <img src="assets/images/Musixmatch4.png" class="musixmatch-logo" alt="Musixmatch logo">
-                    </a>
-                </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="row footer-wrapper justify-content-center align-items-center">
+            <div class="social-icons col-sm-6">
+                <a href="https://www.facebook.com" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" rel="noopener"><i class="fab fa-twitter-square"></i></a>
             </div>
-        </footer>
+            <div class="col-sm-6 footer-content musixmatch-tagline">
+                <p>Lyrics powered by</p>
+                <a href="https://www.musixmatch.com" target="_blank">
+                    <img src="assets/images/Musixmatch4.png" class="musixmatch-logo" alt="Musixmatch logo">
+                </a>
+            </div>
+        </div>
+    </footer>
     </div>
 
     <script src="scripts/main.js"></script>

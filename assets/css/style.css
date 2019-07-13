@@ -85,42 +85,6 @@ label.form-check-label {
 styling for placeholder text in the search box
 ============================================= 
 */
-
-
-/* all */
-
- ::-webkit-input-placeholder {
-    color: #ea5228b0 !important;
-}
-
-
-/* Chrome/Opera/Safari */
-
- ::-webkit-input-placeholder {
-    color: #ea5228b0 !important;
-}
-
-
-/* Chrome/Opera/Safari */
-
- ::-moz-placeholder {
-    color: #ea5228b0 !important;
-}
-
-
-/* firefox 19+ */
-
- ::-ms-input-placeholder {
-    color: #ea5228b0 !important;
-}
-
-
-/* ie */
-
- ::-moz-placeholder {
-    color: #ea5228b0 !important;
-}
-
 footer {
     width: 100%;
     bottom: 0;
@@ -133,36 +97,50 @@ footer {
     color: #fafafa !important;
 }
 
-.fab {
-    margin: 10px;
-    font-size: 1.3rem;
-    color: #fafafa;
-}
-
-.footer-wrapper {
-    flex-wrap: nowrap !important;
-    padding-bottom: 5px;
-    font-size: 1.2rem;
-}
-
-/* Landscape phones and portrait tablets */
-
-@media screen and (min-width: 767px) {
-    .slogan {
-        margin: 20px;
-        margin-top: 10px;
-        font-size: 1.6rem;
+    /* all */
+    
+     ::-webkit-input-placeholder {
+        color: #ea5228b0 !important;
     }
-    a {
-        font-size: 1.4rem;
+    /* Chrome/Opera/Safari */
+    
+     ::-webkit-input-placeholder {
+        color: #ea5228b0 !important;
     }
+    /* Chrome/Opera/Safari */
+    
+     ::-moz-placeholder {
+        color: #ea5228b0 !important;
+    }
+    /* firefox 19+ */
+    
+     ::-ms-input-placeholder {
+        color: #ea5228b0 !important;
+    }
+    /* ie */
+    
+     ::-moz-placeholder {
+        color: #ea5228b0 !important;
+    }
+    
     .fab {
         margin: 10px;
         font-size: 1.3rem;
         color: #fafafa;
     }
     }
-}        .fab {
+    /* Landscape phones and portrait tablets */
+    
+    @media screen and (min-width: 767px) {
+        .slogan {
+            margin: 20px;
+            margin-top: 10px;
+            font-size: 1.6rem;
+        }
+        a {
+            font-size: 1.4rem;
+        }
+        .fab {
             font-size: 1.4rem;
             padding: 6px;
         }

@@ -4,18 +4,6 @@
  General 
  =============================== 
  */
-body {
-    padding: 0;
-    min-height: 100vh;
-    font-size: 1rem;
-}
-
-.bg {
-    background-image: url("../images/wat-bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 .logo {
     text-align: inline-block;
@@ -50,6 +38,29 @@ label.form-check-label {
     color: #ea5128;
 }
 
+    
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+    
+    .row,
+    .container,
+    .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        padding: 0;
+        min-height: 100vh;
+        font-size: 1rem;
+        background-image: url("../images/wat-bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .search-content {
         display: inline-block;
     }

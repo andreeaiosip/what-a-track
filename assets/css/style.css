@@ -135,7 +135,7 @@ styling for placeholder text in the search box
     /* Chrome/Opera/Safari */
     
      ::-webkit-input-placeholder {
-        color: #ea5228b0 !important;
+        color: rgb(166, 200, 207) !important;
     }
     /* Chrome/Opera/Safari */
     

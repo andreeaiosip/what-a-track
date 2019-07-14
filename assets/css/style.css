@@ -26,6 +26,12 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    main {
+        flex: 1;
     }
     
     .slogan>p {
@@ -56,6 +62,7 @@
         height: 32px;
         max-width: 50%;
     }
+    
     .center-form {
         width: 70%;
         margin: 0 auto;
@@ -151,10 +158,8 @@ styling for placeholder text in the search box
     }
     
     footer {
-        margin: auto;
-        padding-top: 40px;
         flex-wrap: nowrap !important;
-        padding-bottom: 5px;
+        padding-bottom: 10px;
         font-size: 1rem;
         color: #fafafa !important;
         text-align: center;

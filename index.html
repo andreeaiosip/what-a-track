@@ -24,17 +24,15 @@
         <!--Home page section-->
         <section id="home" class="container-fluid">
             <div class="search-content">
-                <div class="form-check-inline">
+                <div class="form-group">
                     <label class="form-check-label">
-                          <input type="radio" class="form-check-input options-search" name="group1" >By artist
+                          <input type="radio" class="form-check-input options-search" name="search" id="artist" >By artist
+                        </label>
+                    <label class="form-check-label">
+                          <input type="radio" class="form-check-input options-search" name="group1" value="" id="song">By song
                         </label>
                 </div>
-                <div class="form-check-inline">
-                    <label class="form-check-label">
-                          <input type="radio" class="form-check-input options-search"name="group1" value="">By song
-                        </label>
-                </div>
-                <div class="center-form">
+                <div class="form-group">
                     <input id="q" type="text" name="lyrics-search" class="form-control options-search" placeholder="Search for the lyrics you love...">
                     <input id="user-search-button" type="button" value="Search" class="btn btn-success">
                 </div>

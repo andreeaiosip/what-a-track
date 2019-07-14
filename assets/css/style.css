@@ -75,9 +75,9 @@
     
     .form-control {
         display: inline-block;
-        -webkit-box-shadow: 10px 10px 5px -3px rgba(130, 126, 130, 0.57);
-        -moz-box-shadow: 10px 10px 5px -3px rgba(130, 126, 130, 0.57);
-        box-shadow: 10px 10px 5px -3px rgba(130, 126, 130, 0.57);
+        -webkit-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
+        -moz-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
+        box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
     }
     
     .btn-success {

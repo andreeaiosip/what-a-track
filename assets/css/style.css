@@ -35,11 +35,12 @@
     }
     
     .slogan>p {
-        text-shadow: 4px 4px 2px hsla(0, 31%, 90%, 0.09);
+        text-shadow: 2px 2px 2px hsla(234, 79%, 72%, 0.705);
     }
     
     .logo {
         text-align: inline-block;
+        height: 70px;
     }
     
     #home {

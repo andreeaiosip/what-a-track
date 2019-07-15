@@ -7,6 +7,7 @@ const apiURL = "https://api.musixmatch.com/ws/1.1/";
 let userSearched = $('#q').val();
 
 // Results printed in the HTML div section "output"
+let output = $('#output');
 
 output.innerHTML = "test test";
 
@@ -23,6 +24,7 @@ function getData(userSearched) {
             getArtist(idOfArtist)
         });
 }
+
 
 function getArtist(artistID) {
     console.log(artistID)

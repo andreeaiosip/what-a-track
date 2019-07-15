@@ -73,6 +73,7 @@
     .form-control,
     label.form-check-label {
         color: rgb(166, 200, 207);
+        margin: 10px;
     }
     
     .form-control {

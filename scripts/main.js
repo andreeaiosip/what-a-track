@@ -8,6 +8,9 @@ let userSearched = $('#q').val();
 
 // Results printed in the HTML div section "output"
 
+output.innerHTML = "test test";
+
+
 function getData(userSearched) {
     fetch(apiURL + "track.search?q=" + userSearched + "&apikey=" + apiKey, {
             mode: 'no-cors'

@@ -1,6 +1,12 @@
 const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
+
+// Musixmatch APIurl
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
-let userSearched = $("#q").val();
+
+// Terms the user is inserting the search box
+let userSearched = $('#q').val();
+
+// Results printed in the HTML div section "output"
 
 function getData(userSearched) {
     fetch(apiURL + "track.search?q=" + userSearched + "&apikey=" + apiKey, {

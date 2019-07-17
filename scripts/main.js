@@ -1,10 +1,10 @@
 // Set event Listener on Search Button
 const searchButton = document.querySelector('#user-search-button');
-const lyricsSearch = document.querySelector('#query-lyrics');
+const lyricsSearch = document.querySelector('#query');
 
 
 searchButton.addEventListener('click', (event) => {
-    const lyricsSearch = lyricsSearch.value;
+    const lyricsSearch = query.value;
     getData(lyricsSearch);
 })
 
@@ -29,7 +29,6 @@ function getData(lyricsSearch) {
         contentType: 'application/json',
         success: function(data) {
             console.log(data)
-
         }
     });
 }

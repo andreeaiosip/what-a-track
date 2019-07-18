@@ -1,5 +1,10 @@
-// Set event Listener on Search Button
-const searchButton = document.querySelector("#user-search-button");
+window.addEventListener('load', () => {
+    // Set event Listener on Search Button
+    const searchButton = document.querySelector("#user-search-button");
+    searchButton.addEventListener('click', () => getData());
+})
+
+
 
 //Search field
 const lyricsSearch = document.querySelector("#query");

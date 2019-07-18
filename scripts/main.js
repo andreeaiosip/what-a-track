@@ -24,14 +24,15 @@ function getData(lyricsSearch) {
         type: "GET",
         data: {
             apikey: apiKey,
-            track_id: lyricsSearch,
+            q_track: lyricsSearch,
+            q_artist: lyricsSearch,
             format: "jsonp",
             callback: "jsonp_callback"
         },
-        url: "https://api.musixmatch.com/ws/1.1/track.search",
+        url: apiURL + "matcher.lyrics.get",
         dataType: "jsonp",
-        jsonpCallback: 'jsonp_callback',
-        contentType: 'application/json',
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
         success: function(data) {
             console.log(data)
         }

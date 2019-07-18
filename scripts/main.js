@@ -17,8 +17,9 @@ searchButton.addEventListener("click", (event) => {
 
 // Print lyrics on the page in the output div
 function getData(lyricsSearch) {
-    let results = document.getElementById("output").textContent;
-    console.log(results)
+    const outputSection = document.getElementById("#output");
+    console.log(lyricsSearch);
+
     $.ajax({
         type: "GET",
         data: {

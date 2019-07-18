@@ -33,7 +33,23 @@ function getData(lyricsSearch) {
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
         success: function(data) {
-            console.log(data)
+            let lyricsResults = data.message.body.q_track.q_artist;
+            outputSection.innerHTML += `<thead>
+                                           <tr>
+                                            <th scope="col">Song</th>
+                                          <th scope="col">Artist</th>
+                                        </tr>
+                                     </thead>`;
+            lyricsResults.forEach(function(item) {
+                outputSection.innerHTML += `<tbody>
+                                            <tr>
+                                                <td>${q_track}</td>
+                                                <td>${q_artist}</td>
+                                            </tr>
+                                            
+                                            <button class="btn btn-secondary btn-result" onclick="returnLyrics(${item.q_track.q_artist}, 'getTrack')">Click here for lyrics</button>
+                                        </tbody>`;
+            })
         }
     });
 }

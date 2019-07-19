@@ -51,10 +51,8 @@ function getData() {
                                                 <td>${item.tracklist.q_track}</td>
                                                 <td>${item.tracklist.q_artist}</td>
                                             </tr>
-                                            
-                                            <button class="btn btn-secondary btn-result" onclick="returnLyrics(${item.q_track.q_artist}, 'getTrack')">Click here for lyrics</button>
                                         </tbody>`;
             })
         }
-    });
+    })
 }

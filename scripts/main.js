@@ -38,7 +38,7 @@ function getData() {
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
         success: function(data) {
-            let lyricsResults = data.message.body.q_track.q_artist;
+            let lyricsResults = data.message.body;
             outputSection.innerHTML += `<thead>
                                            <tr>
                                             <th scope="col">Song</th>
@@ -48,8 +48,8 @@ function getData() {
             lyricsResults.forEach(function(item) {
                 outputSection.innerHTML += `<tbody>
                                             <tr>
-                                                <td>${q_track}</td>
-                                                <td>${q_artist}</td>
+                                                <td>${item.tracklist.q_track}</td>
+                                                <td>${item.tracklist.q_artist}</td>
                                             </tr>
                                             
                                             <button class="btn btn-secondary btn-result" onclick="returnLyrics(${item.q_track.q_artist}, 'getTrack')">Click here for lyrics</button>

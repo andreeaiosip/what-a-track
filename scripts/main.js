@@ -26,11 +26,13 @@ function getData() {
         type: "GET",
         data: {
             apikey: apiKey,
-            q_track: lyricsSearch,
-            q_artist: lyricsSearch,
+            q_track: queryLyrics,
+            q_artist: queryLyrics,
             format: "jsonp",
             callback: "jsonp_callback"
         },
+
+        // matcher.lyrics.get API method takes two parameters: q_track and q_artist
         url: apiURL + "matcher.lyrics.get",
         dataType: "jsonp",
         jsonpCallback: "jsonp_callback",

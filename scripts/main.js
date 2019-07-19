@@ -1,23 +1,26 @@
-window.addEventListener('load', () => {
-    // Set event Listener on Search Button
-    const searchButton = document.querySelector("#user-search-button");
-    searchButton.addEventListener('click', () => getData());
-})
+const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
+const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
+// Set event Listener on Search Button
+const searchButton = document.querySelector("#user-search-button");
 
+// Link the Search Button to the search field
 searchButton.addEventListener('click', () => {
     const lyricsSearch = ("#query-lyrics").value;
     getData(lyricsSearch);
 })
 
-const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
-const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
 function getData() {
 
-    const lyricsSearch = document.querySelector("#query-lyrics").value;
+    // Variable set for the search section field
+    const queryLyrics = document.querySelector("#query-lyrics").value;
+
+    // Variable set for the output section
+    const outputSection = document.getElementById("#output");
+    document.querySelector("#output").textContent = "";
 
     $.ajax({
         type: "GET",

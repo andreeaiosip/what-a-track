@@ -6,19 +6,19 @@ window.addEventListener('load', () => {
 
 
 
-//Search field
-const lyricsSearch = document.querySelector("#query");
+searchButton.addEventListener('click', () => {
+    const lyricsSearch = ("#query-lyrics").value;
+    getData(lyricsSearch);
+})
 
 const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
+function getData() {
 
+    const lyricsSearch = document.querySelector("#query-lyrics").value;
 
-// Print lyrics on the page in the output div
-function getData(lyricsSearch) {
-    const outputSection = document.getElementById("#output");
-    document.querySelector("#output").textContent = "";
     $.ajax({
         type: "GET",
         data: {

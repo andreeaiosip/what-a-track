@@ -1,8 +1,9 @@
 const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
+
+
+//  Form event listener to prevent the default format for submitting to a server
 const form = document.querySelector('#form');
-
-
 
 // Link the Search Button to the search field
 searchButton.addEventListener('click', () => {
@@ -13,14 +14,16 @@ searchButton.addEventListener('click', () => {
 form.onsubmit = (event) => {
     event.preventDefault();
 
-    // 3 values - radio x 2, text input
+    // 3 values - radio x 2, text input in the search box
     let selected;
 
-    // selectors
+    // Variable for the search box input
     const query = document.querySelector('#query-lyrics').value;
+
+    // Variable for the radio buttons
     const radio = document.querySelectorAll('[type="radio"]');
 
-    // decide what was selected
+    // Decide what radio button / option was selected
     radio.forEach(item => {
         if (item.checked) selected = item.value;
     })
@@ -28,10 +31,10 @@ form.onsubmit = (event) => {
     getLyrics(selected, query);
 }
 
-
 function getLyrics(selected, query) {
 
 
+    // If artist radio button option is selected
     if (selected == 'artist') {
         data = {
             apikey: apiKey,

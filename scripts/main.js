@@ -86,26 +86,29 @@ function getLyrics(selected, query) {
 
 }
 
-// function appendToPage(results) {
 
-//     const tbody = document.querySelector("tbody");
-//     tbody.innerHTML = "";
-//     console.log(results)
+// Function for printing results on the page
 
-//     results.track_list.forEach(item => {
-//         tbody.innerHTML +=
-//             `<tr>
-//             <td>${item.track.artist_name}</td>
-//             <td>${item.track.track_name}</td>
-//             <td class="getLyrics" data-trackid="${item.track.track_id}">Get Lyrics</td>
-//         </tr>`;
-//     });
+function appendToPage(results) {
+
+    const tbody = document.querySelector("tbody");
+    tbody.innerHTML = "";
+    console.log(results)
+
+    results.track_list.forEach(item => {
+        tbody.innerHTML +=
+            `<tr>
+            <td>${item.track.artist_name}</td>
+            <td>${item.track.track_name}</td>
+            <td class="getLyrics" data-trackid="${item.track.track_id}">Get Lyrics</td>
+        </tr>`;
+    });
 
 
-//     let getLyrics = document.querySelectorAll('.getLyrics');
-//     getLyrics.forEach(item => item.addEventListener('click', (event) => {
-//         const trackID = event.currentTarget.dataset.trackid;
-//         console.log(trackID);
-//         getLyrics(trackID)
-//     }))
-// }
+    let getLyrics = document.querySelectorAll('.getLyrics');
+    getLyrics.forEach(item => item.addEventListener('click', (event) => {
+        const trackID = event.currentTarget.dataset.trackid;
+        console.log(trackID);
+        getLyrics(trackID)
+    }))
+}

@@ -64,6 +64,7 @@ function getLyrics(selected, query) {
             apikey: apiKey,
             q_track: query,
             f_has_lyrics: true,
+            s_track_rating: true,
             format: "jsonp",
             callback: "jsonp_callback"
         }

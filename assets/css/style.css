@@ -65,6 +65,9 @@
         margin-bottom: 10px;
     }
     
+    .artist {
+        margin-left: 25px;
+    }
     .form-group {
         width: 70%;
         margin: 0 auto;

@@ -57,6 +57,9 @@ function getLyrics(selected, query) {
         }
     })
 
+
+    // If song radio button option is selected
+    if (selected == 'song') {
         data = {
             apikey: apiKey,
             q_track: query,
@@ -69,16 +72,14 @@ function getLyrics(selected, query) {
 
     $.ajax({
         type: "GET",
-        data: data,
-
-        // matcher.lyrics.get API method takes two parameters: q_track and q_artist
+        data: getLyrics,
         url: apiURL + 'track.search',
         dataType: "jsonp",
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
         success: function(data) {
             let results = data.message.body;
-            console.log(data)
+            console.log(results)
         }
     })
 

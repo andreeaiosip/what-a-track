@@ -1,16 +1,18 @@
-const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
+const apiKey = "422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
+
+// Variable for the search box input
+const query = document.querySelector('#query-lyrics').value;
+
+// Add event listener to the search button
+searchButton.addEventListener('click', () => {
+    getLyrics(query);
+})
 
 
 //  Form event listener to prevent the default format for submitting to a server
 const form = document.querySelector('#form');
 
-// Link the Search Button to the search field
-searchButton.addEventListener('click', () => {
-    const lyricsSearch = ("#query-lyrics").value;
-    getData(lyricsSearch);
-})
-//  form event listener
 form.onsubmit = (event) => {
     event.preventDefault();
 

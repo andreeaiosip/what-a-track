@@ -19,9 +19,6 @@ form.onsubmit = (event) => {
     // 3 values - radio x 2, text input in the search box
     let selected;
 
-    // Variable for the search box input
-    const query = document.querySelector('#query-lyrics').value;
-
     // Variable for the radio buttons
     const radio = document.querySelectorAll('[type="radio"]');
 
@@ -45,7 +42,21 @@ function getLyrics(selected, query) {
             format: "jsonp",
             callback: "jsonp_callback"
         }
-    } else {
+    }
+
+    $.ajax({
+        type: "GET",
+        data: getLyrics,
+        url: apiURL + 'track.search',
+        dataType: "jsonp",
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
+        success: function(data) {
+            let results = data.message.body;
+            console.log(results)
+        }
+    })
+
         data = {
             apikey: apiKey,
             q_track: query,
@@ -70,6 +81,7 @@ function getLyrics(selected, query) {
             console.log(data)
         }
     })
+
 }
 
 // function appendToPage(results) {

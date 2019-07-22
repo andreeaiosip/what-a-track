@@ -13,8 +13,6 @@ searchButton.addEventListener('click', () => {
 //  Form event listener to prevent the default format for submitting to a server
 const form = document.querySelector('#form');
 
-form.onsubmit = (event) => {
-    event.preventDefault();
 
     // 3 values - radio x 2, text input in the search box
     let selected;

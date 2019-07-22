@@ -25,13 +25,15 @@ let selected;
 // Variable for the radio buttons
 const radio = document.querySelectorAll('[type="radio"]');
 
-// Decide what radio button / option was selected
-radio.forEach(item => {
-    if (item.checked) selected = item.value;
-})
 
 function getLyrics(selected, query) {
 
+    // Decide what radio button / option was selected
+    radio.forEach(item => {
+        if (item.checked) selected = item.id;
+    })
+
+    console.log(selected);
 
     // If artist radio button option is selected
     if (selected == 'artist') {

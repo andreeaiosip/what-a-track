@@ -68,6 +68,17 @@
     .artist {
         margin-left: 25px;
     }
+    
+    #form,
+    .search-content {
+        color: #fafafa;
+    }
+    
+    .search-content {
+        margin: 20px;
+        padding: 20px;
+    }
+    
     .form-group {
         width: 70%;
         margin: 0 auto;

@@ -26,6 +26,7 @@ let getLyricsNow = document.querySelectorAll('.getLyricsNow');
 function getLyrics(query, selected) {
 
     // If artist radio button option is selected
+    let data;
     if (selected == 'artist') {
         data = {
             apikey: apiKey,
@@ -75,7 +76,6 @@ function getLyrics(query, selected) {
 }
 
 // Variable for printing results on the page
-let results = data;
 
 
 function appendToPageSongResults(results) {
@@ -99,4 +99,8 @@ function appendToPageSongResults(results) {
         console.log(trackID);
         getLyrics(trackID)
     }))
+function appendToPageArtistResults(results) {
+    const tbody = document.querySelector("#tbody");
+    tbody.innerHTML = "";
+    console.log(results);
 }

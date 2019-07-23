@@ -52,8 +52,8 @@ function getLyrics(query) {
         urlExt = 'artist.search'
 
 
-    // If song radio button option is selected
-    if (selected == 'song') {
+        // If song radio button option is selected
+    } else if (selected == 'song') {
         data = {
             apikey: apiKey,
             q_track: query,

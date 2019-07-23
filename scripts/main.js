@@ -80,7 +80,7 @@ function getLyrics(query) {
     })
 }
 
-// Function for printing results on the page
+// Variable for printing results on the page
 let results = data;
 
 function appendToPage(results) {
@@ -88,7 +88,7 @@ function appendToPage(results) {
     tbody.innerHTML = "";
     console.log(results)
 
-    // Print results on the table as a table layout
+    // Print results on the page as a table layout
     results.track_list.forEach(item => {
         tbody.innerHTML +=
             `<tr>

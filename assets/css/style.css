@@ -5,19 +5,6 @@
  =============================== 
  */
     
-    body,
-    html {
-        height: 100%;
-        margin: 0;
-    }
-    
-    .row,
-    .container,
-    .container-fluid {
-        margin: 0;
-        padding: 0;
-    }
-    
     body {
         padding: 0;
         min-height: 100vh;
@@ -32,6 +19,13 @@
     
     main {
         flex: 1;
+    }
+    
+    .row,
+    .container,
+    .container-fluid {
+        margin: 0;
+        padding: 0;
     }
     
     .slogan>p {
@@ -181,8 +175,7 @@ styling for placeholder text in the search box
     }
     
     footer {
-        flex-wrap: nowrap !important;
-        padding-bottom: 10px;
+        margin-bottom: 10px;
         font-size: 1rem;
         color: #fafafa !important;
         text-align: center;

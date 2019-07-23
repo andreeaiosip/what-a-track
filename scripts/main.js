@@ -73,16 +73,14 @@ function getLyrics(query, selected) {
             }
         }
     })
+
 }
-
-// Variable for printing results on the page
-
 
 function appendToPageSongResults(results) {
 
     const tbody = document.querySelector("#tbody");
     tbody.innerHTML = "";
-    console.log(results)
+    console.log(results);
 
     // Print results on the page as a table layout
     results.track_list.forEach(item => {
@@ -99,8 +97,20 @@ function appendToPageSongResults(results) {
         console.log(trackID);
         getLyrics(trackID)
     }))
+}
+
 function appendToPageArtistResults(results) {
     const tbody = document.querySelector("#tbody");
     tbody.innerHTML = "";
     console.log(results);
+
+    // Print results on the page as a table layout
+    results.forEach(item => {
+        tbody.innerHTML +=
+            `<tr>
+                <td>${item.artist.artist_name}</td>
+                <td>${item.artist.artist_country}</td>
+                <td class="getLyricsNow" data-trackid="${item.artist.artist_id}">Get Lyrics</td>
+            </tr>`;
+    });
 }

@@ -26,7 +26,10 @@ let selected;
 const radio = document.querySelectorAll('[type="radio"]');
 
 
-function getLyrics(selected, query) {
+getLyrics(query);
+
+
+function getLyrics(query) {
 
     // Decide what radio button / option was selected
     radio.forEach(item => {
@@ -72,6 +75,7 @@ function getLyrics(selected, query) {
         }
     }
 
+    }
 
     $.ajax({
         type: "GET",

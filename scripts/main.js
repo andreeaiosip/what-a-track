@@ -47,7 +47,6 @@ function getLyrics(query) {
             format: "jsonp",
             callback: "jsonp_callback"
         }
-    }
 
         // API method for the artist lookup
         urlExt = 'artist.search'
@@ -63,7 +62,6 @@ function getLyrics(query) {
             format: "jsonp",
             callback: "jsonp_callback"
         }
-    }
 
         // API method for the song lookup
         urlExt = 'track.search'
@@ -98,13 +96,11 @@ function appendToPage(results) {
             `<tr>
             <td>${item.track.artist_name}</td>
             <td>${item.track.track_name}</td>
-            <td class="getLyrics" data-trackid="${item.track.track_id}">Get Lyrics</td>
+            <td class="getLyricsNow" data-trackid="${item.track.track_id}">Get Lyrics</td>
         </tr>`;
     });
 
-
-    let getLyrics = document.querySelectorAll('.getLyrics');
-    getLyrics.forEach(item => item.addEventListener('click', (event) => {
+    getLyricsNow.forEach(item => item.addEventListener('click', (event) => {
         const trackID = event.currentTarget.dataset.trackid;
         console.log(trackID);
         getLyrics(trackID)

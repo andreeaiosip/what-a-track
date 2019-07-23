@@ -13,7 +13,7 @@ searchButton.addEventListener('click', () => {
 const form = document.querySelector('#form');
 
 // Variable for printing the results as a table on the page 
-const tbody = document.querySelector("tbody");
+const tbody = document.querySelector("#tbody");
 
 // .getLyrics is the link to the option for showing the lyrics for each song from the list with results displayed
 let getLyricsNow = document.querySelectorAll('.getLyricsNow');

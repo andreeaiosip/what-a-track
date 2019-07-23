@@ -75,22 +75,20 @@ function getLyrics(query) {
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
         success: function(data) {
-            let results = data.message.body;
-            console.log(results)
+            console.log(data)
         }
     })
-
 }
 
-
 // Function for printing results on the page
+let results = data;
 
 function appendToPage(results) {
 
-    const tbody = document.querySelector("tbody");
     tbody.innerHTML = "";
     console.log(results)
 
+    // Print results on the table as a table layout
     results.track_list.forEach(item => {
         tbody.innerHTML +=
             `<tr>

@@ -49,18 +49,8 @@ function getLyrics(query) {
         }
     }
 
-    $.ajax({
-        type: "GET",
-        data: getLyrics,
-        url: apiURL + 'track.search',
-        dataType: "jsonp",
-        jsonpCallback: "jsonp_callback",
-        contentType: "application/json",
-        success: function(data) {
-            let results = data.message.body;
-            console.log(results)
-        }
-    })
+        // API method for the artist lookup
+        urlExt = 'artist.search'
 
 
     // If song radio button option is selected
@@ -75,12 +65,14 @@ function getLyrics(query) {
         }
     }
 
+        // API method for the song lookup
+        urlExt = 'track.search'
     }
 
     $.ajax({
         type: "GET",
-        data: getLyrics,
-        url: apiURL + 'track.search',
+        data: data,
+        url: apiURL + urlExt,
         dataType: "jsonp",
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",

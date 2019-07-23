@@ -23,22 +23,7 @@ const tbody = document.querySelector("#tbody");
 let getLyricsNow = document.querySelectorAll('.getLyricsNow');
 
 
-// 3 values - radio x 2, text input in the search box
-let selected;
-
-
-
-getLyrics(query);
-
-
-function getLyrics(query) {
-
-    // Decide what radio button / option was selected
-    radio.forEach(item => {
-        if (item.checked) selected = item.id;
-    })
-
-    console.log(selected);
+function getLyrics(query, selected) {
 
     // If artist radio button option is selected
     if (selected == 'artist') {
@@ -76,8 +61,15 @@ function getLyrics(query) {
         dataType: "jsonp",
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
-        success: function(data) {
-            console.log(data)
+        success: function(results) {
+
+            if (selected == 'artist') {
+                results = results.message.body.artist_list;
+                appendToPageArtistResults(results);
+            } else {
+                results = results.message.body.track_list;
+                appendToPageSongResults(results);
+            }
         }
     })
 }
@@ -85,8 +77,10 @@ function getLyrics(query) {
 // Variable for printing results on the page
 let results = data;
 
-function appendToPage(results) {
 
+function appendToPageSongResults(results) {
+
+    const tbody = document.querySelector("#tbody");
     tbody.innerHTML = "";
     console.log(results)
 

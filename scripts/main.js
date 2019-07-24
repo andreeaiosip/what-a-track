@@ -75,7 +75,7 @@ function appendToPageSongResults(results) {
     console.log(results);
 
     // Print results on the page as a table layout
-    results.track_list.forEach(item => {
+    results.forEach(item => {
         tbody.innerHTML +=
             `<tr>
             <td>${item.track.artist_name}</td>

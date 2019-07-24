@@ -15,14 +15,6 @@ searchButton.addEventListener('click', () => {
     getLyrics(query, selected);
 })
 
-
-// Variable for printing the results as a table on the page 
-const tbody = document.querySelector("#tbody");
-
-// .getLyrics is the link to the option for showing the lyrics for each song from the list with results displayed
-let getLyricsNow = document.querySelectorAll('.getLyricsNow');
-
-
 function getLyrics(query, selected) {
 
     // If artist radio button option is selected
@@ -92,6 +84,8 @@ function appendToPageSongResults(results) {
         </tr>`;
     });
 
+
+    let getLyricsNow = document.querySelectorAll('.getLyricsNow');
     getLyricsNow.forEach(item => item.addEventListener('click', (event) => {
         const trackID = event.currentTarget.dataset.trackid;
         console.log(trackID);
@@ -110,7 +104,7 @@ function appendToPageArtistResults(results) {
             `<tr>
                 <td>${item.artist.artist_name}</td>
                 <td>${item.artist.artist_country}</td>
-                <td class="getLyricsNow" data-trackid="${item.artist.artist_id}">Get Lyrics</td>
+                <td class="getLyricsNow" data-trackid="${item.artist.artist_id}">Find Lyrics</td>
             </tr>`;
     });
 }

@@ -63,6 +63,15 @@
         margin-left: 25px;
     }
     
+    #tbody {
+        color: #fafafa;
+        margin: 0 auto;
+    }
+    
+    td {
+        margin-left: 5px;
+    }
+    
     #form,
     .search-content {
         color: #fafafa;

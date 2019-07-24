@@ -24,6 +24,7 @@ function getLyrics(query, selected) {
             apikey: apiKey,
             q_artist: query,
             f_has_lyrics: true,
+            s_artist_rating: true,
             format: "jsonp",
             callback: "jsonp_callback"
         }
@@ -80,7 +81,8 @@ function appendToPageSongResults(results) {
             `<tr>
             <td>${item.track.artist_name}</td>
             <td>${item.track.track_name}</td>
-            <td class="getLyricsNow" data-trackid="${item.track.track_id}">Get Lyrics</td>
+            <td class="getLyricsNow" data-trackid="${item.track.track_id}"></td>
+            <td><a href="${item.track.track_share_url}" target="_blank">Get Lyrics<a/></td>
         </tr>`;
     });
 

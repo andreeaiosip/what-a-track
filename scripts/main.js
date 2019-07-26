@@ -84,7 +84,7 @@ function appendToPageSongResults(results) {
             <td>${item.track.artist_name}</td>
             <td>${item.track.track_name}</td>
             <td class="getLyricsNow" data-trackid="${item.track.track_id}"></td>
-            <td><a href="${item.track.track_share_url}" target="_blank">Get Lyrics<a/></td>
+            <td><a href="${item.track.track_share_url}" target="_blank">Lyrics<a/></td>
         </tr>`;
     });
 
@@ -108,7 +108,7 @@ function appendToPageArtistResults(results) {
             `<tr>
                 <td>${item.artist.artist_name}</td>
                 <td>${item.artist.artist_country}</td>
-                <td class="getLyricsNow" data-trackid="${item.artist.artist_id}">Find Lyrics</td>
+                <td class="getLyricsNow" data-trackid="${item.artist.artist_id}">Songs</td>
             </tr>`;
     });
 }

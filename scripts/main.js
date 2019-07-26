@@ -26,7 +26,8 @@ function getLyrics(query, selected) {
             f_has_lyrics: true,
             s_artist_rating: true,
             format: "jsonp",
-            callback: "jsonp_callback"
+            callback: "jsonp_callback",
+            page_size: 20 //wil return 20 results
         }
 
         // API method for the artist lookup
@@ -41,7 +42,8 @@ function getLyrics(query, selected) {
             f_has_lyrics: true,
             s_track_rating: true,
             format: "jsonp",
-            callback: "jsonp_callback"
+            callback: "jsonp_callback",
+            page_size: 20 // will return 20 results
         }
 
         // API method for the song lookup

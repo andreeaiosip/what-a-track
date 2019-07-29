@@ -118,7 +118,7 @@ appendToPageArtistResults.value.addEventListener('click', () => {
 
 // Find albums for the artist
 function getAlbums(artistID) {
-    let artistID = appendToPageArtistResults.value;
+    // let artistID = appendToPageArtistResults.value;
 
     urlExt = `artist.albums.get`;
 
@@ -159,13 +159,6 @@ function getAlbums(artistID) {
                     </tr>`;
         });
 
-
-        let getLyricsNow = document.querySelectorAll('.getLyricsNow');
-        getLyricsNow.forEach(item => item.addEventListener('click', (event) => {
-            const trackID = event.currentTarget.dataset.trackid;
-            console.log(trackID);
-            getLyrics(trackID)
-        }))
     }
 
 

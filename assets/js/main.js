@@ -15,6 +15,13 @@ searchButton.addEventListener('click', () => {
     getLyrics(query, selected);
 })
 
+
+$('#query-lyrics').keypress(function(e) {
+    if (e.which == 13) { //Enter key pressed
+        $('#searchButton').click(); //Trigger search button click event
+    }
+});
+
 function getLyrics(query, selected) {
 
     // If artist radio button option is selected

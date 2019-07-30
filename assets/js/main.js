@@ -31,6 +31,8 @@ function getLyrics(query, selected) {
             apikey: apiKey,
             q_artist: query,
             f_has_lyrics: true,
+            page_size: 100,
+            s_artist_rating: "ASC",
             format: "jsonp",
             callback: "jsonp_callback"
         }
@@ -46,6 +48,9 @@ function getLyrics(query, selected) {
             q_track: query,
             f_has_lyrics: true,
             s_track_rating: true,
+            g_commontrack: true,
+            page_size: 100,
+            s_track_rating: "ASC",
             format: "jsonp",
             callback: "jsonp_callback"
         }

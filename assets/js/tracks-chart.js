@@ -40,16 +40,55 @@ function appendToPageChartResults(results) {
     // Print results on the page
     results.forEach(item => {
         container.innerHTML +=
-            `<div>
-            <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-            
-        </div>`
+            `<div class="container-fluid">
+                <div class="card bg-dark text-white col-sm-12 col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                         <div class="card-img-overlay">
+                            <h5 class="card-title">Song title</h5>
+                                <h6>Artist</h6>
+                                     <p class="card-text">Lyrics here</p>
+                         </div> 
+                </div>
+                <div class="card bg-dark text-white col-sm-12 col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                         <div class="card-img-overlay">
+                            <h5 class="card-title">Song title</h5>
+                                <h6>Artist</h6>
+                                     <p class="card-text">Lyrics here</p>
+                         </div> 
+                </div>
+                <div class="card bg-dark text-white col-sm-12 col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                         <div class="card-img-overlay">
+                            <h5 class="card-title">Song title</h5>
+                                <h6>Artist</h6>
+                                     <p class="card-text">Lyrics here</p>
+                         </div> 
+                </div>
+                <div class="card bg-dark text-white col-sm-12 col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                         <div class="card-img-overlay">
+                            <h5 class="card-title">Song title</h5>
+                                <h6>Artist</h6>
+                                     <p class="card-text">Lyrics here</p>
+                         </div> 
+                </div>
+                <div class="card bg-dark text-white col-sm-12 col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                         <div class="card-img-overlay">
+                            <h5 class="card-title">Song title</h5>
+                                <h6>Artist</h6>
+                                     <p class="card-text">Lyrics here</p>
+                         </div> 
+                </div>
+                <div class="card bg-dark text-white col-sm-12 col-md-4">
+                    <img src="..." class="card-img" alt="...">
+                         <div class="card-img-overlay">
+                            <h5 class="card-title">Song title</h5>
+                                <h6>Artist</h6>
+                                     <p class="card-text">Lyrics here</p>
+                         </div> 
+                </div>
+            </div>`
     })
 }

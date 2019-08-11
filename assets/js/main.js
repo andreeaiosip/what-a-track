@@ -72,11 +72,7 @@ function getLyrics(query, selected) {
                 results = results.message.body.artist_list;
                 appendToPageArtistResults(results);
             } else {
-                results = results.message.body {
-                    lyrics_id {
-                        lyrics_body.script_tracking_url.lyrics_copyright
-                    }
-                }
+                results = results.message.body.lyrics_id.lyrics_body.script_tracking_url.lyrics_copyright;
                 appendToPageSongResults(results);
             }
         }
@@ -116,17 +112,17 @@ function appendToPageArtistResults(results) {
 
     // Print results on the page 
     results.forEach(item, index) => {
-        $('.row').append(`<div class="col-sm-12 col-md-6 col-lg-4">
+            $('.row').append(`<div class="col-sm-12 col-md-6 col-lg-4">
         <div class="card my-5"
         <img scr="${artist.cover}" class="card-img-top" alt="artist album cover">
         </div>
         </div>
         container.innerHTML +=
             ` < tr >
-            <
-            td > $ { item.artist.artist_name } < /td> <
-            td > $ { item.artist.artist_country } < /td> <
-            td class = "getLyricsNow"
-            data - trackid = "${item.artist.artist_id}" > Find Lyrics < /td> <
-            /tr>`);
+                    <
+                    td > $ { item.artist.artist_name } < /td> <
+                    td > $ { item.artist.artist_country } < /td> <
+                    td class = "getLyricsNow"
+                    data - trackid = "${item.artist.artist_id}" > Find Lyrics < /td> < /
+                    tr > `);
         })

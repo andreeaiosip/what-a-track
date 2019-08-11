@@ -32,13 +32,13 @@ function getLyrics(query, selected) {
             q_artist: query,
             f_has_lyrics: true,
             page_size: 100,
-            s_artist_rating: "ASC",
+            s_artist_rating: "dsc",
             format: "jsonp",
             callback: "jsonp_callback"
         }
 
         // API method for the artist lookup
-        urlExt = 'artist.search'
+        urlExt = 'artist.get'
 
 
         // If song radio button option is selected
@@ -50,13 +50,13 @@ function getLyrics(query, selected) {
             s_track_rating: true,
             g_commontrack: true,
             page_size: 100,
-            s_track_rating: "ASC",
+            s_track_rating: "dsc",
             format: "jsonp",
             callback: "jsonp_callback"
         }
 
         // API method for the song lookup
-        urlExt = 'track.search'
+        urlExt = 'track.lyrics.get'
     }
 
     $.ajax({
@@ -72,7 +72,11 @@ function getLyrics(query, selected) {
                 results = results.message.body.artist_list;
                 appendToPageArtistResults(results);
             } else {
-                results = results.message.body.track_list;
+                results = results.message.body {
+                    lyrics_id {
+                        lyrics_body.script_tracking_url.lyrics_copyright
+                    }
+                }
                 appendToPageSongResults(results);
             }
         }
@@ -82,13 +86,13 @@ function getLyrics(query, selected) {
 
 function appendToPageSongResults(results) {
 
-    const tbody = document.querySelector("#tbody");
-    tbody.innerHTML = "";
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
     console.log(results);
 
     // Print results on the page as a table layout
     results.forEach(item => {
-        tbody.innerHTML +=
+        container.innerHTML +=
             `<tr>
             <td>${item.track.artist_name}</td>
             <td>${item.track.track_name}</td>
@@ -106,17 +110,23 @@ function appendToPageSongResults(results) {
 }
 
 function appendToPageArtistResults(results) {
-    const tbody = document.querySelector("#tbody");
-    tbody.innerHTML = "";
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
     console.log(results);
 
-    // Print results on the page as a table layout
-    results.forEach(item => {
-        tbody.innerHTML +=
-            `<tr>
-                <td>${item.artist.artist_name}</td>
-                <td>${item.artist.artist_country}</td>
-                <td class="getLyricsNow" data-trackid="${item.artist.artist_id}">Find Lyrics</td>
-            </tr>`;
-    });
-}
+    // Print results on the page 
+    results.forEach(item, index) => {
+        $('.row').append(`<div class="col-sm-12 col-md-6 col-lg-4">
+        <div class="card my-5"
+        <img scr="${artist.cover}" class="card-img-top" alt="artist album cover">
+        </div>
+        </div>
+        container.innerHTML +=
+            ` < tr >
+            <
+            td > $ { item.artist.artist_name } < /td> <
+            td > $ { item.artist.artist_country } < /td> <
+            td class = "getLyricsNow"
+            data - trackid = "${item.artist.artist_id}" > Find Lyrics < /td> <
+            /tr>`);
+        })

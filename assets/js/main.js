@@ -30,7 +30,7 @@ function getLyrics(query, selected) {
         data = {
             apikey: apiKey,
             q_artist: query,
-            f_has_lyrics: true,
+            f_has_lyrics: 1,
             page_size: 100,
             s_artist_rating: "dsc",
             format: "jsonp",
@@ -38,7 +38,7 @@ function getLyrics(query, selected) {
         }
 
         // API method for the artist lookup
-        urlExt = 'artist.get'
+        urlExt = 'artist.related.get'
 
 
         // If song radio button option is selected
@@ -46,9 +46,9 @@ function getLyrics(query, selected) {
         data = {
             apikey: apiKey,
             q_track: query,
-            f_has_lyrics: true,
-            s_track_rating: true,
-            g_commontrack: true,
+            f_has_lyrics: 1,
+            s_track_rating: 1,
+            g_commontrack: 1,
             page_size: 100,
             s_track_rating: "dsc",
             format: "jsonp",
@@ -56,7 +56,7 @@ function getLyrics(query, selected) {
         }
 
         // API method for the song lookup
-        urlExt = 'track.lyrics.get'
+        urlExt = 'track.search'
     }
 
     $.ajax({
@@ -72,7 +72,7 @@ function getLyrics(query, selected) {
                 results = results.message.body.artist_list;
                 appendToPageArtistResults(results);
             } else {
-                results = results.message.body.lyrics_id.lyrics_body.script_tracking_url.lyrics_copyright;
+                results = results.message.body.track_list;
                 appendToPageSongResults(results);
             }
         }
@@ -99,7 +99,7 @@ function appendToPageSongResults(results) {
 
     let getLyricsNow = document.querySelectorAll('.getLyricsNow');
     getLyricsNow.forEach(item => item.addEventListener('click', (event) => {
-        const trackID = event.currentTarget.dataset.trackid;
+        const trackID = event.currentTarget.dataset.track_id;
         console.log(trackID);
         getLyrics(trackID)
     }))

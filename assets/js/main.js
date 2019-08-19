@@ -2,7 +2,7 @@ const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
-// When page loads, print top 6 tracks from Ireland with API method for the CHART lookup
+// When page loads, print top 6 tracks from Ireland
 $(window).bind("load", function() {
 
     function getChartTracks(appendToPageChartResults) {
@@ -25,7 +25,7 @@ $(window).bind("load", function() {
             dataType: "jsonp",
             jsonpCallback: "jsonp_callback",
             contentType: "application/json",
-            success: function() {
+            success: function(results) {
                 let results = results.message.body.track_list;
                 appendToPageChartResults(results);
                 console.log(results);

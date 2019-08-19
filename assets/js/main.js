@@ -141,11 +141,15 @@ function appendToPageSongResults(results) {
     // Print results on the page as a table layout
     results.forEach(item => {
         container.innerHTML +=
-            `<tr>
-            <td>${item.track.artist_name}</td>
-            <td>${item.track.track_name}</td>
-            <td class="getLyricsNow" data-trackid="${item.track.track_id}">Get Lyrics</td>
-        </tr>`;
+            `<div class="container-songs">
+            <div class="card bg-dark text-white col-sm-12 col-md-6 mx-auto">
+           
+
+           <h5>${item.track.track_name}</h5> 
+           <h6>${item.track.artist_name}</h6>
+            <!-- <h6 class="getLyricsNow" data-trackid="${item.track.track_id}">Get Lyrics</h6> -->
+        </div>
+        </div>`;
     });
 
 
@@ -170,11 +174,11 @@ function appendToPageArtistResults(results) {
         </div>
         </div>
         container.innerHTML +=
-            ` < tr >
-                    <
-                    td > $ { item.artist.artist_name } < /td> <
-                    td > $ { item.artist.artist_country } < /td> <
-                    td class = "getLyricsNow"
-                    data - trackid = "${item.artist.artist_id}" > Find Lyrics < /td> < /
-                    tr > `);
-        })
+            `<div class="container-artists">
+                      <div class="card bg-dark text-white col-sm-12 col-md-6 mx-auto">
+              <h5 class="card-title">${item.artist.artist_name}</h5> 
+                                     <h6>${item.artist.artist_country}</h6>
+                               </div> 
+                        </div>`
+    });
+}

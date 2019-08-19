@@ -67,10 +67,10 @@ searchButton.addEventListener('click', () => {
     getLyrics(query, selected);
 })
 
-
+//Enter key pressed, triggers search button click event
 $('#query-lyrics').keypress(function(e) {
-    if (e.which == 13) { //Enter key pressed
-        $('#searchButton').click(); //Trigger search button click event
+    if (e.which == 13) {
+        $('#searchButton').click();
     }
 });
 

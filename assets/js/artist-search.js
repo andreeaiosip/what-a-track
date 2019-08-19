@@ -47,6 +47,7 @@ function appendToPageArtistResults(results) {
 
     //                      </div> 
     //             </div>
+    // </div>
 
     // })
 }

@@ -43,13 +43,14 @@ function appendToPageChartResults(results) {
     //     container.innerHTML +=
     //         <div class="container-fluid">
     //             <div class="card bg-dark text-white col-sm-12 col-md-4">
-    //                 <img src="..." class="card-img" alt="..."> // wil be a general music related image (no album image is sent back in the response).
-    //                      <div class="card-img-overlay">
-    //                         <h5 class="card-title">{track_name}</h5> // track name
-    //                             <h6>{artist_name}</h6> //artist name
+    //                 <!-- <img src="..." class="card-img" alt="..."> // wil be a general music related image (no album image is sent back in the response). 
+    //                      <div class="card-img-overlay"> -->
+    //                         <h5 class="card-title">${item.track.track_name}</h5> // track name
+    //                             <h6>${item.track.artist_name}</h6> //artist name
 
     //                      </div> 
     //             </div>
+    // </div>
 
     // })
 }

@@ -31,8 +31,9 @@ function getLyrics(query, selected) {
             apikey: apiKey,
             q_artist: query,
             f_has_lyrics: 1,
-            page_size: 100,
-            s_artist_rating: "dsc",
+            page: 1, // results only on homepage
+            page_size: 100, // 100 artists returned
+            s_artist_rating: "desc",
             format: "jsonp",
             callback: "jsonp_callback"
         }
@@ -47,10 +48,9 @@ function getLyrics(query, selected) {
             apikey: apiKey,
             q_track: query,
             f_has_lyrics: 1,
-            s_track_rating: 1,
-            g_commontrack: 1,
-            page_size: 100,
-            s_track_rating: "dsc",
+            page: 1, // results only on homepage
+            page_size: 100, // 100 artists returned
+            s_track_rating: "desc",
             format: "jsonp",
             callback: "jsonp_callback"
         }

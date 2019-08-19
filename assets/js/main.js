@@ -14,8 +14,8 @@ $(window).bind("load", function() {
                 apikey: apiKey,
                 page: 1, // results only on homepage
                 page_size: 6, // 6 songs returned
-                chart_name: "top", // top tracks in Ireland
-                country: "ie",
+                chart_name: top, // top tracks in Ireland
+                country: ie,
                 f_has_lyrics: 1,
                 format: "jsonp",
                 callback: "jsonp_callback"

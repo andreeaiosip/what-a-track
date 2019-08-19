@@ -46,9 +46,9 @@ function appendToPageAlbumTracks(results) {
     //             <div class="card bg-dark text-white col-sm-12 col-md-4">
     //                 <img src={tbc} class="card-img" alt="..."> /
     //                      <div class="card-img-overlay">
-    //                          <h5>{track_name}</h5> 
+    //                          <h5>${track_name}</h5> 
     <
-    h5 class = "card-title" > { getSnippet() } < /h5> 
+    h5 class = "card-title" > $ { getSnippet() } < /h5> 
         //                      </div> 
         //             </div>
 

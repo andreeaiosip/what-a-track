@@ -79,6 +79,7 @@ function getSnippet(appendToPageSnippet) {
     })
 }
 
+
 // function appendToPageSnippet(results) {
 
 //     const container = document.querySelector("#container");
@@ -88,8 +89,8 @@ function getSnippet(appendToPageSnippet) {
 // Print results on the page
 // results.forEach(item => {
 //     container.innerHTML +=
-//         <div class="container-fluid">
-//                             <h6>{snippet_body}</h6> 
+//         <div class="container mx-auto col-sm-6">
+//                             <h6>${snippet_body}</h6> 
 //                      </div> 
 //             </div>
 

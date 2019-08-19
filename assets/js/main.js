@@ -25,7 +25,7 @@ $(window).bind("load", function() {
             dataType: "jsonp",
             jsonpCallback: "jsonp_callback",
             contentType: "application/json",
-            success: function(results) {
+            success: function() {
                 let results = results.message.body.track_list;
                 appendToPageChartResults(results);
                 console.log(results);

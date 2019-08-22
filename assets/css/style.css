@@ -9,7 +9,7 @@
         padding: 0;
         min-height: 100vh;
         font-size: 1rem;
-        background-image: url("../images/bg1.jpg");
+        background-image: url("../images/bg1.jpeg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -29,12 +29,13 @@
     }
     
     .slogan>p {
-        text-shadow: 2px 2px 2px hsla(234, 79%, 72%, 0.705);
+        text-shadow: 2px 2px 2px hsla(220.8, 83.3%, 11.8%, 0.71);
     }
     
     .logo {
         text-align: inline-block;
         height: 70px;
+        color: white;
     }
     
     #home {
@@ -51,7 +52,7 @@
         font-family: 'Sarpanch', sans-serif;
         font-size: 1.2rem;
         font-weight: 700;
-        color: rgb(166, 200, 207);
+        color: rgb(237, 243, 244);
     }
     
     .musixmatch-logo {

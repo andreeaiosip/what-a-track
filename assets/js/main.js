@@ -34,14 +34,16 @@ $(window).bind("load", function() {
         container.innerHTML = "";
 
         d.forEach(item => {
-            container.innerHTML += `<div class="container-chart">
-                  <div class="card bg-dark text-white col-sm-12 col-md-4 mx-auto">
-                  <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
-                  <div class="card-img-overlay">
+            container.innerHTML += `
+            <div class="container-chart row">
+                  <div class="card bg-dark text-white col-sm-4 col-md-4 mx-auto">
+                  <img src="images/album-cover.jpeg" class="card-img img-fluid" alt="picture of a vinyl">
+                  <div class="card-img-overlay chart-cards">
                               <h5 class="card-title">${item.track.track_name}</h5>
                                   <h6>${item.track.artist_name}</h6>
                           </div>
                           </div>
+                 
                   </div>`;
         });
     }

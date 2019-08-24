@@ -1,6 +1,7 @@
 const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
+/**
 // When page loads, print CHART top 6 tracks from Ireland
 $(window).bind("load", function() {
 
@@ -35,22 +36,21 @@ $(window).bind("load", function() {
 
         d.forEach(item => {
             container.innerHTML += `
-            <div class="container-chart row">
+            <div class="container-chart">
                   <div class="card bg-dark text-white col-sm-4 col-md-4 mx-auto">
-                  <img src="images/album-cover.jpeg" class="card-img img-fluid" alt="picture of a vinyl">
+                  <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
                   <div class="card-img-overlay chart-cards">
                               <h5 class="card-title">${item.track.track_name}</h5>
                                   <h6>${item.track.artist_name}</h6>
                           </div>
                           </div>
-                 
                   </div>`;
         });
     }
 
     appendToPageChartResults();
 });
-
+*/
 
 // Add event listener to the search button to trigger the search for the value typed in the search box
 searchButton.addEventListener('click', () => {
@@ -139,10 +139,10 @@ function appendToPageSongResults(results) {
     console.log(results);
     results.forEach(item => {
         container.innerHTML +=
-            `<div class="container-songs">
-                 <div class="card bg-dark text-white col-sm-12 col-md-6 mx-auto">
+            `<div class="container-songs mx-auto">
+                 <div class="card card-songs bg-dark text-white mx-auto">
                     <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
-                        <div class="card-img-overlay">
+                        <div class="card-img-overlay mx-auto">
                              <h5>${item.track.track_name}</h5> 
                             <h6>${item.track.artist_name}</h6>
                             <h6 class="getLyricsNow" data-trackid="${item.track.track_id}">Get Lyrics</h6>

@@ -160,9 +160,32 @@
         grid-gap: 10px;
     }
      */
+    
+    .card-img-overlay {
+        position: relative;
+    }
+    
+    .container-songs {
+        height: 200px;
+        width: 200px;
+        margin: 10px;
+    }
+    
+    .card-songs {
+        height: inherit;
+        width: inherit;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 100%;
+    }
+    
+    .card-songs>img {
+        position: absolute;
+    }
     /* 
 ==============================================
-styling for placeholder text in the search box
+Styling for placeholder text in the search box
 ============================================= 
 */
     /* all */

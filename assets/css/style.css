@@ -162,13 +162,15 @@
         position: relative;
     }
     
-    .container-songs {
-        height: 200px;
-        width: 200px;
+    .container-songs,
+    .container-artists {
+        height: 150px;
+        width: 150px;
         margin: 10px;
     }
     
-    .card-songs {
+    .card-songs,
+    .card-artists {
         height: inherit;
         width: inherit;
         text-align: center;

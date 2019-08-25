@@ -11,7 +11,7 @@ $(window).bind("load", function() {
         type: "GET",
         data: {
             apikey: apiKey,
-            //page: 1, // results only on homepage
+            page: 1, // results only on homepage
             page_size: 6, // 6 songs returned
             chart_name: "top", // top tracks in Ireland
             country: "IE",
@@ -31,9 +31,7 @@ $(window).bind("load", function() {
 
     function appendToPageChartResults(d) {
         const container = document.querySelector("#container");
-
         container.innerHTML = "";
-
         d.forEach(item => {
             container.innerHTML += `
             <div class="container-chart">
@@ -140,9 +138,9 @@ function appendToPageSongResults(results) {
     results.forEach(item => {
         container.innerHTML +=
             `<div class="container-songs mx-auto">
-                 <div class="card card-songs bg-dark text-white mx-auto">
+                 <div class="card card-songs text-white mx-auto">
                     <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
-                        <div class="card-img-overlay mx-auto">
+                        <div class="card-img-overlay">
                              <h5>${item.track.track_name}</h5> 
                             <h6>${item.track.artist_name}</h6>
                             <h6 class="getLyricsNow" data-trackid="${item.track.track_id}">Get Lyrics</h6>
@@ -169,11 +167,11 @@ function appendToPageArtistResults(results) {
     console.log(results);
     results.forEach(item => {
         container.innerHTML +=
-            `<div class="container-artists">
-                <div class="card bg-dark text-white col-sm-12 col-md-6 mx-auto">
-                    <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
-                         <div class="card-img-overlay">
-                            <h5 class="card-title">${item.artist.artist_name}</h5> 
+            `<div class="container-artists mx-auto">
+            <div class="card card-songs bg-dark text-white mx-auto">
+            <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
+                <div class="card-img-overlay mx-auto">
+                            <h5>${item.artist.artist_name}</h5> 
                             <h6>${item.artist.artist_country}</h6>
                         </div> 
                  </div> 

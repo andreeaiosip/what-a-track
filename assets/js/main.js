@@ -63,7 +63,7 @@ $(document).ajaxComplete(function() {
 // Add event listener to the search button to trigger the search for the value typed in the search box
 searchButton.addEventListener('click', () => {
     const form = document.querySelector('#form');
-    const query = document.querySelector('#query-lyrics').value;
+    const query = document.querySelector('#query-music').value;
     const radio = document.querySelectorAll('[type="radio"]');
 
     let selected;
@@ -71,17 +71,17 @@ searchButton.addEventListener('click', () => {
         if (item.checked) selected = item.id;
     })
 
-    getLyrics(query, selected);
+    getMusic(query, selected);
 })
 
 // Enter key pressed, triggers search button click event
-$('#query-lyrics').keypress(function(e) {
+$('#query-music').keypress(function(e) {
     if (e.which == 13) {
         $('#searchButton').click();
     }
 });
 
-function getLyrics(query, selected) {
+function getMusic(query, selected) {
 
     // If ARTIST radio button option is selected
     let data;
@@ -109,6 +109,7 @@ function getLyrics(query, selected) {
             f_has_lyrics: 1,
             page: 1, // results only on homepage
             page_size: 100, // 100 artists returned
+            // g_commontrack: 1,
             s_track_rating: "desc",
             format: "jsonp",
             callback: "jsonp_callback"
@@ -151,20 +152,20 @@ function appendToPageSongResults(results) {
                  <div class="card card-songs text-white mx-auto">
                     <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
                         <div class="card-img-overlay">
-                             <h5>${item.track.track_name}</h5> 
-                            <h6>${item.track.artist_name}</h6>
-                            <h6 class="getLyricsNow" data-trackid="${item.track.track_id}">Get Lyrics</h6>
+                             <h6>${item.track.track_name}</h6> 
+                            <h6 class="artist-name">${item.track.artist_name}</h6>
+                            <p class="getLyrics" data-trackid="${item.track.track_id}">Lyrics</p>
                         </div>
                  </div>
             </div>`;
     });
 
 
-    let getLyricsNow = document.querySelectorAll('.getLyricsNow');
-    getLyricsNow.forEach(item => item.addEventListener('click', (event) => {
+    let getLyrics = document.querySelectorAll('.getLyrics');
+    getLyrics.forEach(item => item.addEventListener('click', (event) => {
         const trackID = event.currentTarget.dataset.trackID;
         console.log(trackID);
-        getLyrics(trackID)
+        getMusic(trackID)
     }))
 }
 

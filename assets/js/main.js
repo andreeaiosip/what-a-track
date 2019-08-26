@@ -50,6 +50,16 @@ $(window).bind("load", function() {
 });
 */
 
+// Show loader while searching
+$(document).ajaxStart(function() {
+    // Show image container
+    $("#loader").show();
+});
+$(document).ajaxComplete(function() {
+    // Hide image container
+    $("#loader").hide();
+});
+
 // Add event listener to the search button to trigger the search for the value typed in the search box
 searchButton.addEventListener('click', () => {
     const form = document.querySelector('#form');

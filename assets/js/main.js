@@ -34,17 +34,21 @@ $(window).bind("load", function() {
         container.innerHTML = "";
         d.forEach(item => {
             container.innerHTML += `
-            
-	<div class="row mx-auto">
-		<div class="col-sm-12">
-				<div class="col-sm-2 music-img-container">
-                    <div class="image music-img" alt="picture of a vinyl">
-                    </div>
+            <div class="container-fluid container-chart">
+	<div class="row class="mx-auto">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-2 song-image">
+					<img  src="images/album-cover.jpeg" class="img-fluid" alt="picture of a vinyl" />
                 </div>
 				<div class="col-sm-3 music-container">
 					  <h5 class="song-name">${item.track.track_name}</h5>
 					<h6 class="artist-name">${item.track.artist_name}</h6>
 				</div>
+				<div class="col-md-7 lyrics-container">
+					 <p class="getLyrics" data-trackid="${item.track.track_id}">Lyrics</p>
+                </div>
+              
 			</div>
         </div>
                     

@@ -21,7 +21,9 @@
         flex: 1;
     }
     
-    .row {
+    .row,
+    .container-fluid,
+    .container {
         margin: 0;
         padding: 0;
     }
@@ -83,7 +85,7 @@
     }
     
     .form-group {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
     }
     
@@ -91,6 +93,10 @@
     label.form-check-label {
         color: rgb(166, 200, 207);
         margin: 15px;
+    }
+    
+    .form-control {
+        width: 80%;
     }
     
     .form-check-input {
@@ -147,41 +153,40 @@
         position: relative;
         top: 1px;
     }
-    /* Chart on homepage work in progress tbc
-    .chart-cards {
+    /* Chart on homepage work in progress tbc */
+    
+    .song-name,
+    .getLyrics {
+        color: #fafafa;
+    }
+    
+    .artist-name {
+        color: #B8B8FF;
+    }
+    /* .chart-cards {
         position: relative;
         margin: 10px;
     }
+    
+   
+    */
+    
     .container-chart {
-        display: grid;
-        grid-gap: 10px;
-    }
-     */
-    
-    .card-img-overlay {
-        position: relative;
-    }
-    
-    .container-songs,
-    .container-artists {
-        height: 150px;
-        width: 150px;
         margin: 10px;
     }
     
-    .card-songs,
-    .card-artists {
-        height: inherit;
-        width: inherit;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 100%;
-        background-color: #85858547 !important;
+    .lyrics-container {
+        background-color: #85858548;
     }
-    /* .card-songs>img {
-        position: absolute;
-    } */
+    
+    .song-artist-container {
+        background-color: #85858548;
+        border-right: solid #ffffff3d;
+    }
+    
+    .music-container {
+        border-radius: 0.5px;
+    }
     /* 
 ==============================================
 Styling for placeholder text in the search box
@@ -240,5 +245,8 @@ Styling for placeholder text in the search box
         .fab {
             font-size: 1.4rem;
             padding: 6px;
+        }
+        #container {
+            margin: 30px !important;
         }
     }

@@ -1,7 +1,7 @@
 const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
-/**
+
 // When page loads, print CHART top 6 tracks from Ireland
 $(window).bind("load", function() {
 
@@ -12,7 +12,7 @@ $(window).bind("load", function() {
         data: {
             apikey: apiKey,
             page: 1, // results only on homepage
-            page_size: 6, // 6 songs returned
+            page_size: 10, // 10 songs returned
             chart_name: "top", // top tracks in Ireland
             country: "IE",
             f_has_lyrics: 1,
@@ -34,23 +34,36 @@ $(window).bind("load", function() {
         container.innerHTML = "";
         d.forEach(item => {
             container.innerHTML += `
-            <div class="container-chart">
-                  <div class="card bg-dark text-white col-sm-4 col-md-4 mx-auto">
-                  <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
-                  <div class="card-img-overlay chart-cards">
-                              <h5 class="card-title">${item.track.track_name}</h5>
-                                  <h6>${item.track.artist_name}</h6>
-                          </div>
-                          </div>
-                  </div>`;
+            <div class="container-fluid container-chart">
+	<div class="row class="mx-auto">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-2 song-image">
+					<img  src="images/album-cover.jpeg" class="img-fluid" alt="picture of a vinyl" />
+                </div>
+               
+				<div class="col-md-3 song-artist-container">
+					  <h5 class="song-name">${item.track.track_name}</h5>
+					<h6 class="artist-name">${item.track.artist_name}</h6>
+				</div>
+				<div class="col-md-7 lyrics-container">
+					 <p class="getLyrics" data-trackid="${item.track.track_id}">Lyrics</p>
+                </div>
+              
+			</div>
+		</div>
+	</div>
+                        
+                  `;
         });
     }
 
     appendToPageChartResults();
 });
-*/
 
-// Show loader while searching
+
+// Show loader while searching content
+// Code from https://makitweb.com/display-loading-image-when-ajax-call-is-in-progress/
 $(document).ajaxStart(function() {
     // Show image container
     $("#loader").show();
@@ -150,11 +163,11 @@ function appendToPageSongResults(results) {
         container.innerHTML +=
             `<div class="container-songs mx-auto">
                  <div class="card card-songs text-white mx-auto">
-                    <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
+                    <img src="images/album-cover.jpeg" class=" img-fluid card-img float-left" alt="picture of a vinyl">
                         <div class="card-img-overlay">
                              <h6>${item.track.track_name}</h6> 
                             <h6 class="artist-name">${item.track.artist_name}</h6>
-                            <p class="getLyrics" data-trackid="${item.track.track_id}">Lyrics</p>
+                            <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics</p>
                         </div>
                  </div>
             </div>`;
@@ -182,10 +195,65 @@ function appendToPageArtistResults(results) {
             <div class="card card-songs bg-dark text-white mx-auto">
             <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
                 <div class="card-img-overlay mx-auto">
-                            <h5>${item.artist.artist_name}</h5> 
+                            <h6>${item.artist.artist_name}</h6> 
                             <h6>${item.artist.artist_country}</h6>
                         </div> 
                  </div> 
             </div>`
     });
 }
+
+// API method for the ALBUMS lookup when clicked on ARTIST results
+
+/* function getAlbums(artistId) {
+    urlExt = 'artist.albums.get';
+
+    $.ajax({
+        type: "GET",
+        data: {
+            apikey: apiKey,
+            page: 1, // results only on homepage
+            page_size: 100,
+            artist_id: artistId,
+            g_album_name: "",
+            s_release_date: desc,
+            page_size: 100,
+            page: 1,
+            format: "jsonp",
+            callback: "jsonp_callback"
+
+        },
+        url: apiURL + urlExt,
+        dataType: "jsonp",
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
+        success: function(results) {
+            let results = results.message.body.album_list;
+            appendToPageAlbums(results);
+            console.log(results);
+        }
+    })
+}
+
+function appendToPageAlbums(results) {
+
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
+    console.log(results);
+
+    // Print results on the page
+    results.forEach(item => {
+        container.innerHTML +=
+            <div class="container-fluid">
+                <div class="card bg-dark text-white">
+                    <img src={item.album_coverart_500x500} class="card-img" alt="..."> /
+                         <div class="card-img-overlay">
+                            <h5 class="card-title">{album_name}</h5> 
+                                <h6>{artist_name}</h6> 
+                                <p>{album_release_date}</p> 
+
+                         </div> 
+                </div>
+
+    })
+} **/

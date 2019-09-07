@@ -168,10 +168,18 @@
         margin: 10px;
     }
     
+    .music-container {
         background-color: #85858548;
         border-right: solid #ffffff3d;
+        width: initial !important;
+        margin-right: 0;
     }
     
+    .music-img {
+        min-height: 74px;
+        background-image: url("../images/album-cover.jpeg");
+        background-repeat: no-repeat;
+        background-size: contain;
     }
     /* 
 ==============================================

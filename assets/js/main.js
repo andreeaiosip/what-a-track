@@ -5,32 +5,57 @@ const apiURL = "https://api.musixmatch.com/ws/1.1/";
 // When page loads, print top 6 tracks from Ireland
 $(window).bind("load", function() {
 
-    function getChartTracks(appendToPageChartResults) {
-        urlExt = 'chart.tracks.get';
+    urlExt = "chart.tracks.get";
 
-        $.ajax({
-            type: "GET",
-            data: {
-                apikey: apiKey,
-                page: 1, // results only on homepage
-                page_size: 6, // 6 songs returned
-                chart_name: top, // top tracks in Ireland
-                country: ie,
-                f_has_lyrics: 1,
-                format: "jsonp",
-                callback: "jsonp_callback"
+    $.ajax({
+        type: "GET",
+        data: {
+            apikey: apiKey,
+            page: 1, // results only on homepage
+            page_size: 10, // 10 songs returned
+            chart_name: "top", // top tracks in Ireland
+            country: "IE",
+            f_has_lyrics: 1,
+            format: "jsonp",
+            callback: "jsonp_callback"
+        },
+        url: apiURL + urlExt,
+        dataType: "jsonp",
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
+        success: function(d) {
+            let results = d.message.body.track_list;
+            appendToPageChartResults(results);
+        },
+    });
 
-            },
-            url: apiURL + urlExt,
-            dataType: "jsonp",
-            jsonpCallback: "jsonp_callback",
-            contentType: "application/json",
-            success: function(results) {
-                let results = results.message.body.track_list;
-                appendToPageChartResults(results);
-                console.log(results);
-            }
-        })
+    function appendToPageChartResults(d) {
+        const container = document.querySelector("#container");
+        container.innerHTML = "";
+        d.forEach(item => {
+            container.innerHTML += `
+            <div class="container-fluid container-chart">
+	<div class="row class="mx-auto">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-2 song-image">
+					<img  src="images/watlogo.png" class="img-fluid vinyl-img" alt="picture of a vinyl" />
+                </div>
+               
+				<div class="col-md-3 song-artist-container">
+					  <h5 class="song-name">${item.track.track_name}</h5>
+					<h6 class="artist-name">${item.track.artist_name}</h6>
+				</div>
+				<div class="col-md-7 lyrics-container">
+					 <p class="getLyrics" data-trackid="${item.track.track_id}">Lyrics snippet preview</p>
+                </div>
+              
+			</div>
+		</div>
+	</div>
+                        
+                  `;
+        });
     }
 
 

@@ -94,6 +94,10 @@
         margin: 15px;
     }
     
+    .form-control {
+        width: 90%;
+    }
+    
     .form-check-input {
         position: initial;
         margin-top: 0;
@@ -146,6 +150,35 @@
     .btn-success:active {
         position: relative;
         top: 1px;
+    }
+    /* Chart on homepage */
+    
+    .song-name,
+    .getLyrics {
+        color: #fafafa;
+    }
+    
+    .artist-name {
+        color: #B8B8FF;
+    }
+    
+    .container-chart {
+        margin: 10px;
+    }
+    
+    .lyrics-container {
+        background-color: #85858548;
+        border-radius: 0 10px 10px 0;
+    }
+    
+    .song-artist-container {
+        background-color: #85858548;
+        border-right: solid #ffffff3d;
+    }
+    
+    .vinyl-img {
+        width: 128px;
+        height: 128px;
     }
     /* 
 ==============================================

@@ -163,29 +163,15 @@
     .artist-name {
         color: #B8B8FF;
     }
-    /* .chart-cards {
-        position: relative;
-        margin: 10px;
-    }
-    
-   
-    */
     
     .container-chart {
         margin: 10px;
     }
     
-    .lyrics-container {
-        background-color: #85858548;
-    }
-    
-    .song-artist-container {
         background-color: #85858548;
         border-right: solid #ffffff3d;
     }
     
-    .music-container {
-        border-radius: 0.5px;
     }
     /* 
 ==============================================

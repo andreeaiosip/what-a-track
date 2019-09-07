@@ -41,8 +41,7 @@ $(window).bind("load", function() {
 				<div class="col-md-2 song-image">
 					<img  src="images/album-cover.jpeg" class="img-fluid" alt="picture of a vinyl" />
                 </div>
-               
-				<div class="col-md-3 song-artist-container">
+				<div class="col-sm-3 music-container">
 					  <h5 class="song-name">${item.track.track_name}</h5>
 					<h6 class="artist-name">${item.track.artist_name}</h6>
 				</div>
@@ -51,9 +50,8 @@ $(window).bind("load", function() {
                 </div>
               
 			</div>
-		</div>
-	</div>
-                        
+        </div>
+                    
                   `;
         });
     }

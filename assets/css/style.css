@@ -4,243 +4,259 @@
  General 
  =============================== 
  */
-    
-    body {
-        padding: 0;
-        min-height: 100vh;
-        font-size: 1rem;
-        background-image: url("../images/bg1.jpeg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    main {
-        flex: 1;
-    }
-    
-    .row,
-    .container-fluid,
-    .container {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .slogan>p {
-        text-shadow: 2px 2px 2px hsla(220.8, 83.3%, 11.8%, 0.71);
-    }
-    
-    .logo {
-        text-align: inline-block;
-        height: 70px;
-        color: white;
-    }
-    
-    #home {
-        text-align: center;
-        margin-bottom: 45px;
-    }
-    
-    .search-content {
-        display: inline-block;
-    }
-    
-    .slogan {
-        text-align: center;
-        font-family: 'Sarpanch', sans-serif;
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: rgb(237, 243, 244);
-    }
-    
-    .musixmatch-logo {
-        height: 32px;
-        max-width: 50%;
-        margin-bottom: 10px;
-    }
-    
-    #artist {
-        margin-left: 25px;
-    }
-    
-    #tbody {
-        color: #fafafa;
-        margin: 0 auto;
-    }
-    
-    td {
-        margin-left: 5px;
-    }
-    
-    #form,
-    .search-content {
-        color: #fafafa;
-    }
-    
-    .search-content {
-        margin: 20px;
-        padding: 20px;
-    }
-    
-    .form-group {
-        width: 80%;
-        margin: 0 auto;
-    }
-    
-    .form-control,
-    label.form-check-label {
-        color: rgb(166, 200, 207);
-        margin: 15px;
-    }
-    
-    .form-control {
-        width: 90%;
-    }
-    
-    .form-check-input {
-        position: initial;
-        margin-top: 0;
-        margin-left: 0;
-    }
-    
-    .form-control {
-        display: inline-block;
-        -webkit-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
-        -moz-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
-        box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
-    }
-    
-    .btn-success {
-        -moz-box-shadow: 0px 0px 0px 2px #7485b8;
-        -webkit-box-shadow: 0px 0px 0px 2px #7485b8;
-        box-shadow: 0px 0px 0px 2px #7485b8;
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1b2c45), color-stop(1, #8d51b0));
-        background: -moz-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
-        background: -webkit-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
-        background: -o-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
-        background: -ms-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
-        background: linear-gradient(to bottom, #1b2c45 5%, #8d51b0 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1b2c45', endColorstr='#8d51b0', GradientType=0);
-        background-color: #1b2c45;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        border-radius: 10px;
-        border: 1px solid #bdb9bd;
-        display: inline-block;
-        cursor: pointer;
-        color: #e6e6e6;
-        font-family: Arial;
-        font-size: 1 rem;
-        padding: 8px 26px;
-        text-decoration: none;
-        text-shadow: 0px 1px 0px #283966;
-    }
-    
-    .btn-success:hover {
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #8d51b0), color-stop(1, #1b2c45));
-        background: -moz-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
-        background: -webkit-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
-        background: -o-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
-        background: -ms-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
-        background: linear-gradient(to bottom, #8d51b0 5%, #1b2c45 100%);
-        filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#8d51b0', endColorstr='#1b2c45', GradientType=0);
-        background-color: #8d51b0;
-    }
-    
-    .btn-success:active {
-        position: relative;
-        top: 1px;
-    }
-    /* Chart on homepage layout */
-    
-    .song-name,
-    .getLyrics {
-        color: #fafafa;
-    }
-    
-    .artist-name {
-        color: #B8B8FF;
-    }
-    
-    .container-chart {
-        margin: 10px;
-    }
-    
-    .music-container {
-        background-color: #85858548;
-        border-right: solid #ffffff3d;
-        width: initial !important;
-        margin-right: 0;
-    }
-    
-    .music-img {
-        min-height: 74px;
-        background-image: url("../images/album-cover.jpeg");
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-    /* 
+
+body {
+    padding: 0;
+    min-height: 100vh;
+    font-size: 1rem;
+    background-image: url("../images/bg1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.row,
+.container-fluid,
+.container {
+    margin: 0;
+    padding: 0;
+}
+
+.slogan>p {
+    text-shadow: 2px 2px 2px hsla(220.8, 83.3%, 11.8%, 0.71);
+}
+
+.logo {
+    text-align: inline-block;
+    height: 70px;
+    color: white;
+}
+
+#home {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.search-content {
+    display: inline-block;
+}
+
+.slogan {
+    text-align: center;
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgb(237, 243, 244);
+}
+
+.musixmatch-logo {
+    height: 32px;
+    max-width: 50%;
+    margin-bottom: 10px;
+}
+
+#artist {
+    margin-left: 25px;
+}
+
+#tbody {
+    color: #fafafa;
+    margin: 0 auto;
+}
+
+td {
+    margin-left: 5px;
+}
+
+#form,
+.search-content {
+    color: #fafafa;
+}
+
+.search-content {
+    margin: 20px;
+    padding: 20px;
+}
+
+.form-group {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.form-control,
+label.form-check-label {
+    color: rgb(166, 200, 207);
+    margin: 15px;
+}
+
+.form-control {
+    width: 90%;
+}
+
+.form-check-input {
+    position: initial;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.form-control {
+    display: inline-block;
+    -webkit-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
+    -moz-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
+    box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
+}
+
+.btn-success {
+    -moz-box-shadow: 0px 0px 0px 2px #7485b8;
+    -webkit-box-shadow: 0px 0px 0px 2px #7485b8;
+    box-shadow: 0px 0px 0px 2px #7485b8;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #1b2c45), color-stop(1, #8d51b0));
+    background: -moz-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
+    background: -webkit-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
+    background: -o-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
+    background: -ms-linear-gradient(top, #1b2c45 5%, #8d51b0 100%);
+    background: linear-gradient(to bottom, #1b2c45 5%, #8d51b0 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#1b2c45', endColorstr='#8d51b0', GradientType=0);
+    background-color: #1b2c45;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #bdb9bd;
+    display: inline-block;
+    cursor: pointer;
+    color: #e6e6e6;
+    font-family: Arial;
+    font-size: 1 rem;
+    padding: 8px 26px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #283966;
+}
+
+.btn-success:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #8d51b0), color-stop(1, #1b2c45));
+    background: -moz-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
+    background: -webkit-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
+    background: -o-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
+    background: -ms-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
+    background: linear-gradient(to bottom, #8d51b0 5%, #1b2c45 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#8d51b0', endColorstr='#1b2c45', GradientType=0);
+    background-color: #8d51b0;
+}
+
+.btn-success:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* Chart on homepage layout */
+
+.song-name,
+.getLyrics {
+    color: #fafafa;
+}
+
+.artist-name {
+    color: #B8B8FF;
+}
+
+.container-chart {
+    margin: 10px;
+}
+
+.music-container {
+    margin-bottom: 5px;
+    background-color: #85858548;
+    border-right: solid #ffffff3d;
+}
+
+.music-img {
+    min-height: 74px;
+    background-image: url("../images/album-cover.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.music-wrapper {
+    display: flex;
+}
+
+
+/* 
 ==============================================
 Styling for placeholder text in the search box
 ============================================= 
 */
-    /* all */
-    
-     ::-webkit-input-placeholder {
-        color: rgb(166, 200, 207) !important;
+
+
+/* all */
+
+ ::-webkit-input-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* Chrome/Opera/Safari */
+
+ ::-webkit-input-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* Chrome/Opera/Safari */
+
+ ::-moz-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* firefox 19+ */
+
+ ::-ms-input-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* ie */
+
+ ::-moz-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+.fab {
+    margin: 10px;
+    font-size: 1.3rem;
+    color: #fafafa;
+}
+
+footer {
+    margin-bottom: 10px;
+    margin-top: 70px;
+    font-size: 1rem;
+    color: #fafafa !important;
+    text-align: center;
+}
+
+
+/* Landscape phones and portrait tablets */
+
+@media screen and (min-width: 767px) {
+    .slogan {
+        margin: 20px;
+        margin-top: 10px;
+        font-size: 1.6rem;
     }
-    /* Chrome/Opera/Safari */
-    
-     ::-webkit-input-placeholder {
-        color: rgb(166, 200, 207) !important;
+    a {
+        font-size: 1.4rem;
     }
-    /* Chrome/Opera/Safari */
-    
-     ::-moz-placeholder {
-        color: rgb(166, 200, 207) !important;
-    }
-    /* firefox 19+ */
-    
-     ::-ms-input-placeholder {
-        color: rgb(166, 200, 207) !important;
-    }
-    /* ie */
-    
-     ::-moz-placeholder {
-        color: rgb(166, 200, 207) !important;
-    }
-    
     .fab {
-        margin: 10px;
-        font-size: 1.3rem;
-        color: #fafafa;
+        font-size: 1.4rem;
+        padding: 6px;
     }
-    
-    footer {
-        margin-bottom: 10px;
-        margin-top: 70px;
-        font-size: 1rem;
-        color: #fafafa !important;
-        text-align: center;
-    }
-    /* Landscape phones and portrait tablets */
-    
-    @media screen and (min-width: 767px) {
-        .slogan {
-            margin: 20px;
-            margin-top: 10px;
-            font-size: 1.6rem;
-        }
-        a {
-            font-size: 1.4rem;
-        }
-        .fab {
-            font-size: 1.4rem;
-            padding: 6px;
-        }
-        #container {
-            margin: 30px !important;
-        }
-    }
+}

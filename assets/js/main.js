@@ -45,10 +45,6 @@ $(window).bind("load", function() {
 					  <h5 class="song-name">${item.track.track_name}</h5>
 					<h6 class="artist-name">${item.track.artist_name}</h6>
 				</div>
-				<div class="col-md-7 lyrics-container">
-					 <p class="getLyrics" data-trackid="${item.track.track_id}">Lyrics</p>
-                </div>
-              
 			</div>
         </div>
                     

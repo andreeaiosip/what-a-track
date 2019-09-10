@@ -34,18 +34,18 @@ $(window).bind("load", function() {
         container.innerHTML = "";
         d.forEach(item => {
             container.innerHTML += `
-            <div class="container-fluid container-chart">
-	<div class="row class="mx-auto">
-		<div class="col-md-12">
-			<div class="row">
+           
+            <div class="container mx-auto"> 
+                <div class="row mx-auto music-container">
+                    <div class="col-2 music-img-container">
+                        <img class="music-img">
+                    </div>
+                <div class="col-10 ml-auto">
+                    <h5 class="song-name">${item.track.track_name}</h5>
+                   <h6 class="artist-name">${item.track.artist_name}</h6>
                 </div>
-				<div class="col-sm-3 music-container">
-					  <h5 class="song-name">${item.track.track_name}</h5>
-					<h6 class="artist-name">${item.track.artist_name}</h6>
-				</div>
-			</div>
-        </div>
-                    
+                </div>
+             </div>         
                   `;
         });
     }

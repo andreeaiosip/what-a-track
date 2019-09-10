@@ -177,14 +177,44 @@ label.form-check-label {
 }
 
 .music-img {
-    min-height: 74px;
-    background-image: url("../images/album-cover.jpeg");
+    background-image: url("../images/album-cover4.jpeg");
+    width: 74px;
+    height: 73px;
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.music-wrapper {
-    display: flex;
+.music-container {
+    margin-bottom: 8px;
+    background-color: #85858548;
+    max-width: 90%;
+    border-radius: 0 10px 10px 0px;
+    align-items: center;
+}
+
+.music-img-container {
+    padding-left: 0;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.container-songs,
+.container-artists {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+
+.card-songs,
+.card-artists {
+    height: inherit;
+    width: inherit;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+    background-color: #85858547 !important;
 }
 
 

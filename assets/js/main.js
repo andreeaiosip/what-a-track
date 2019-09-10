@@ -38,8 +38,6 @@ $(window).bind("load", function() {
 	<div class="row class="mx-auto">
 		<div class="col-md-12">
 			<div class="row">
-				<div class="col-md-2 song-image">
-					<img  src="images/album-cover.jpeg" class="img-fluid" alt="picture of a vinyl" />
                 </div>
 				<div class="col-sm-3 music-container">
 					  <h5 class="song-name">${item.track.track_name}</h5>
@@ -157,12 +155,12 @@ function appendToPageSongResults(results) {
         container.innerHTML +=
             `<div class="container-songs mx-auto">
                  <div class="card card-songs text-white mx-auto">
-                    <img src="images/album-cover.jpeg" class=" img-fluid card-img float-left" alt="picture of a vinyl">
                         <div class="card-img-overlay">
                              <h6>${item.track.track_name}</h6> 
                             <h6 class="artist-name">${item.track.artist_name}</h6>
                             <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics</p>
                         </div>
+                    <div class="song-img"  alt="picture of a vinyl">
                  </div>
             </div>`;
     });

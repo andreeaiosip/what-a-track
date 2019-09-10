@@ -1,5 +1,6 @@
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans|Sarpanch:700&display=swap');
-    /*
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Sarpanch:700&display=swap');
+
+/*
  =============================== 
  General 
  =============================== 
@@ -44,7 +45,15 @@ main {
 }
 
 .search-content {
+    padding: 20px;
     display: inline-block;
+}
+
+.top-tracks {
+    margin: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .slogan {
@@ -65,23 +74,10 @@ main {
     margin-left: 25px;
 }
 
-#tbody {
-    color: #fafafa;
-    margin: 0 auto;
-}
-
-td {
-    margin-left: 5px;
-}
-
 #form,
-.search-content {
+.search-content,
+.top-tracks {
     color: #fafafa;
-}
-
-.search-content {
-    margin: 20px;
-    padding: 20px;
 }
 
 .form-group {
@@ -157,23 +153,29 @@ label.form-check-label {
 
 /* Chart on homepage layout */
 
-.song-name,
-.getLyrics {
+.song-name {
     color: #fafafa;
+    margin-left: 25px;
+}
+
+.artist-name-song {
+    color: #B8B8FF;
 }
 
 .artist-name {
     color: #B8B8FF;
+    margin-left: 25px;
 }
 
-.container-chart {
-    margin: 10px;
-}
-
-.music-container {
-    margin-bottom: 5px;
-    background-color: #85858548;
-    border-right: solid #ffffff3d;
+.song-img {
+    background: url("../images/album-cover4.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    margin: 10px 0 0 10px;
+    position: relative;
+    float: left;
 }
 
 .music-img {
@@ -288,5 +290,14 @@ footer {
     .fab {
         font-size: 1.4rem;
         padding: 6px;
+    }
+    .music-container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .music-container {
+        width: 50%;
     }
 }

@@ -3,6 +3,7 @@ const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
 // This code prevents automatic search when the button is pressed without any query typed in the search box
+// Code source https://stackoverflow.com/questions/7067005/disable-button-whenever-a-text-field-is-empty-dynamically
 function success() {
     var i = document.getElementById("query-music");
     if (i.value == "") {
@@ -162,16 +163,17 @@ function appendToPageSongResults(results) {
     console.log(results);
     results.forEach(item => {
         container.innerHTML +=
-            `<div class="container-songs mx-auto">
-                 <div class="card card-songs text-white mx-auto">
-                        <div class="card-img-overlay">
-                             <h6>${item.track.track_name}</h6> 
-                            <h6 class="artist-name">${item.track.artist_name}</h6>
-                            <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics</p>
-                        </div>
+            `<div class="img-song-container row">
+                 <div class=" col-3">
                     <div class="song-img"  alt="picture of a vinyl">
+                       
+                             <h6 class="centered">${item.track.track_name}</h6> 
+                            <h6 class="centered artist-name-song">${item.track.artist_name}</h6>
+                            <p class=" centered getLyrics" data-trackID="${item.track.track_id}">Lyrics</p>
+                        
                  </div>
-            </div>`;
+                 </div>
+                 </div>`;
     });
 
 
@@ -194,7 +196,7 @@ function appendToPageArtistResults(results) {
         container.innerHTML +=
             `<div class="container-artists mx-auto">
             <div class="card card-songs bg-dark text-white mx-auto">
-            <img src="images/album-cover.jpeg" class="card-img" alt="picture of a vinyl">
+            <img class="artist-img card-img" alt="picture of a vinyl">
                 <div class="card-img-overlay mx-auto">
                             <h6>${item.artist.artist_name}</h6> 
                             <h6>${item.artist.artist_country}</h6>

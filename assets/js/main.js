@@ -2,6 +2,15 @@ const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
+// This code prevents automatic search when the button is pressed without any query typed in the search box
+function success() {
+    var i = document.getElementById("query-music");
+    if (i.value == "") {
+        document.getElementById("searchButton").disabled = true;
+    } else
+        document.getElementById("searchButton").disabled = false;
+}
+
 // When page loads, print CHART top 6 tracks from Ireland
 $(window).bind("load", function() {
 

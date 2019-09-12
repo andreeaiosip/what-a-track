@@ -31,9 +31,9 @@
                 <input type="radio" id="artist" name="option">By Artist</input>
             </div>
             <div class="form-group">
-                <input id="query-music" type="text" name="lyrics" value="" class="form-control options-search" placeholder="Search for the lyrics you love...">
-                <input id="searchButton" type="button" value="Search" class="btn btn-success">
-                <div id="loader" style="display: none;">
+                <input id="query-music" type="text" name="lyrics" value="" onkeyup="success()" class="form-control options-search" placeholder="Search for the lyrics you love...">
+                <input id="searchButton" type="button" value="Search" class="btn btn-success" disabled>
+                <div id="loader">
                     <img src="assets/images/loader.svg" alt="loading...">
                 </div>
                 <!-- Image loader -->

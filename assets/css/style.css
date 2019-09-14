@@ -177,20 +177,15 @@ label.form-check-label {
 }
 
 .song-img {
-    background: url("../images/album-cover4.jpeg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 200px;
-    height: 200px;
-    margin: 10px 0 0 10px;
-    position: relative;
-    float: left;
+    width: 98px;
+    height: 98px;
 }
 
 .music-img {
     background-image: url("../images/album-cover4.jpeg");
-    width: 74px;
-    height: 73px;
+    width: 83px;
+    height: 83px;
+    float: left;
     background-repeat: no-repeat;
     background-size: contain;
 }

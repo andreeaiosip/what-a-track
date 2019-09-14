@@ -224,6 +224,7 @@ label.form-check-label {
 }
 
 .getLyrics,
+.getAlbums {
     margin-bottom: 5px;
     color: #dce6e6;
 }

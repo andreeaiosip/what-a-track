@@ -198,15 +198,19 @@ function appendToPageArtistResults(results) {
     console.log(results);
     results.forEach(item => {
         container.innerHTML +=
-            `<div class="container-artists mx-auto">
-            <div class="card card-songs bg-dark text-white mx-auto">
-            <img class="artist-img card-img" alt="picture of a vinyl">
-                <div class="card-img-overlay mx-auto">
-                            <h6>${item.artist.artist_name}</h6> 
-                            <h6>${item.artist.artist_country}</h6>
-                        </div> 
-                 </div> 
-            </div>`
+            `
+            <div class="container mx-auto"> 
+            <div class="row mx-auto music-container">
+                <div class="col-2 music-img-container">
+                    <img class="music-img">
+                </div>
+            <div class="col-9 offset-1">
+                <p class="artist-title">${item.artist.artist_name}</p>
+               <p class="country">${item.artist.artist_country}</p>  
+               <p class="getAlbums" data-artistId="${item.artist.album_list}">Find Albums</p>
+            </div>
+            </div>
+         </div> `
     });
 }
 

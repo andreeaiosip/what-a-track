@@ -153,18 +153,27 @@ label.form-check-label {
 
 /* Chart on homepage layout */
 
-.song-name {
+.song-name,
+.artist-title {
     color: #fafafa;
-    margin-left: 25px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
 }
 
 .artist-name-song {
     color: #B8B8FF;
 }
 
-.artist-name {
-    color: #B8B8FF;
-    margin-left: 25px;
+.artist-name,
+.country {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #e7a7f1;
+    margin-bottom: 5px;
 }
 
 .song-img {

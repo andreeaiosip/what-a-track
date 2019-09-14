@@ -50,9 +50,10 @@ $(window).bind("load", function() {
                     <div class="col-2 music-img-container">
                         <img class="music-img">
                     </div>
-                <div class="col-10 ml-auto">
-                    <h5 class="song-name">${item.track.track_name}</h5>
-                   <h6 class="artist-name">${item.track.artist_name}</h6>
+                <div class="col-9 offset-1">
+                    <p class="song-name">${item.track.track_name}</p>
+                   <p class="artist-name">${item.track.artist_name}</p>
+                   <p class="getLyrics" data-trackID="${item.track.track_id}">Find Lyrics</p>
                 </div>
                 </div>
              </div>         

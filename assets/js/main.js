@@ -164,17 +164,20 @@ function appendToPageSongResults(results) {
     console.log(results);
     results.forEach(item => {
         container.innerHTML +=
-            `<div class="img-song-container row">
-                 <div class=" col-3">
-                    <div class="song-img"  alt="picture of a vinyl">
-                       
-                             <h6 class="centered">${item.track.track_name}</h6> 
-                            <h6 class="centered artist-name-song">${item.track.artist_name}</h6>
-                            <p class=" centered getLyrics" data-trackID="${item.track.track_id}">Lyrics</p>
-                        
-                 </div>
-                 </div>
-                 </div>`;
+            `
+            <div class="container mx-auto"> 
+            <div class="row mx-auto music-container">
+                <div class="col-2 music-img-container">
+                    <img class="music-img song-img">
+                </div>
+            <div class="col-9 offset-1">
+                <p class="song-name">${item.track.track_name}</p>
+               <p class="artist-name">${item.track.artist_name}</p>  
+               <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics</p>
+            </div>
+            </div>
+         </div> 
+        `;
     });
 
 

@@ -259,9 +259,9 @@ function appendToPageAlbums(results) {
                 <div class="card bg-dark text-white">
                     <img src={item.album_coverart_500x500} class="card-img" alt="..."> /
                          <div class="card-img-overlay">
-                            <h5 class="card-title">{album_name}</h5> 
-                                <h6>{artist_name}</h6> 
-                                <p>{album_release_date}</p> 
+                            <p class="card-title">{item.artist.album_name}</p> 
+                                <p>{item.artist_name}</p> 
+                                <p>{item.artist.album_name.album_release_date}</p> 
 
                          </div> 
                 </div>

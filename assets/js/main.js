@@ -214,6 +214,48 @@ function appendToPageArtistResults(results) {
     });
 }
 
+// Search for lyrics when clicked on a song
+function getLyricsSong(trackId, appendToPageLyricsSong) {
+    urlExt = 'track.lyrics.get';
+
+    $.ajax({
+        type: "GET",
+        data: {
+            apikey: apiKey,
+            track_id: trackId,
+            format: "jsonp",
+            callback: "jsonp_callback"
+
+        },
+        url: apiURL + urlExt,
+        dataType: "jsonp",
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
+        success: function(results) {
+            let results = results.message.body.lyrics;
+            appendToPageLyricsSong(results);
+            console.log(results);
+        }
+    })
+}
+
+// Print lyrics results on the page
+function appendToPageLyricsSong(results) {
+
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
+    console.log(results);
+
+
+    results.forEach(item => {
+        container.innerHTML +=
+            `<div class="lyrics-container">
+            <h6>${item.lyrics.lyrics_body}</h6>  
+            </div>`
+    })
+}
+
+
 // API method for the ALBUMS lookup when clicked on ARTIST results
 
 /* function getAlbums(artistId) {

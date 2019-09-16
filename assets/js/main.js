@@ -12,7 +12,7 @@ function success() {
         document.getElementById("searchButton").disabled = false;
 }
 
-// When page loads, print CHART top 6 tracks from Ireland
+// When page loads, print CHART top 10 tracks from Ireland
 $(window).bind("load", function() {
 
     urlExt = "chart.tracks.get";
@@ -39,24 +39,28 @@ $(window).bind("load", function() {
         },
     });
 
+    // Top 10 tracks in Ireland are printed on the page
     function appendToPageChartResults(d) {
         const container = document.querySelector("#container");
         container.innerHTML = "";
         d.forEach(item => {
             container.innerHTML += `
-            <div class="container mx-auto"> 
-                <div class="row mx-auto music-container">
-                    <div class="col-2 music-img-container">
-                        <img class="music-img">
-                    </div>
+            <div class="container mx-auto">
+            <div class="row mx-auto music-container">
+                <div class="col-2 music-img-container">
+                    <img class="music-img">
+                </div>
                 <div class="col-9 offset-1">
                     <p class="song-name">${item.track.track_name}</p>
-                   <p class="artist-name">${item.track.artist_name}</p>
-                   <div><p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics <img src="assets/images/expand.png"class="expand-arrow"> </p>
-                   </div>
-                </div> 
+                    <p class="artist-name">${item.track.artist_name}</p>
+                    <div>
+                        <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
+                            <img src="assets/images/expand.png" class="expand-arrow">
+                        </p>
+                    </div>
                 </div>
-             </div>         
+            </div>
+        </div>         
                   `;
         });
     }
@@ -125,7 +129,6 @@ function getMusic(query, selected) {
             f_has_lyrics: 1,
             page: 1, // results only on homepage
             page_size: 100, // 100 artists returned
-            // g_commontrack: 1,
             s_track_rating: "desc",
             format: "jsonp",
             callback: "jsonp_callback"
@@ -164,19 +167,20 @@ function appendToPageSongResults(results) {
     console.log(results);
     results.forEach(item => {
         container.innerHTML +=
-            `
-            <div class="container mx-auto"> 
+            `<div class="container mx-auto">
             <div class="row mx-auto music-container">
                 <div class="col-2 music-img-container">
                     <img class="music-img song-img">
                 </div>
-            <div class="col-9 offset-1">
-                <p class="song-name">${item.track.track_name}</p>
-               <p class="artist-name">${item.track.artist_name}</p>  
-               <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics <img src="assets/images/expand.png"class="expand-arrow"></p>
+                <div class="col-9 offset-1">
+                    <p class="song-name">${item.track.track_name}</p>
+                    <p class="artist-name">${item.track.artist_name}</p>
+                    <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
+                        <img src="assets/images/expand.png" class="expand-arrow">
+                    </p>
+                </div>
             </div>
-            </div>
-         </div> 
+        </div>
         `;
     });
 
@@ -198,19 +202,20 @@ function appendToPageArtistResults(results) {
     console.log(results);
     results.forEach(item => {
         container.innerHTML +=
-            `
-            <div class="container mx-auto"> 
+            `<div class="container mx-auto">
             <div class="row mx-auto music-container">
                 <div class="col-2 music-img-container">
                     <img class="music-img">
                 </div>
-            <div class="col-9 offset-1">
-                <p class="artist-title">${item.artist.artist_name}</p>
-               <p class="country">${item.artist.artist_country}</p>  
-               <p class="getAlbums" data-artistId="${item.artist.album_list}">Show Albums<img src="assets/images/expand.png"class="expand-arrow"></p>
+                <div class="col-9 offset-1">
+                    <p class="artist-title">${item.artist.artist_name}</p>
+                    <p class="country">${item.artist.artist_country}</p>
+                    <p class="getAlbums" data-artistId="${item.artist.album_list}">Show Albums
+                        <img src="assets/images/expand.png" class="expand-arrow">
+                    </p>
+                </div>
             </div>
-            </div>
-         </div> `
+        </div> `
     });
 }
 
@@ -258,7 +263,7 @@ function appendToPageLyricsSong(results) {
 
 // API method for the ALBUMS lookup when clicked on ARTIST results
 
-/* function getAlbums(artistId) {
+function getAlbums(artistId) {
     urlExt = 'artist.albums.get';
 
     $.ajax({
@@ -294,19 +299,19 @@ function appendToPageAlbums(results) {
     container.innerHTML = "";
     console.log(results);
 
-    // Print results on the page
+    // Print albums results on the page
     results.forEach(item => {
         container.innerHTML +=
-            <div class="container-fluid">
-                <div class="card bg-dark text-white">
-                    <img src={item.album_coverart_500x500} class="card-img" alt="..."> /
-                         <div class="card-img-overlay">
-                            <p class="card-title">{item.artist.album_name}</p> 
-                                <p>{item.artist_name}</p> 
-                                <p>{item.artist.album_name.album_release_date}</p> 
-
-                         </div> 
+            `<div class="container-fluid">
+            <div class="card bg-dark text-white">
+                <img src=${item.album_coverart_500x500} class="card-img" alt="music album cover">/
+                <div class="card-img-overlay">
+                    <p class="card-title">${item.artist.album_name}</p>
+                    <p>${item.artist_name}</p>
+                    <p>${item.artist.album_name.album_release_date}</p>
                 </div>
+            </div>
+        </div>`
 
     })
 } **/

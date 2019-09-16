@@ -193,8 +193,7 @@ label.form-check-label {
 }
 
 .expand-arrow {
-    background-image: url("../images/expand.png");
-    width: 40px;
+    width: 15px;
     height: 15px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -316,6 +315,5 @@ footer {
     }
     .offset-1 {
         margin-left: 0 !important;
-        padding-left: 0 !important;
     }
 }

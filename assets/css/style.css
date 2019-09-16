@@ -191,6 +191,14 @@ label.form-check-label {
     background-size: contain;
 }
 
+.expand-arrow {
+    background-image: url("../images/expand.png");
+    width: 40px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 .music-container {
     margin-bottom: 8px;
     background-color: #85858548;

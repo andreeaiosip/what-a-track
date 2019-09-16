@@ -44,7 +44,6 @@ $(window).bind("load", function() {
         container.innerHTML = "";
         d.forEach(item => {
             container.innerHTML += `
-           
             <div class="container mx-auto"> 
                 <div class="row mx-auto music-container">
                     <div class="col-2 music-img-container">
@@ -53,8 +52,9 @@ $(window).bind("load", function() {
                 <div class="col-9 offset-1">
                     <p class="song-name">${item.track.track_name}</p>
                    <p class="artist-name">${item.track.artist_name}</p>
-                   <p class="getLyrics" data-trackID="${item.track.track_id}">Find Lyrics</p>
-                </div>
+                   <div><p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics <img class="expand-arrow"></p>
+                   </div>
+                </div> 
                 </div>
              </div>         
                   `;
@@ -173,7 +173,7 @@ function appendToPageSongResults(results) {
             <div class="col-9 offset-1">
                 <p class="song-name">${item.track.track_name}</p>
                <p class="artist-name">${item.track.artist_name}</p>  
-               <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics</p>
+               <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics <img class="expand-arrow"></p>
             </div>
             </div>
          </div> 
@@ -207,7 +207,7 @@ function appendToPageArtistResults(results) {
             <div class="col-9 offset-1">
                 <p class="artist-title">${item.artist.artist_name}</p>
                <p class="country">${item.artist.artist_country}</p>  
-               <p class="getAlbums" data-artistId="${item.artist.album_list}">Find Albums</p>
+               <p class="getAlbums" data-artistId="${item.artist.album_list}">Show Albums <img class="expand-arrow"></p>
             </div>
             </div>
          </div> `

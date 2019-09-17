@@ -55,7 +55,7 @@ $(window).bind("load", function() {
                     <p class="artist-name">${item.track.artist_name}</p>
                     <div>
                         <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
-                            <img src="assets/images/expand.png" class="expand-arrow">
+                            <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics()">
                         </p>
                     </div>
                 </div>
@@ -219,99 +219,99 @@ function appendToPageArtistResults(results) {
     });
 }
 
+/*
 // Search for lyrics when clicked on a song
-// function getLyricsSong(trackId, appendToPageLyricsSong) {
-//     urlExt = 'track.lyrics.get';
+function getLyrics(trackId, appendToPageLyrics) {
+    urlExt = 'track.lyrics.get';
 
-//     $.ajax({
-//         type: "GET",
-//         data: {
-//             apikey: apiKey,
-//             track_id: trackId,
-//             format: "jsonp",
-//             callback: "jsonp_callback"
+    $.ajax({
+        type: "GET",
+        data: {
+            apikey: apiKey,
+            track_id: trackId,
+            format: "jsonp",
+            callback: "jsonp_callback"
 
-//         },
-//         url: apiURL + urlExt,
-//         dataType: "jsonp",
-//         jsonpCallback: "jsonp_callback",
-//         contentType: "application/json",
-//         success: function(results) {
-//             let results = results.message.body.lyrics;
-//             appendToPageLyricsSong(results);
-//             console.log(results);
-//         }
-//     })
-// }
+        },
+        url: apiURL + urlExt,
+        dataType: "jsonp",
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
+        success: function(results) {
+            let results = results.message.body.lyrics;
+            appendToPageLyrics(results);
+            console.log(results);
+        }
+    })
+}
 
-// // Print lyrics results on the page
-// function appendToPageLyricsSong(results) {
+// Print lyrics results on the page
+function appendToPageLyrics(results) {
 
-//     const container = document.querySelector("#container");
-//     container.innerHTML = "";
-//     console.log(results);
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
+    console.log(results);
+    results.forEach(item => {
+        container.innerHTML +=
+            `<div class="lyrics-container">
+            <h6>${item.lyrics.lyrics_body}</h6>  
+            </div>`
+    })
+}
 
+/*
+// API method for the ALBUMS lookup when clicked on ARTIST results
 
-//     results.forEach(item => {
-//         container.innerHTML +=
-//             `<div class="lyrics-container">
-//             <h6>${item.lyrics.lyrics_body}</h6>  
-//             </div>`
-//     })
-// }
+function getAlbums(artistId) {
+    urlExt = 'artist.albums.get';
 
+    $.ajax({
+        type: "GET",
+        data: {
+            apikey: apiKey,
+            page: 1, // results only on homepage
+            page_size: 100,
+            artist_id: artistId,
+            g_album_name: "",
+            s_release_date: desc,
+            page_size: 100,
+            page: 1,
+            format: "jsonp",
+            callback: "jsonp_callback"
 
-// // API method for the ALBUMS lookup when clicked on ARTIST results
+        },
+        url: apiURL + urlExt,
+        dataType: "jsonp",
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
+        success: function(results) {
+            let results = results.message.body.album_list;
+            appendToPageAlbums(results);
+            console.log(results);
+        }
+    })
+}
 
-// function getAlbums(artistId) {
-//     urlExt = 'artist.albums.get';
+function appendToPageAlbums(results) {
 
-//     $.ajax({
-//         type: "GET",
-//         data: {
-//             apikey: apiKey,
-//             page: 1, // results only on homepage
-//             page_size: 100,
-//             artist_id: artistId,
-//             g_album_name: "",
-//             s_release_date: desc,
-//             page_size: 100,
-//             page: 1,
-//             format: "jsonp",
-//             callback: "jsonp_callback"
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
+    console.log(results);
 
-//         },
-//         url: apiURL + urlExt,
-//         dataType: "jsonp",
-//         jsonpCallback: "jsonp_callback",
-//         contentType: "application/json",
-//         success: function(results) {
-//             let results = results.message.body.album_list;
-//             appendToPageAlbums(results);
-//             console.log(results);
-//         }
-//     })
-// }
+    // Print albums results on the page
+    results.forEach(item => {
+        container.innerHTML +=
+            `<div class="container-fluid">
+            <div class="card bg-dark text-white">
+                <img src=${item.album_coverart_500x500} class="card-img" alt="music album cover">/
+                <div class="card-img-overlay">
+                    <p class="card-title">${item.artist.album_name}</p>
+                    <p>${item.artist_name}</p>
+                    <p>${item.artist.album_name.album_release_date}</p>
+                </div>
+            </div>
+        </div>`
 
-// function appendToPageAlbums(results) {
-
-//     const container = document.querySelector("#container");
-//     container.innerHTML = "";
-//     console.log(results);
-
-//     // Print albums results on the page
-//     results.forEach(item => {
-//         container.innerHTML +=
-//             `<div class="container-fluid">
-//             <div class="card bg-dark text-white">
-//                 <img src=${item.album_coverart_500x500} class="card-img" alt="music album cover">/
-//                 <div class="card-img-overlay">
-//                     <p class="card-title">${item.artist.album_name}</p>
-//                     <p>${item.artist_name}</p>
-//                     <p>${item.artist.album_name.album_release_date}</p>
-//                 </div>
-//             </div>
-//         </div>`
-
-//     })
-// }
+    })
+}
+*/

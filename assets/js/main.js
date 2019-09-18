@@ -238,20 +238,21 @@ function getLyrics(trackId, appendToPageLyrics) {
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
         success: function(results) {
-            let results = results.message.body.lyrics;
-            appendToPageLyrics(results);
-            console.log(results);
+            let data = results.message.body.lyrics;
+            appendToPageLyrics(data);
+            console.log(data);
+
         }
     })
 }
 
 // Print lyrics results on the page
-function appendToPageLyrics(results) {
+function appendToPageLyrics(data) {
 
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(results);
-    results.forEach(item => {
+    console.log(data);
+    data.forEach(item => {
         container.innerHTML +=
             `<div class="lyrics-container">
             <h6>${item.lyrics.lyrics_body}</h6>  
@@ -285,9 +286,9 @@ function getAlbums(artistId) {
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
         success: function(results) {
-            let results = results.message.body.album_list;
+            let data = results.message.body.album_list;
             appendToPageAlbums(results);
-            console.log(results);
+            console.log(data);
         }
     })
 }

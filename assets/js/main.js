@@ -211,7 +211,7 @@ function appendToPageArtistResults(results) {
                     <p class="artist-title">${item.artist.artist_name}</p>
                     <p class="country">${item.artist.artist_country}</p>
                     <p class="getAlbums" data-artistId="${item.artist.album_list}">Show Albums
-                        <img src="assets/images/expand.png" class="expand-arrow">
+                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getAlbums(appendToPageAlbums)">
                     </p>
                 </div>
             </div>

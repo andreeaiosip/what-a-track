@@ -189,7 +189,7 @@ function appendToPageSongResults(results) {
     getLyrics.forEach(item => item.addEventListener('click', (event) => {
         const trackID = event.currentTarget.dataset.trackID;
         console.log(trackID);
-        getMusic(trackID)
+        getMusic(trackID);
     }))
 }
 
@@ -219,7 +219,7 @@ function appendToPageArtistResults(results) {
     });
 }
 
-/*
+
 // Search for lyrics when clicked on a song
 function getLyrics(trackId, appendToPageLyrics) {
     urlExt = 'track.lyrics.get';
@@ -274,7 +274,7 @@ function getAlbums(artistId) {
             page_size: 100,
             artist_id: artistId,
             g_album_name: "",
-            s_release_date: desc,
+            s_release_date: "desc",
             page_size: 100,
             page: 1,
             format: "jsonp",

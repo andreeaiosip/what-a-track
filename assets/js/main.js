@@ -55,7 +55,7 @@ $(window).bind("load", function() {
                     <p class="artist-name">${item.track.artist_name}</p>
                     <div>
                         <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
-                            <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics()">
+                            <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(appendToPageLyrics)">
                         </p>
                     </div>
                 </div>
@@ -176,7 +176,7 @@ function appendToPageSongResults(results) {
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
                     <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
-                        <img src="assets/images/expand.png" class="expand-arrow">
+                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(appendToPageLyrics)">
                     </p>
                 </div>
             </div>

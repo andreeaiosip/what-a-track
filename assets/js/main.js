@@ -260,7 +260,7 @@ function appendToPageLyrics(data) {
     })
 }
 
-/*
+
 // API method for the ALBUMS lookup when clicked on ARTIST results
 
 function getAlbums(artistId) {
@@ -315,4 +315,3 @@ function appendToPageAlbums(results) {
 
     })
 }
-*/

@@ -55,7 +55,7 @@ $(window).bind("load", function() {
                     <p class="artist-name">${item.track.artist_name}</p>
                     <div>
                         <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
-                            <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(appendToPageLyrics)">
+                            <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(${item.track.track_id})">
                         </p>
                     </div>
                 </div>
@@ -176,7 +176,7 @@ function appendToPageSongResults(results) {
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
                     <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
-                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(appendToPageLyrics)">
+                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(${item.track.track_id})">
                     </p>
                 </div>
             </div>
@@ -221,7 +221,7 @@ function appendToPageArtistResults(results) {
 
 
 // Search for lyrics when clicked on a song
-function getLyrics(trackId, appendToPageLyrics) {
+function getLyrics(trackId) {
     urlExt = 'track.lyrics.get';
 
     $.ajax({
@@ -252,12 +252,11 @@ function appendToPageLyrics(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
     console.log(data);
-    data.forEach(item => {
-        container.innerHTML +=
-            `<div class="lyrics-container">
-            <h6>${item.lyrics.lyrics_body}</h6>  
+    container.innerHTML +=
+        `<div class="lyrics-container">
+            <h6 class="lyrics-text">${data.lyrics_body}</h6>  
             </div>`
-    })
+
 }
 
 

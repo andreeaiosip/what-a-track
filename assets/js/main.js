@@ -309,10 +309,40 @@ function appendToPageAlbums(data) {
         <div class="col-9 offset-1">
             <p class="album-name">${item.album.album_name}</p>
             <p class="getLyrics">Tracks
-            <img src="assets/images/expand.png" class="expand-arrow" onclick="getMusic(${item.album.album_id})">
+            <img src="assets/images/expand.png" class="expand-arrow" onclick="getAlbumTracks(${item.album.album_id})">
         </p>
         </div>
     </div>
 </div>`
     })
+}
+
+
+// API method for the ALBUM TRACKS lookup
+
+function getAlbumTracks(albumId) {
+    urlExt = 'album.tracks.get';
+
+    $.ajax({
+        type: "GET",
+        data: {
+            apikey: apiKey,
+            page: 1, // results only on homepage
+            page_size: 50,
+            album_id: albumId,
+            format: "jsonp",
+            callback: "jsonp_callback"
+
+        },
+        url: apiURL + urlExt,
+        dataType: "jsonp",
+        jsonpCallback: "jsonp_callback",
+        contentType: "application/json",
+        success: function(results) {
+            let data = results.message.body.track_list;
+            appendToPageAlbums(data);
+            console.log(data);
+        }
+    })
+}
 }

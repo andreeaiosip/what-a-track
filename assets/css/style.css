@@ -245,11 +245,11 @@ label.form-check-label {
 
 .lyrics-text {
     color: #fafafa;
-    padding-right: 20px;
-    padding-left: 25px;
-    background: #00000063;
+    padding: 25px;
+    background: #00000070;
     white-space: pre-line;
     text-align: center;
+    width: 80vw;
 }
 
 
@@ -329,5 +329,8 @@ footer {
     }
     .offset-1 {
         margin-left: 0 !important;
+    }
+    .lyrics-text {
+        width: 50vw;
     }
 }

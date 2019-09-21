@@ -253,8 +253,9 @@ function appendToPageLyrics(data) {
     container.innerHTML = "";
     console.log(data);
     container.innerHTML +=
-        `<div class="lyrics-container">
-            <p class="lyrics-text">${data.lyrics_body}</p>  
+        `<div class="lyrics-container mx-auto">
+        
+            <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
             </div>`
 
 }

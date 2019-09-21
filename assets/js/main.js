@@ -286,7 +286,7 @@ function getAlbums(artistId) {
         contentType: "application/json",
         success: function(results) {
             let data = results.message.body.album_list;
-            appendToPageAlbums(results);
+            appendToPageAlbums(data);
             console.log(data);
         }
     })

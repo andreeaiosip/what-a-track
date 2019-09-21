@@ -210,7 +210,7 @@ function appendToPageArtistResults(results) {
                 <div class="col-9 offset-1">
                     <p class="artist-title">${item.artist.artist_name}</p>
                     <p class="country">${item.artist.artist_country}</p>
-                    <p class="getAlbums" data-artistId="${item.artist.album_list}">Show Albums
+                    <p class="getAlbums" data-artistId="${item.artist.album_list}">Albums
                         <img src="assets/images/expand.png" class="expand-arrow" onclick="getAlbums(${item.artist.artist_id})">
                     </p>
                 </div>
@@ -301,20 +301,18 @@ function appendToPageAlbums(data) {
     // Print albums results on the page
     data.forEach(item => {
         container.innerHTML +=
-            `
-
-        <div class="container mx-auto">
-            <div class="row mx-auto music-container">
-                <div class="col-2 music-img-container">
-                    <img class="music-img">
-                </div>
-                <div class="col-9 offset-1">
-                    <p class="artist-title">${item.album.artist_name}</p>
-                    <p class="country">${item.album.album_name}</p>
-                </div>
-            </div>
+            `<div class="container mx-auto">
+    <div class="row mx-auto music-container">
+        <div class="col-2 music-img-container">
+            <img class="music-img">
         </div>
-        `
-
+        <div class="col-9 offset-1">
+            <p class="album-name">${item.album.album_name}</p>
+            <p class="getLyrics">Tracks
+            <img src="assets/images/expand.png" class="expand-arrow" onclick="getMusic(${item.album.album_id})">
+        </p>
+        </div>
+    </div>
+</div>`
     })
 }

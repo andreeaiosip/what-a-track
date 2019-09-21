@@ -152,13 +152,18 @@ label.form-check-label {
 }
 
 .song-name,
-.artist-title {
+.artist-title,
+.album-name {
     color: #fafafa;
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-bottom: 5px;
+}
+
+.album-name {
+    white-space: normal;
 }
 
 .artist-name-song {

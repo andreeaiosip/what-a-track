@@ -240,6 +240,9 @@ label.form-check-label {
 
 .lyrics-text {
     color: #fafafa;
+    padding-right: 20px;
+    padding-left: 25px;
+    background: #00000063;
 }
 
 

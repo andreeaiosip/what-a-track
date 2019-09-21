@@ -211,7 +211,7 @@ function appendToPageArtistResults(results) {
                     <p class="artist-title">${item.artist.artist_name}</p>
                     <p class="country">${item.artist.artist_country}</p>
                     <p class="getAlbums" data-artistId="${item.artist.album_list}">Show Albums
-                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getAlbums(appendToPageAlbums)">
+                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getAlbums(${item.artist.artist_id})">
                     </p>
                 </div>
             </div>
@@ -292,25 +292,29 @@ function getAlbums(artistId) {
     })
 }
 
-function appendToPageAlbums(results) {
+function appendToPageAlbums(data) {
 
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(results);
+    console.log(data);
 
     // Print albums results on the page
-    results.forEach(item => {
+    data.forEach(item => {
         container.innerHTML +=
-            `<div class="container-fluid">
-            <div class="card bg-dark text-white">
-                <img src=${item.album_coverart_500x500} class="card-img" alt="music album cover">/
-                <div class="card-img-overlay">
-                    <p class="card-title">${item.artist.album_name}</p>
-                    <p>${item.artist_name}</p>
-                    <p>${item.artist.album_name.album_release_date}</p>
+            `
+
+        <div class="container mx-auto">
+            <div class="row mx-auto music-container">
+                <div class="col-2 music-img-container">
+                    <img class="music-img">
+                </div>
+                <div class="col-9 offset-1">
+                    <p class="artist-title">${item.album.artist_name}</p>
+                    <p class="country">${item.album.album_name}</p>
                 </div>
             </div>
-        </div>`
+        </div>
+        `
 
     })
 }

@@ -345,4 +345,27 @@ function getAlbumTracks(albumId) {
         }
     })
 }
+
+function appendToPageAlbumTracks(data) {
+
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
+    console.log(data);
+
+    // Print albums results on the page
+
+    container.innerHTML +=
+        `<div class="container mx-auto">
+                                <div class="row mx-auto music-container">
+                                    <div class="col-2 music-img-container">
+                                        <img class="music-img">
+                                    </div>
+                                    <div class="col-9 offset-1">
+                                        <p class="artist-title">${item.track.track_name}</p>
+                                        <p class="getAlbums">Lyrics
+                                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(${item.track.track_id}">
+                                    </p>
+                                    </div>
+                                </div>
+                            </div>`
 }

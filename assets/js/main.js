@@ -54,7 +54,7 @@ $(window).bind("load", function() {
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
                     <div>
-                        <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
+                        <p class="getLyrics">Lyrics
                             <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(${item.track.track_id})">
                         </p>
                     </div>

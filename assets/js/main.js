@@ -54,8 +54,8 @@ $(window).bind("load", function() {
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
                     <div>
-                        <p class="getLyrics">Lyrics
-                            <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(${item.track.track_id})">
+                        <p class="getLyrics pointer" onclick="getLyrics(${item.track.track_id})">Lyrics
+                            <img src="assets/images/expand.png" class="expand-arrow" >
                         </p>
                     </div>
                 </div>
@@ -126,7 +126,7 @@ function getMusic(query, selected) {
         data = {
             apikey: apiKey,
             q_track: query,
-            f_has_lyrics: 1,
+            f_has_lyrics: true,
             page: 1, // results only on homepage
             page_size: 100, // 100 artists returned
             s_track_rating: "desc",
@@ -175,8 +175,8 @@ function appendToPageSongResults(results) {
                 <div class="col-9 offset-1">
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
-                    <p class="getLyrics" data-trackID="${item.track.track_id}">Lyrics
-                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(${item.track.track_id})">
+                    <p class="getLyrics pointer"  onclick="getLyrics(${item.track.track_id})" data-trackID="${item.track.track_id}">Lyrics
+                        <img src="assets/images/expand.png" class="expand-arrow ">
                     </p>
                 </div>
             </div>
@@ -210,8 +210,8 @@ function appendToPageArtistResults(results) {
                 <div class="col-9 offset-1">
                     <p class="artist-title">${item.artist.artist_name}</p>
                     <p class="country">${item.artist.artist_country}</p>
-                    <p class="getAlbums" data-artistId="${item.artist.album_list}">Albums
-                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getAlbums(${item.artist.artist_id})">
+                    <p class="getAlbums pointer" onclick="getAlbums(${item.artist.artist_id})" data-artistId="${item.artist.album_list}">Albums
+                        <img src="assets/images/expand.png" class="expand-arrow">
                     </p>
                 </div>
             </div>
@@ -309,8 +309,8 @@ function appendToPageAlbums(data) {
         </div>
         <div class="col-9 offset-1">
             <p class="album-name">${item.album.album_name}</p>
-            <p class="getLyrics">Tracks
-            <img src="assets/images/expand.png" class="expand-arrow" onclick="getAlbumTracks(${item.album.album_id})">
+            <p class="getLyrics pointer" onclick="getAlbumTracks(${item.album.album_id})">Tracks
+            <img src="assets/images/expand.png" class="expand-arrow">
         </p>
         </div>
     </div>
@@ -363,8 +363,8 @@ function appendToPageAlbumTracks(data) {
                                     </div>
                                     <div class="col-9 offset-1">
                                         <p class="artist-title">${item.track.track_name}</p>
-                                        <p class="getAlbums">Lyrics
-                                        <img src="assets/images/expand.png" class="expand-arrow" onclick="getLyrics(${item.track.track_id}">
+                                        <p class="getAlbums pointer" onclick="getLyrics(${item.track.track_id}">Lyrics
+                                        <img src="assets/images/expand.png" class="expand-arrow">
                                     </p>
                                     </div>
                                 </div>

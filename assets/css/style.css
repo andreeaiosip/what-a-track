@@ -153,6 +153,7 @@ label.form-check-label {
     padding-bottom: 10px;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
+    display: none;
 }
 
 .song-name,
@@ -310,6 +311,10 @@ footer {
     font-size: 1rem;
     color: #fafafa !important;
     text-align: center;
+}
+
+#lyricsModal {
+    display: block;
 }
 
 

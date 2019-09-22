@@ -25,7 +25,7 @@ $(window).bind("load", function() {
             page_size: 10, // 10 songs returned
             chart_name: "top", // top tracks in Ireland
             country: "IE",
-            f_has_lyrics: 1,
+            f_has_lyrics: true,
             format: "jsonp",
             callback: "jsonp_callback"
         },
@@ -175,7 +175,7 @@ function appendToPageSongResults(results) {
                 <div class="col-9 offset-1">
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
-                    <p class="getLyrics pointer"  onclick="getLyrics(${item.track.track_id})" data-trackID="${item.track.track_id}">Lyrics
+                    <p class="getLyrics pointer" data-toggle="modal" href="#" data-target="#lyricsModal" onclick="getLyrics(${item.track.track_id})" data-trackID="${item.track.track_id}">Lyrics
                         <img src="assets/images/expand.png" class="expand-arrow ">
                     </p>
                 </div>
@@ -249,10 +249,10 @@ function getLyrics(trackId) {
 // Print lyrics results on the page
 function appendToPageLyrics(data) {
 
-    const container = document.querySelector("#container");
-    container.innerHTML = "";
+    const container = document.querySelector("#modalBody");
+    modalBody.innerHTML = "";
     console.log(data);
-    container.innerHTML +=
+    modalBody.innerHTML +=
         `<div class="lyrics-container mx-auto">
         
             <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  

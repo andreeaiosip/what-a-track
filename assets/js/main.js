@@ -249,10 +249,10 @@ function getLyrics(trackId) {
 // Print lyrics results on the page
 function appendToPageLyrics(data) {
 
-    const container = document.querySelector("#modalBody");
-    modalBody.innerHTML = "";
+    const container = document.querySelector("#container");
+    container.innerHTML = "";
     console.log(data);
-    modalBody.innerHTML +=
+    container.innerHTML +=
         `<div class="lyrics-container mx-auto">
         
             <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
@@ -369,4 +369,5 @@ function appendToPageAlbumTracks(data) {
                                     </div>
                                 </div>
                             </div>`
+    })
 }

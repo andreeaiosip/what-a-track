@@ -363,7 +363,7 @@ function appendToPageAlbumTracks(data) {
                                     </div>
                                     <div class="col-9 offset-1">
                                         <p class="artist-title">${item.track.track_name}</p>
-                                        <p class="getAlbums pointer" data-trackId="${item.track.track_id}" onclick="getLyrics(${item.track.track_id}">Lyrics
+                                        <p class="getAlbums pointer" data-trackId="${item.track.track_id}" onclick="getLyrics(${item.track.track_id})">Lyrics
                                         <img src="assets/images/expand.png" class="expand-arrow">
                                     </p>
                                     </div>

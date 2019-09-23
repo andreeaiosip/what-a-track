@@ -25,7 +25,7 @@ $(window).bind("load", function() {
             page_size: 10, // 10 songs returned
             chart_name: "top", // top tracks in Ireland
             country: "IE",
-            f_has_lyrics: true,
+            f_has_lyrics: 1,
             format: "jsonp",
             callback: "jsonp_callback"
         },
@@ -175,7 +175,7 @@ function appendToPageSongResults(results) {
                 <div class="col-9 offset-1">
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
-                    <p class="getLyrics pointer" data-toggle="modal" href="#" data-target="#lyricsModal" onclick="getLyrics(${item.track.track_id})" data-trackID="${item.track.track_id}">Lyrics
+                    <p class="getLyrics pointer"  onclick="getLyrics(${item.track.track_id})" data-trackID="${item.track.track_id}">Lyrics
                         <img src="assets/images/expand.png" class="expand-arrow ">
                     </p>
                 </div>
@@ -309,7 +309,7 @@ function appendToPageAlbums(data) {
         </div>
         <div class="col-9 offset-1">
             <p class="album-name">${item.album.album_name}</p>
-            <p class="getLyrics pointer" onclick="getAlbumTracks(${item.album.album_id})">Tracks
+            <p class="getLyrics pointer" onclick="getAlbumTracks(${item.album.album_id})"  data-artistId="${item.album.album_id}}">Tracks
             <img src="assets/images/expand.png" class="expand-arrow">
         </p>
         </div>
@@ -341,7 +341,7 @@ function getAlbumTracks(albumId) {
         contentType: "application/json",
         success: function(results) {
             let data = results.message.body.track_list;
-            appendToPageAlbums(data);
+            appendToPageAlbumTracks(data);
             console.log(data);
         }
     })
@@ -353,17 +353,17 @@ function appendToPageAlbumTracks(data) {
     container.innerHTML = "";
     console.log(data);
 
-    // Print albums results on the page
-
-    container.innerHTML +=
-        `<div class="container mx-auto">
+    // Display album tracks results on the page
+    data.forEach(item => {
+        container.innerHTML +=
+            `<div class="container mx-auto">
                                 <div class="row mx-auto music-container">
                                     <div class="col-2 music-img-container">
                                         <img class="music-img">
                                     </div>
                                     <div class="col-9 offset-1">
                                         <p class="artist-title">${item.track.track_name}</p>
-                                        <p class="getAlbums pointer" onclick="getLyrics(${item.track.track_id}">Lyrics
+                                        <p class="getAlbums pointer" data-trackId="${item.track.track_id}" onclick="getLyrics(${item.track.track_id}">Lyrics
                                         <img src="assets/images/expand.png" class="expand-arrow">
                                     </p>
                                     </div>

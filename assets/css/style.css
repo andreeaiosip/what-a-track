@@ -255,6 +255,8 @@ label.form-check-label {
     white-space: pre-line;
     text-align: center;
     width: 80vw;
+    box-shadow: 0 0 7px 12px #0a070782;
+    border-radius: 8px;
 }
 
 

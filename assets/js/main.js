@@ -185,7 +185,7 @@ function appendToPageSongResults(results) {
     });
     if (results.length === 0) {
         container.innerHTML += `
-        <div class="error"><p>Sorry, no song found with this name.</p></div>
+        <div class="error"><p>Sorry, no song found with this title.</p></div>
         `;
     }
 
@@ -265,8 +265,7 @@ function appendToPageLyrics(data) {
     console.log(data);
     container.innerHTML +=
         `<div class="lyrics-container mx-auto">
-            <p class="lyrics-text mx-auto">${data.lyrics_body}
-            <span>${data.lyrics_copyright}</span></p>  
+            <p class="lyrics-text mx-auto">${data.lyrics_body} ${data.lyrics_copyright}}</p>  
            </div>`
     if (data.length === 0) {
         container.innerHTML += `
@@ -288,7 +287,7 @@ function getAlbums(artistId) {
             page: 1, // results only on homepage
             page_size: 100,
             artist_id: artistId,
-            g_album_name: "",
+            g_album_name: 1,
             s_release_date: "desc",
             page_size: 100,
             page: 1,

@@ -265,8 +265,9 @@ function appendToPageLyrics(data) {
     console.log(data);
     container.innerHTML +=
         `<div class="lyrics-container mx-auto">
-            <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
-            </div>`
+            <p class="lyrics-text mx-auto">${data.lyrics_body}
+            <span>${data.lyrics_copyright}</span></p>  
+           </div>`
     if (data.length === 0) {
         container.innerHTML += `
                 <div class="error mx-auto"><p>Sorry, no lyrics available.</p></div>

@@ -147,12 +147,12 @@ function getMusic(query, selected) {
         contentType: "application/json",
         success: function(results) {
 
-            if (selected == 'artist') {
-                results = results.message.body.artist_list;
-                appendToPageArtistResults(results);
+            if (selected == "artist") {
+                resultsArtist = results.message.body.artist_list;
+                appendToPageArtistResults(resultsArtist);
             } else {
-                results = results.message.body.track_list;
-                appendToPageSongResults(results);
+                resultsTrack = results.message.body.track_list;
+                appendToPageSongResults(resultsTrack);
             }
         }
     })
@@ -160,12 +160,12 @@ function getMusic(query, selected) {
 }
 
 // Print results for the SONG results
-function appendToPageSongResults(results) {
+function appendToPageSongResults(resultsTrack) {
 
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(results);
-    results.forEach(item => {
+    console.log(resultsTrack);
+    resultsTrack.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
             <div class="row mx-auto music-container">
@@ -183,7 +183,7 @@ function appendToPageSongResults(results) {
         </div>
         `;
     });
-    if (results.length === 0) {
+    if (resultsTrack.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no song found with this title.</p></div>
         `;
@@ -202,11 +202,11 @@ function appendToPageSongResults(results) {
 
 // Print results for the ARTIST search
 
-function appendToPageArtistResults(results) {
+function appendToPageArtistResults(resultsArtist) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(results);
-    results.forEach(item => {
+    console.log(resultsArtist);
+    resultsArtist.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
             <div class="row mx-auto music-container">
@@ -223,7 +223,7 @@ function appendToPageArtistResults(results) {
             </div>
         </div> `
     });
-    if (results.length === 0) {
+    if (resultsArtist.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no artist found with this name.</p></div>
         `;

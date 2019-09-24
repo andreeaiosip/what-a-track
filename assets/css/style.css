@@ -175,6 +175,11 @@ label.form-check-label {
     color: #B8B8FF;
 }
 
+.error {
+    color: #fafafa;
+    text-align: center;
+}
+
 #artist {
     margin-left: 25px;
 }
@@ -231,7 +236,8 @@ label.form-check-label {
     margin: 10px;
 }
 
-.card-songs,
+
+/* .card-songs,
 .card-artists {
     height: inherit;
     width: inherit;
@@ -240,7 +246,7 @@ label.form-check-label {
     overflow: hidden;
     padding-bottom: 100%;
     background-color: #85858547 !important;
-}
+} */
 
 .getLyrics,
 .getAlbums {
@@ -313,10 +319,6 @@ footer {
     font-size: 1rem;
     color: #fafafa !important;
     text-align: center;
-}
-
-#lyricsModal {
-    display: block;
 }
 
 

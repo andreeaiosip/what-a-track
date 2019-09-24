@@ -183,6 +183,12 @@ function appendToPageSongResults(results) {
         </div>
         `;
     });
+    if (results.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no song found with this name.</p></div>
+        `;
+    }
+
 
 
     let getLyrics = document.querySelectorAll('.getLyrics');
@@ -217,6 +223,11 @@ function appendToPageArtistResults(results) {
             </div>
         </div> `
     });
+    if (results.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no artist found with this name.</p></div>
+        `;
+    }
 }
 
 
@@ -254,10 +265,13 @@ function appendToPageLyrics(data) {
     console.log(data);
     container.innerHTML +=
         `<div class="lyrics-container mx-auto">
-        
             <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
             </div>`
-
+    if (data.length === 0) {
+        container.innerHTML += `
+                <div class="error mx-auto"><p>Sorry, no lyrics available.</p></div>
+                `;
+    }
 }
 
 
@@ -316,6 +330,11 @@ function appendToPageAlbums(data) {
     </div>
 </div>`
     })
+    if (data.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no albums available.</p></div>
+        `;
+    }
 }
 
 
@@ -370,4 +389,9 @@ function appendToPageAlbumTracks(data) {
                                 </div>
                             </div>`
     })
+    if (data.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no tracks available.</p></div>
+        `;
+    }
 }

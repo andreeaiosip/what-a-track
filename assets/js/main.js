@@ -2,6 +2,7 @@ const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
+
 // This code prevents automatic search when the button is pressed without any query typed in the search box
 // Code source https://stackoverflow.com/questions/7067005/disable-button-whenever-a-text-field-is-empty-dynamically
 function success() {
@@ -33,17 +34,18 @@ $(window).bind("load", function() {
         dataType: "jsonp",
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
-        success: function(d) {
-            let results = d.message.body.track_list;
-            appendToPageChartResults(results);
+        success: function(results) {
+            let resultsChart = results.message.body.track_list;
+            appendToPageChartResults(resultsChart);
         },
     });
 
     // Top 10 tracks in Ireland are printed on the page
-    function appendToPageChartResults(d) {
+    function appendToPageChartResults(resultsChart) {
         const container = document.querySelector("#container");
         container.innerHTML = "";
-        d.forEach(item => {
+        console.log(resultsChart);
+        resultsChart.forEach(item => {
             container.innerHTML += `
             <div class="container mx-auto">
             <div class="row mx-auto music-container">
@@ -54,7 +56,7 @@ $(window).bind("load", function() {
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
                     <div>
-                        <p class="getLyrics pointer" onclick="getLyrics(${item.track.track_id})">Lyrics
+                        <p class="getLyrics pointer" data-trackID="${item.track.track_id}" onclick="getLyrics(${item.track.track_id})">Lyrics
                             <img src="assets/images/expand.png" class="expand-arrow" >
                         </p>
                     </div>
@@ -63,9 +65,10 @@ $(window).bind("load", function() {
         </div>         
                   `;
         });
+
     }
 
-    appendToPageChartResults();
+
 });
 
 
@@ -118,11 +121,11 @@ function getMusic(query, selected) {
         }
 
         // API method for the artist lookup
-        urlExt = 'artist.search'
+        urlExt = "artist.search";
 
 
         // If song radio button option is selected
-    } else if (selected == 'song') {
+    } else if (selected == "song") {
         data = {
             apikey: apiKey,
             q_track: query,
@@ -135,7 +138,7 @@ function getMusic(query, selected) {
         }
 
         // API method for the song lookup
-        urlExt = 'track.search'
+        urlExt = "track.search";
     }
 
     $.ajax({
@@ -191,7 +194,7 @@ function appendToPageSongResults(resultsTrack) {
 
 
 
-    let getLyrics = document.querySelectorAll('.getLyrics');
+    let getLyrics = document.querySelectorAll(".getLyrics");
     getLyrics.forEach(item => item.addEventListener('click', (event) => {
         const trackID = event.currentTarget.dataset.trackID;
         console.log(trackID);
@@ -233,7 +236,7 @@ function appendToPageArtistResults(resultsArtist) {
 
 // Search for lyrics when clicked on a song
 function getLyrics(trackId) {
-    urlExt = 'track.lyrics.get';
+    urlExt = "track.lyrics.get";
 
     $.ajax({
         type: "GET",
@@ -265,7 +268,7 @@ function appendToPageLyrics(data) {
     console.log(data);
     container.innerHTML +=
         `<div class="lyrics-container mx-auto">
-            <p class="lyrics-text mx-auto">${data.lyrics_body} ${data.lyrics_copyright}}</p>  
+            <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
            </div>`
     if (data.length === 0) {
         container.innerHTML += `
@@ -323,12 +326,14 @@ function appendToPageAlbums(data) {
         </div>
         <div class="col-9 offset-1">
             <p class="album-name">${item.album.album_name}</p>
+            <p class="country" id="releaseDate">${item.album.album_release_date}</p>
             <p class="getLyrics pointer" onclick="getAlbumTracks(${item.album.album_id})"  data-artistId="${item.album.album_id}}">Tracks
             <img src="assets/images/expand.png" class="expand-arrow">
         </p>
         </div>
     </div>
 </div>`
+
     })
     if (data.length === 0) {
         container.innerHTML += `

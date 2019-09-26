@@ -251,32 +251,44 @@ function getLyrics(trackId) {
         dataType: "jsonp",
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
-        success: function(results) {
-            let data = results.message.body.lyrics;
-            appendToPageLyrics(data);
-            console.log(data);
+        success: function(data) {
 
+
+            // let data = results.message.body.lyrics;
+            // appendToPageLyrics(data);
+            // console.log(data);
+
+
+
+            // Lyrics will print in a modal
+            $("#lyricsModal").bind(data);
+            jQuery("#printLyrics").modal('show');
         }
-    })
+    });
 }
 
-// Print lyrics results on the page
-function appendToPageLyrics(data) {
+// Stops modal from being shown if no lyrics are found
+$('#lyricsModal').on('show.bs.modal', function(e) {
+    if (!data) return e.preventDefault()
+})
 
-    const container = document.querySelector("#container");
-    container.innerHTML = "";
-    console.log(data);
-    container.innerHTML +=
-        `<div class="lyrics-container mx-auto">
-            <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
-           </div>`
-    if (data.length === 0) {
-        container.innerHTML += `
-                <div class="error mx-auto"><p>Sorry, no lyrics available.</p></div>
-                `;
-    }
-}
 
+// // Print lyrics results on the page
+// function appendToPageLyrics(data) {
+
+//     const container = document.querySelector("#container");
+//     container.innerHTML = "";
+//     console.log(data);
+//     container.innerHTML +=
+//         `<div class="lyrics-container mx-auto">
+//             <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
+//            </div>`
+//     if (data.length === 0) {
+//         container.innerHTML += `
+//                 <div class="error mx-auto"><p>Sorry, no lyrics available.</p></div>
+//                 `;
+//     }
+// }
 
 // API method for the ALBUMS lookup when clicked on ARTIST results
 

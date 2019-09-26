@@ -265,6 +265,10 @@ label.form-check-label {
     border-radius: 8px;
 }
 
+#lyricsModal {
+    display: none;
+}
+
 
 /* 
 ==============================================

@@ -258,13 +258,13 @@ function getLyrics(trackId) {
     });
 }
 // Stops modal from being shown if no lyrics are found
-$('#lyricsModal1').on('show.bs.modal', function(e) {
+$('#lyricsModalContainer').on('show.bs.modal', function(e) {
     if (!data) return e.preventDefault()
 })
 
 // Print lyrics results on the page
 function appendToPageLyrics(data) {
-    var container = document.getElementById("lyricsModal1");
+    var container = document.getElementById("lyricsModalContainer");
     container.innerHTML = "<p>" + data + "</p>";
     if (data.length === 0) {
         container.innerHTML += `

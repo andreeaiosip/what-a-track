@@ -259,6 +259,10 @@ label.form-check-label {
     padding-bottom: 5px !important;
 }
 
+#printLyrics {
+    padding-right: 0;
+}
+
 
 /* 
 ==============================================

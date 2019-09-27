@@ -236,18 +236,6 @@ label.form-check-label {
     margin: 10px;
 }
 
-
-/* .card-songs,
-.card-artists {
-    height: inherit;
-    width: inherit;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 100%;
-    background-color: #85858547 !important;
-} */
-
 .getLyrics,
 .getAlbums {
     margin-bottom: 2px;

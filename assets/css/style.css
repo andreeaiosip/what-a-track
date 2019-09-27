@@ -242,19 +242,21 @@ label.form-check-label {
     color: #dce6e6;
 }
 
-.lyrics-text {
+#lyricsModalContainer {
     color: #fafafa;
     padding: 25px;
-    background: #00000070;
+    background: #26042a;
     white-space: pre-line;
     text-align: center;
-    width: 80vw;
-    box-shadow: 0 0 7px 12px #0a070782;
-    border-radius: 8px;
 }
 
 #lyricsModal {
     display: none;
+}
+
+.modal-header {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
 }
 
 

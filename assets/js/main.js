@@ -2,7 +2,6 @@ const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
 
-
 // This code prevents automatic search when the button is pressed without any query typed in the search box
 // Code source https://stackoverflow.com/questions/7067005/disable-button-whenever-a-text-field-is-empty-dynamically
 function success() {
@@ -237,7 +236,6 @@ function appendToPageArtistResults(resultsArtist) {
 // Search for lyrics when clicked on a song
 function getLyrics(trackId) {
     urlExt = "track.lyrics.get";
-
     $.ajax({
         type: "GET",
         data: {
@@ -245,50 +243,36 @@ function getLyrics(trackId) {
             track_id: trackId,
             format: "jsonp",
             callback: "jsonp_callback"
-
         },
         url: apiURL + urlExt,
         dataType: "jsonp",
         jsonpCallback: "jsonp_callback",
         contentType: "application/json",
         success: function(data) {
-
-
-            // let data = results.message.body.lyrics;
-            // appendToPageLyrics(data);
-            // console.log(data);
-
-
+            modalLyrics = data.message.body.lyrics.lyrics_body
+            appendToPageLyrics(modalLyrics);
 
             // Lyrics will print in a modal
-            $("#lyricsModal").bind(data);
-            jQuery("#printLyrics").modal('show');
+            $("#printLyrics").modal('show');
         }
     });
 }
-
 // Stops modal from being shown if no lyrics are found
-$('#lyricsModal').on('show.bs.modal', function(e) {
+$('#lyricsModal1').on('show.bs.modal', function(e) {
     if (!data) return e.preventDefault()
 })
 
+// Print lyrics results on the page
+function appendToPageLyrics(data) {
+    var container = document.getElementById("lyricsModal1");
+    container.innerHTML = "<p>" + data + "</p>";
+    if (data.length === 0) {
+        container.innerHTML += `
+                <div class="error mx-auto"><p>Sorry, no lyrics available.</p></div>
+                `;
+    }
+}
 
-// // Print lyrics results on the page
-// function appendToPageLyrics(data) {
-
-//     const container = document.querySelector("#container");
-//     container.innerHTML = "";
-//     console.log(data);
-//     container.innerHTML +=
-//         `<div class="lyrics-container mx-auto">
-//             <p class="lyrics-text mx-auto">${data.lyrics_body}</p>  
-//            </div>`
-//     if (data.length === 0) {
-//         container.innerHTML += `
-//                 <div class="error mx-auto"><p>Sorry, no lyrics available.</p></div>
-//                 `;
-//     }
-// }
 
 // API method for the ALBUMS lookup when clicked on ARTIST results
 

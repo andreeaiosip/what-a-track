@@ -25,7 +25,7 @@ $(window).bind("load", function() {
             page_size: 10, // 10 songs returned
             chart_name: "top", // top tracks in Ireland
             country: "IE",
-            f_has_lyrics: 1,
+            f_has_lyrics: 1, //display songs with lyrics only
             format: "jsonp",
             callback: "jsonp_callback"
         },
@@ -45,8 +45,8 @@ $(window).bind("load", function() {
         container.innerHTML = "";
         console.log(resultsChart);
         resultsChart.forEach(item => {
-            container.innerHTML += `
-            <div class="container mx-auto">
+            container.innerHTML +=
+                `<div class="container mx-auto">
             <div class="row mx-auto music-container">
                 <div class="col-2 music-img-container">
                     <img class="music-img">
@@ -56,18 +56,14 @@ $(window).bind("load", function() {
                     <p class="artist-name">${item.track.artist_name}</p>
                     <div>
                         <p class="getLyrics pointer" data-trackID="${item.track.track_id}" onclick="getLyrics(${item.track.track_id})">Lyrics
-                            <img src="assets/images/expand.png" class="expand-arrow" >
+                            <img src="assets/images/expand.png" class="expand-arrow">
                         </p>
                     </div>
                 </div>
             </div>
-        </div>         
-                  `;
+        </div>`;
         });
-
     }
-
-
 });
 
 
@@ -84,15 +80,14 @@ $(document).ajaxComplete(function() {
 
 // Add event listener to the search button to trigger the search for the value typed in the search box
 searchButton.addEventListener('click', () => {
-    const form = document.querySelector('#form');
-    const query = document.querySelector('#query-music').value;
-    const radio = document.querySelectorAll('[type="radio"]');
+    const query = document.querySelector('#query-music').value; // Keyword typed in the search bar
+    const radio = document.querySelectorAll('[type="radio"]'); // Radio button picked
 
     let selected;
     radio.forEach(item => {
-        if (item.checked) selected = item.id;
-    })
-
+            if (item.checked) selected = item.id;
+        })
+        // Radio button plus keyword will form the search values
     getMusic(query, selected);
 })
 
@@ -112,9 +107,9 @@ function getMusic(query, selected) {
             apikey: apiKey,
             q_artist: query,
             f_has_lyrics: 1,
-            page: 1, // results only on homepage
+            page: 1, // Results only on homepage
             page_size: 100, // 100 artists returned
-            s_artist_rating: "desc",
+            s_artist_rating: "desc", // Results displayed by popularity
             format: "jsonp",
             callback: "jsonp_callback"
         }
@@ -129,9 +124,9 @@ function getMusic(query, selected) {
             apikey: apiKey,
             q_track: query,
             f_has_lyrics: true,
-            page: 1, // results only on homepage
+            page: 1, // Results only on homepage
             page_size: 100, // 100 artists returned
-            s_track_rating: "desc",
+            s_track_rating: "desc", // Results displayed by popularity
             format: "jsonp",
             callback: "jsonp_callback"
         }
@@ -177,13 +172,12 @@ function appendToPageSongResults(resultsTrack) {
                 <div class="col-9 offset-1">
                     <p class="song-name">${item.track.track_name}</p>
                     <p class="artist-name">${item.track.artist_name}</p>
-                    <p class="getLyrics pointer"  onclick="getLyrics(${item.track.track_id})" data-trackID="${item.track.track_id}">Lyrics
+                    <p class="getLyrics pointer" onclick="getLyrics(${item.track.track_id})" data-trackID="${item.track.track_id}">Lyrics
                         <img src="assets/images/expand.png" class="expand-arrow ">
                     </p>
                 </div>
             </div>
-        </div>
-        `;
+        </div>`;
     });
     if (resultsTrack.length === 0) {
         container.innerHTML += `
@@ -191,8 +185,7 @@ function appendToPageSongResults(resultsTrack) {
         `;
     }
 
-
-
+    // When clicked on a song function getLyrics will be called to search for lyrics
     let getLyrics = document.querySelectorAll(".getLyrics");
     getLyrics.forEach(item => item.addEventListener('click', (event) => {
         const trackID = event.currentTarget.dataset.trackID;
@@ -203,7 +196,6 @@ function appendToPageSongResults(resultsTrack) {
 
 
 // Print results for the ARTIST search
-
 function appendToPageArtistResults(resultsArtist) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
@@ -283,13 +275,12 @@ function getAlbums(artistId) {
         type: "GET",
         data: {
             apikey: apiKey,
-            page: 1, // results only on homepage
-            page_size: 100,
+            page: 1, // Results only on homepage
+            page_size: 100, // 100 results returned
             artist_id: artistId,
-            g_album_name: 1,
-            s_release_date: "desc",
-            page_size: 100,
-            page: 1,
+            g_album_name: 1, // Common albums will be grouped together
+            s_release_date: "desc", // Displayed by the newest to the oldest release
+            page: 1, // Results only on the homepage
             format: "jsonp",
             callback: "jsonp_callback"
 
@@ -305,31 +296,27 @@ function getAlbums(artistId) {
         }
     })
 }
-
+// Print albums results on the page
 function appendToPageAlbums(data) {
-
     const container = document.querySelector("#container");
     container.innerHTML = "";
     console.log(data);
-
-    // Print albums results on the page
     data.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
-    <div class="row mx-auto music-container">
-        <div class="col-2 music-img-container">
-            <img class="music-img">
-        </div>
-        <div class="col-9 offset-1">
-            <p class="album-name">${item.album.album_name}</p>
-            <p class="country" id="releaseDate">${item.album.album_release_date}</p>
-            <p class="getLyrics pointer" onclick="getAlbumTracks(${item.album.album_id})"  data-artistId="${item.album.album_id}}">Tracks
-            <img src="assets/images/expand.png" class="expand-arrow">
-        </p>
-        </div>
-    </div>
-</div>`
-
+            <div class="row mx-auto music-container">
+                <div class="col-2 music-img-container">
+                    <img class="music-img">
+                </div>
+                <div class="col-9 offset-1">
+                    <p class="album-name">${item.album.album_name}</p>
+                    <p class="country" id="releaseDate">${item.album.album_release_date}</p>
+                    <p class="getLyrics pointer" onclick="getAlbumTracks(${item.album.album_id})" data-artistId="${item.album.album_id}}">Tracks
+                        <img src="assets/images/expand.png" class="expand-arrow">
+                    </p>
+                </div>
+            </div>
+        </div>`
     })
     if (data.length === 0) {
         container.innerHTML += `
@@ -348,8 +335,8 @@ function getAlbumTracks(albumId) {
         type: "GET",
         data: {
             apikey: apiKey,
-            page: 1, // results only on homepage
-            page_size: 50,
+            page: 1, // Results only on homepage
+            page_size: 50, // 50 tracks will be displayed
             album_id: albumId,
             format: "jsonp",
             callback: "jsonp_callback"
@@ -367,28 +354,26 @@ function getAlbumTracks(albumId) {
     })
 }
 
+// Tracks of a specific album will be displayed o the page
 function appendToPageAlbumTracks(data) {
-
     const container = document.querySelector("#container");
     container.innerHTML = "";
     console.log(data);
-
-    // Display album tracks results on the page
     data.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
-                                <div class="row mx-auto music-container">
-                                    <div class="col-2 music-img-container">
-                                        <img class="music-img">
-                                    </div>
-                                    <div class="col-9 offset-1">
-                                        <p class="artist-title">${item.track.track_name}</p>
-                                        <p class="getAlbums pointer" data-trackId="${item.track.track_id}" onclick="getLyrics(${item.track.track_id})">Lyrics
-                                        <img src="assets/images/expand.png" class="expand-arrow">
-                                    </p>
-                                    </div>
-                                </div>
-                            </div>`
+            <div class="row mx-auto music-container">
+                <div class="col-2 music-img-container">
+                    <img class="music-img">
+                </div>
+                <div class="col-9 offset-1">
+                    <p class="artist-title">${item.track.track_name}</p>
+                    <p class="getAlbums pointer" data-trackId="${item.track.track_id}" onclick="getLyrics(${item.track.track_id})">Lyrics
+                        <img src="assets/images/expand.png" class="expand-arrow">
+                    </p>
+                </div>
+            </div>
+        </div>`
     })
     if (data.length === 0) {
         container.innerHTML += `

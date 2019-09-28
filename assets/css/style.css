@@ -31,6 +31,17 @@ main {
     padding: 0;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
+
+/*
+ =============================== 
+ Top part of the page
+ =============================== 
+ */
+
 .slogan>p {
     text-shadow: 2px 2px 2px hsla(220.8, 83.3%, 11.8%, 0.71);
 }
@@ -39,10 +50,6 @@ main {
     text-align: inline-block;
     height: 70px;
     color: white;
-}
-
-.pointer {
-    cursor: pointer;
 }
 
 #home {
@@ -68,6 +75,13 @@ main {
     max-width: 50%;
     margin-bottom: 10px;
 }
+
+
+/*
+ =============================== 
+ Search form area
+ =============================== 
+ */
 
 #form,
 .search-content,
@@ -102,6 +116,55 @@ label.form-check-label {
     -moz-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
     box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
 }
+
+
+/* 
+================================================ 
+Styling for placeholder text in the search box
+=============================================== 
+*/
+
+
+/* all */
+
+::-webkit-input-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* Chrome/Opera/Safari */
+
+ ::-webkit-input-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* Chrome/Opera/Safari */
+
+ ::-moz-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* firefox 19+ */
+
+ ::-ms-input-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/* ie */
+
+ ::-moz-placeholder {
+    color: rgb(166, 200, 207) !important;
+}
+
+
+/*
+ ========================
+ Search button styling
+ ========================
+ */
 
 .btn-success {
     -moz-box-shadow: 0px 0px 0px 2px #7485b8;
@@ -146,7 +209,14 @@ label.form-check-label {
 }
 
 
-/* Chart on homepage layout */
+/*
+ ==========================================
+ Styling for the music containers displayed
+ ==========================================
+ */
+
+
+/* Chart 10 top songs on the homepage*/
 
 .top-tracks {
     margin: 10px;
@@ -154,6 +224,10 @@ label.form-check-label {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     display: none;
+}
+
+.artist-name-song {
+    color: #B8B8FF;
 }
 
 .song-name,
@@ -169,10 +243,6 @@ label.form-check-label {
 
 .album-name {
     white-space: normal;
-}
-
-.artist-name-song {
-    color: #B8B8FF;
 }
 
 .error {
@@ -193,10 +263,8 @@ label.form-check-label {
     margin-bottom: 5px;
 }
 
-.song-img {
-    width: 98px;
-    height: 98px;
-}
+
+/* Generic image for the music displayed */
 
 .music-img {
     background-image: url("../images/album-cover4.jpeg");
@@ -206,6 +274,9 @@ label.form-check-label {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+
+/* Arrow icon will trigger the function to search for lyrics*/
 
 .expand-arrow {
     width: 15px;
@@ -235,6 +306,13 @@ label.form-check-label {
     color: #dce6e6;
 }
 
+
+/*
+ =============================== 
+ Modal for the lyrics displayed
+ =============================== 
+ */
+
 #lyricsModalContainer {
     color: #fafafa;
     padding: 25px;
@@ -257,46 +335,11 @@ label.form-check-label {
 }
 
 
-/* 
-==============================================
-Styling for placeholder text in the search box
-============================================= 
-*/
-
-
-/* all */
-
- ::-webkit-input-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* Chrome/Opera/Safari */
-
- ::-webkit-input-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* Chrome/Opera/Safari */
-
- ::-moz-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* firefox 19+ */
-
- ::-ms-input-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* ie */
-
- ::-moz-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
+/*
+ ============
+ Footer
+ ============
+ */
 
 .fab {
     margin: 10px;
@@ -311,6 +354,13 @@ footer {
     color: #fafafa !important;
     text-align: center;
 }
+
+
+/*
+ ====================
+ Media queries
+ ====================
+ */
 
 
 /* Landscape phones and portrait tablets */

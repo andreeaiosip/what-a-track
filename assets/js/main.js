@@ -241,9 +241,9 @@ function getLyrics(trackId) {
     });
 }
 // // Stops modal from being shown if no lyrics are found
-// $('#lyricsModalContainer').on('show.bs.modal', function(e) {
-//     if (!data) return e.preventDefault()
-// })
+$('#lyricsModalContainer').on('show.bs.modal', function(e) {
+    if (!data) return e.preventDefault()
+})
 
 // Print lyrics results on the page
 function appendToPageLyrics(data) {

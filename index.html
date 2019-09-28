@@ -27,10 +27,10 @@
             <div class="search-content">
                 <p>Search for the lyrics of your favourite song by selecting one the below options:</p>
             </div>
-            <div id="form">
-                <input type="radio" id="song" name="option" checked>By Song</input>
-                <input type="radio" id="artist" name="option">By Artist</input>
-            </div>
+            <form>
+                <input type="radio" id="song" name="option">By Song
+                <input type="radio" id="artist" name="option">By Artist
+            </form>
             <div class="form-group">
                 <input id="query-music" type="text" name="lyrics" value="" onkeyup="success()" class="form-control options-search" placeholder="Search for the lyrics you love...">
                 <input id="searchButton" type="button" value="Search" class="btn btn-success" disabled>

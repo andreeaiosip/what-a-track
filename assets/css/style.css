@@ -314,9 +314,9 @@ Styling for placeholder text in the search box
  */
 
 #lyricsModalContainer {
-    /* color: #fafafa; */
+    color: #fafafa;
     padding: 25px;
-    /* background: #26042a; */
+    background: #26042a;
     white-space: pre-line;
     text-align: center;
 }

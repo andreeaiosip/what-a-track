@@ -229,13 +229,6 @@ label.form-check-label {
     color: white;
 }
 
-.container-songs,
-.container-artists {
-    height: 150px;
-    width: 150px;
-    margin: 10px;
-}
-
 .getLyrics,
 .getAlbums {
     margin-bottom: 2px;

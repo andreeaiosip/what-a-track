@@ -161,9 +161,9 @@ label.form-check-label {
 .album-name {
     color: #fafafa;
     font-weight: 700;
-    white-space: nowrap;
+    white-space: nowrap !important;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis !important;
     margin-bottom: 5px;
 }
 

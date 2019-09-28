@@ -184,16 +184,7 @@ function appendToPageSongResults(resultsTrack) {
         <div class="error"><p>Sorry, no song found with this title.</p></div>
         `;
     }
-
-    // When clicked on a song function getLyrics will be called to search for lyrics
-    let getLyrics = document.querySelectorAll(".getLyrics");
-    getLyrics.forEach(item => item.addEventListener('click', (event) => {
-        const trackID = event.currentTarget.dataset.trackID;
-        console.log(trackID);
-        getLyrics(trackID);
-    }))
 }
-
 
 // Print results for the ARTIST search
 function appendToPageArtistResults(resultsArtist) {
@@ -258,11 +249,6 @@ function getLyrics(trackId) {
 function appendToPageLyrics(data) {
     var container = document.getElementById("lyricsModalContainer");
     container.innerHTML = "<p>" + data + "</p>";
-    if (data.length === 0) {
-        container.innerHTML += `
-                <div class="error mx-auto"><p>Sorry, no lyrics available.</p></div>
-                `;
-    }
 }
 
 

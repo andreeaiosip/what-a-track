@@ -123,7 +123,7 @@ function getMusic(query, selected) {
         data = {
             apikey: apiKey,
             q_track: query,
-            f_has_lyrics: true,
+            f_has_lyrics: 1,
             page: 1, // Results only on homepage
             page_size: 100, // 100 artists returned
             s_track_rating: "desc", // Results displayed by popularity

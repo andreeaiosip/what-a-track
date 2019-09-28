@@ -190,7 +190,7 @@ function appendToPageSongResults(resultsTrack) {
     getLyrics.forEach(item => item.addEventListener('click', (event) => {
         const trackID = event.currentTarget.dataset.trackID;
         console.log(trackID);
-        getMusic(trackID);
+        getLyrics(trackID);
     }))
 }
 

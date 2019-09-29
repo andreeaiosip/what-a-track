@@ -6,6 +6,8 @@
  =============================== 
  */
 
+
+/* 
 body {
     padding: 0;
     margin: 0;
@@ -18,6 +20,22 @@ body {
     display: flex;
     flex-direction: column;
     background-attachment: fixed;
+} */
+
+body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    background: url("../images/bg1.jpeg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 main {

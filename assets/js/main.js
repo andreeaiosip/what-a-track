@@ -220,27 +220,52 @@ function appendToPageArtistResults(resultsArtist) {
 
 // Search for lyrics when clicked on a song
 function getLyrics(trackId) {
-    urlExt = "track.lyrics.get";
-    $.ajax({
-        type: "GET",
-        data: {
-            apikey: apiKey,
-            track_id: trackId,
-            format: "jsonp",
-            callback: "jsonp_callback"
-        },
-        url: apiURL + urlExt,
-        dataType: "jsonp",
-        jsonpCallback: "jsonp_callback",
-        contentType: "application/json",
-        success: function(data) {
-            modalLyrics = data.message.body.lyrics.lyrics_body
-            appendToPageLyrics(modalLyrics);
 
-            // Lyrics will print in a modal
-            $("#printLyrics").modal('show');
+    urlExt = "track.lyrics.get";
+
+    $.ajax({
+
+        type: "GET",
+
+        data: {
+
+            apikey: apiKey,
+
+            track_id: trackId,
+
+            format: "jsonp",
+
+            callback: "jsonp_callback"
+
+        },
+
+        url: apiURL + urlExt,
+
+        dataType: "jsonp",
+
+        jsonpCallback: "jsonp_callback",
+
+        contentType: "application/json",
+
+        success: function(data) {
+            if ((data.message.body) == 0) {
+                const container = document.querySelector("#container");
+                container.innerHTML = "";
+                console.log(data);
+                container.innerHTML += `<p class="error">Sorry, no lyrics found. Please try a different version of the song.</p>`
+            } else {
+                modalLyrics = data.message.body.lyrics.lyrics_body;
+                if (!modalLyrics || modalLyrics.length < 1) {
+                    modalLyrics = "Sorry, no lyrics found";
+                }
+                appendToPageLyrics(modalLyrics);
+
+                // Lyrics will print in a modal
+                $("#printLyrics").modal('show');
+            }
         }
     });
+
 }
 // // Stops modal from being shown if no lyrics are found
 $('#lyricsModalContainer').on('show.bs.modal', function(e) {

@@ -162,6 +162,11 @@ function appendToPageSongResults(resultsTrack) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
     console.log(resultsTrack);
+    if (resultsTrack.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no song found with this title.</p></div>
+        `;
+    }
     resultsTrack.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
@@ -179,11 +184,7 @@ function appendToPageSongResults(resultsTrack) {
             </div>
         </div>`;
     });
-    if (resultsTrack.length === 0) {
-        container.innerHTML += `
-        <div class="error"><p>Sorry, no song found with this title.</p></div>
-        `;
-    }
+
 }
 
 // Print results for the ARTIST search
@@ -191,6 +192,11 @@ function appendToPageArtistResults(resultsArtist) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
     console.log(resultsArtist);
+    if (resultsArtist.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no artist found with this name.</p></div>
+        `;
+    }
     resultsArtist.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
@@ -208,11 +214,7 @@ function appendToPageArtistResults(resultsArtist) {
             </div>
         </div> `
     });
-    if (resultsArtist.length === 0) {
-        container.innerHTML += `
-        <div class="error"><p>Sorry, no artist found with this name.</p></div>
-        `;
-    }
+
 }
 
 
@@ -287,6 +289,11 @@ function appendToPageAlbums(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
     console.log(data);
+    if (data.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no albums available.</p></div>
+        `;
+    }
     data.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
@@ -304,11 +311,7 @@ function appendToPageAlbums(data) {
             </div>
         </div>`
     })
-    if (data.length === 0) {
-        container.innerHTML += `
-        <div class="error"><p>Sorry, no albums available.</p></div>
-        `;
-    }
+
 }
 
 
@@ -345,6 +348,11 @@ function appendToPageAlbumTracks(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
     console.log(data);
+    if (data.length === 0) {
+        container.innerHTML += `
+        <div class="error"><p>Sorry, no tracks available.</p></div>
+        `;
+    }
     data.forEach(item => {
         container.innerHTML +=
             `<div class="container mx-auto">
@@ -361,9 +369,5 @@ function appendToPageAlbumTracks(data) {
             </div>
         </div>`
     })
-    if (data.length === 0) {
-        container.innerHTML += `
-        <div class="error"><p>Sorry, no tracks available.</p></div>
-        `;
-    }
+
 }

@@ -252,7 +252,7 @@ function getLyrics(trackId) {
                 const container = document.querySelector("#container");
                 container.innerHTML = "";
                 console.log(data);
-                container.innerHTML += `<p class="error">Sorry, no lyrics found. Please try a different version of the song.</p>`
+                container.innerHTML += `<p class="error">Sorry, no lyrics found.</p>`
             } else {
                 modalLyrics = data.message.body.lyrics.lyrics_body;
                 if (!modalLyrics || modalLyrics.length < 1) {

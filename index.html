@@ -21,19 +21,27 @@
                 <h5><strong> WHAT A TRACK</strong></h5>
             </div>
         </div>
-
         <!--Home page section-->
         <section id="home" class="container-fluid">
             <div class="search-content">
                 <p>Search for the lyrics of your favourite song by selecting one the below options:</p>
             </div>
             <form>
-                <input type="radio" id="song" name="option" checked>By Song
-                <input type="radio" id="artist" name="option">By Artist
+                <input type="radio" id="song" name="option" value="create" checked/>
+                <label for="song"><i class="radio-text">
+                    Song
+                    </i></label>
+                <input type="radio" id="artist" name="option" value="create" />
+                <label for="artist"><i class="radio-text">
+                   Artist
+                    </i></label>
+
+                <!-- <input type="radio" id="song" name="option" checked>By Song
+                <input type="radio" id="artist" name="option">By Artist -->
             </form>
-            <div class="form-group">
-                <input id="query-music" type="text" name="lyrics" value="" onkeyup="success()" class="form-control options-search" placeholder="Search for the lyrics you love...">
-                <input id="searchButton" type="button" value="Search" class="btn btn-success" disabled>
+            <div class="form-group" id="form">
+                <input id="query-music" type="text" name="lyrics" value="" onkeyup="success()" class="form-control options-search" placeholder="Search for the lyrics you love..." required>
+                <input id="searchButton" type="button" value="Search" class="btn btn-success" required disabled>
             </div>
 
             <!-- Image loader -->

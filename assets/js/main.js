@@ -1,6 +1,7 @@
 const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
+// My colleague Sean Murphy helped me with the first API call
 
 // This code prevents automatic search when the button is pressed without any query typed in the search box
 // Code source https://stackoverflow.com/questions/7067005/disable-button-whenever-a-text-field-is-empty-dynamically
@@ -12,6 +13,7 @@ function success() {
         document.getElementById("searchButton").disabled = false;
 }
 
+// My colleague Villius Dzemyda helped me with the chart music display 
 // When page loads, print CHART top 10 tracks from Ireland
 $(window).bind("load", function() {
 
@@ -39,6 +41,7 @@ $(window).bind("load", function() {
         },
     });
 
+    // My colleague, Heather Olcot helped me with displaying results from an API call
     // Top 10 tracks in Ireland are printed on the page
     function appendToPageChartResults(resultsChart) {
         const container = document.querySelector("#container");
@@ -78,6 +81,7 @@ $(document).ajaxComplete(function() {
     $("#loader").hide();
 });
 
+// My colleague Sean Murphy helped me with the conditional for the radio buttons option
 // Add event listener to the search button to trigger the search for the value typed in the search box
 searchButton.addEventListener('click', () => {
     const query = document.querySelector('#query-music').value; // Keyword typed in the search bar
@@ -91,12 +95,13 @@ searchButton.addEventListener('click', () => {
     getMusic(query, selected);
 })
 
-// Enter key pressed, triggers search button click event
+// Enter key pressed, triggers search button click event - suggestion from mentor Simen Daehlin
 $('#query-music').keypress(function(e) {
     if (e.which == 13) {
         $('#searchButton').click();
     }
 });
+
 
 function getMusic(query, selected) {
 
@@ -219,55 +224,54 @@ function appendToPageArtistResults(resultsArtist) {
 
 
 // Search for lyrics when clicked on a song
+// My mentor Simen Daehlin helped with how to pass the id to the function
 function getLyrics(trackId) {
 
     urlExt = "track.lyrics.get";
 
     $.ajax({
-
         type: "GET",
-
         data: {
-
             apikey: apiKey,
-
             track_id: trackId,
-
             format: "jsonp",
-
             callback: "jsonp_callback"
-
         },
 
         url: apiURL + urlExt,
-
         dataType: "jsonp",
-
         jsonpCallback: "jsonp_callback",
-
         contentType: "application/json",
-
         success: function(data) {
+
+            // Tutor Stephen and Hailey helped me with this conditional and modal display
+            // If there are no lyrics found, the user will receive a message on the screen. 
             if ((data.message.body) == 0) {
                 const container = document.querySelector("#container");
                 container.innerHTML = "";
                 console.log(data);
                 container.innerHTML += `<p class="error">Sorry, no lyrics found.</p>`
+
             } else {
+
                 modalLyrics = data.message.body.lyrics.lyrics_body;
+
+                // Check if there is any data returned into the modal.
                 if (!modalLyrics || modalLyrics.length < 1) {
                     modalLyrics = "Sorry, no lyrics found";
                 }
+
                 appendToPageLyrics(modalLyrics);
 
-                // Lyrics will print in a modal
+                // If lyrics are found, will be printed in a modal.
                 $("#printLyrics").modal('show');
             }
         }
     });
 
 }
-// // Stops modal from being shown if no lyrics are found
+// Stops modal from being shown if no lyrics are found
+//Code from Stackoverflow
 $('#lyricsModalContainer').on('show.bs.modal', function(e) {
     if (!data) return e.preventDefault()
 })
@@ -368,7 +372,7 @@ function getAlbumTracks(albumId) {
     })
 }
 
-// Tracks of a specific album will be displayed o the page
+// Tracks of a specific album will be displayed on the page
 function appendToPageAlbumTracks(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";

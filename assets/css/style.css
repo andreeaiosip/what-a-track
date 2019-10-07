@@ -21,6 +21,7 @@ body {
     flex-direction: column;
     background-attachment: fixed;
 } */
+/* General */
 
 
 /* This code will fix image background streching on mobile view - code found here https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile */
@@ -57,11 +58,7 @@ main {
 }
 
 
-/*
- =============================== 
- Top part of the page
- =============================== 
- */
+/* Top part of the page */
 
 .slogan>p {
     text-shadow: 2px 2px 2px hsla(220.8, 83.3%, 11.8%, 0.71);
@@ -98,11 +95,7 @@ main {
 }
 
 
-/*
- =============================== 
- Search form area
- =============================== 
- */
+/* Search form area */
 
 form,
 .search-content,
@@ -132,7 +125,7 @@ label.form-check-label {
 }
 
 
-/* Adding shadow around the border of the search box*/
+/* Adding shadow around the border of the search box */
 
 .form-control {
     display: inline-block;
@@ -146,11 +139,6 @@ label.form-check-label {
 }
 
 
-/* 
-================================================ 
-Styling for placeholder text in the search box
-=============================================== 
-*/
 
 
 /* all */
@@ -182,17 +170,14 @@ Styling for placeholder text in the search box
 
 
 /* ie */
+/* Styling for placeholder text in the search box */
 
  ::-moz-placeholder {
     color: rgb(166, 200, 207) !important;
 }
 
 
-/*
- ========================
- Search button styling
- ========================
- */
+/* Search button styling */
 
 .btn-success {
     -moz-box-shadow: 0px 0px 0px 2px #7485b8;
@@ -237,11 +222,7 @@ Styling for placeholder text in the search box
 }
 
 
-/*
- ==========================================
- Styling for the music containers displayed
- ==========================================
- */
+/* Styling for the music containers displayed */
 
 
 /* Chart 10 top songs on the homepage*/
@@ -304,7 +285,7 @@ Styling for placeholder text in the search box
 }
 
 
-/* Arrow icon will trigger the function to search for lyrics*/
+/* Arrow icon will trigger the function to search for lyrics */
 
 .expand-arrow {
     width: 15px;
@@ -335,11 +316,7 @@ Styling for placeholder text in the search box
 }
 
 
-/*
- =============================== 
- Modal for the lyrics displayed
- =============================== 
- */
+/* Modal for the lyrics displayed */
 
 #lyricsModalContainer {
     color: #fafafa;
@@ -363,11 +340,7 @@ Styling for placeholder text in the search box
 }
 
 
-/*
- ============
- Footer
- ============
- */
+/* Footer */
 
 .fab {
     margin: 10px;
@@ -418,11 +391,7 @@ footer {
 }
 
 
-/*
- ====================
- Media queries
- ====================
- */
+/* Media queries */
 
 
 /* Landscape phones and portrait tablets */

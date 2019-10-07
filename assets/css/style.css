@@ -1,26 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Sarpanch:700&display=swap');
 
-/*
- =============================== 
- General 
- =============================== 
- */
-
-
-/* 
-body {
-    padding: 0;
-    margin: 0;
-    min-height: 100vh;
-    font-size: 1rem;
-    background-image: url("../images/bg1.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    background-attachment: fixed;
-} */
 /* General */
 
 
@@ -36,9 +15,6 @@ body:before {
     height: 100%;
     z-index: -10;
     background: url("../images/bg1.jpeg") no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -129,8 +105,6 @@ label.form-check-label {
 
 .form-control {
     display: inline-block;
-    -webkit-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
-    -moz-box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
     box-shadow: 3px 1px 5px -3px rgba(230, 214, 230, 1);
 }
 
@@ -139,37 +113,6 @@ label.form-check-label {
 }
 
 
-
-
-/* all */
-
-::-webkit-input-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* Chrome/Opera/Safari */
-
- ::-webkit-input-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* Chrome/Opera/Safari */
-
- ::-moz-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* firefox 19+ */
-
- ::-ms-input-placeholder {
-    color: rgb(166, 200, 207) !important;
-}
-
-
-/* ie */
 /* Styling for placeholder text in the search box */
 
  ::-moz-placeholder {
@@ -206,13 +149,7 @@ label.form-check-label {
 }
 
 .btn-success:hover {
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #8d51b0), color-stop(1, #1b2c45));
-    background: -moz-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
-    background: -webkit-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
-    background: -o-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
-    background: -ms-linear-gradient(top, #8d51b0 5%, #1b2c45 100%);
     background: linear-gradient(to bottom, #8d51b0 5%, #1b2c45 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#8d51b0', endColorstr='#1b2c45', GradientType=0);
     background-color: #8d51b0;
 }
 
@@ -369,10 +306,6 @@ footer {
     z-index: 999;
     display: none;
     cursor: pointer;
-    -moz-transform: rotate(270deg);
-    -webkit-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
     transform: rotate(270deg);
     position: fixed;
     bottom: 50px;

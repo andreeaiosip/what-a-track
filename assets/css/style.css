@@ -86,7 +86,7 @@ form,
 
 .form-control,
 label.form-check-label {
-    color: rgb(166, 200, 207);
+    color: #fcfcfc;
     margin: 15px;
 }
 
@@ -115,8 +115,8 @@ label.form-check-label {
 
 /* Styling for placeholder text in the search box */
 
- ::-moz-placeholder {
-    color: rgb(166, 200, 207) !important;
+input.placeholder {
+    color: rgba(166, 200, 207, 0.788) !important;
 }
 
 
@@ -130,7 +130,7 @@ label.form-check-label {
     border: 1px solid #bdb9bd;
     display: inline-block;
     cursor: pointer;
-    color: #e6e6e6;
+    color: #fcfcfc;
     font-family: Arial;
     font-size: 1 rem;
     padding: 8px 26px;
@@ -233,13 +233,13 @@ label.form-check-label {
     padding-left: 0;
     position: relative;
     text-align: center;
-    color: white;
+    color: #fcfcfc;
 }
 
 .getLyrics,
 .getAlbums {
     margin-bottom: 2px;
-    color: #dce6e6;
+    color: #fcfcfc;
 }
 
 

@@ -21,10 +21,10 @@ Common characteristics of a user:
 
 #### Client stories:
 
-*As **a user** I want to easily look up for the lyrics of a song.
-As **a user** I want to be able to read clearly the lyrics on mobile and desktop.
-As **a user** I want to able to find the title of a song from an artist I know, so I can get the lyrics.
-As **a user** I want to able to connect on social media to keep me updated on what new lyrics are added to their site.*
+* As **a user** I want to easily look up for the lyrics of a song.
+* As **a user** I want to be able to read clearly the lyrics on mobile and desktop.
+* As **a user** I want to able to find the title of a song from an artist I know, so I can get the lyrics.
+* As **a user** I want to able to connect on social media to keep me updated on what new lyrics are added to their site.*
 
 ***
 ### FEATURES

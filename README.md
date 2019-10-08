@@ -14,10 +14,23 @@ Music lovers who want to know the exact lyrics of a song. Could be just as a cur
 * Offer a wide range of lyrics to the user;
 
 ***
-###  UX
+###  UX Design
 Common characteristics of a user:
 * Music lover;
 * Computer literate;
+
+#### Initial design wire-frames / mock-ups:
+
+##### Mobile view
+##### Desktop view
+
+I had to change from the initial design concept of wireframes and structure because the initial concept was very complex and would've taken more time to implement all the APIs I wanted to use: Musixmatch and Songkick.
+I have decided to make a simple lyrics search app and not have the gigs list displayed for the artists.
+
+##### Final Mobile View
+
+##### Final Desktop View
+
 
 #### Client stories:
 

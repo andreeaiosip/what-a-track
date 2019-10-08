@@ -308,7 +308,7 @@ function getAlbums(artistId) {
             artist_id: artistId,
             g_album_name: 1, // Common albums will be grouped together
             s_release_date: "desc", // Displayed by the newest to the oldest release
-            page: 1, // Results only on the homepage
+
             format: "jsonp",
             callback: "jsonp_callback"
 

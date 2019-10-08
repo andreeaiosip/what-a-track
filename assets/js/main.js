@@ -93,7 +93,7 @@ searchButton.addEventListener('click', () => {
         })
         // Radio button plus keyword will form the search values
     getMusic(query, selected);
-})
+});
 
 // Enter key pressed, triggers search button click event - suggestion from mentor Simen Daehlin
 $('#query-music').keypress(function(e) {
@@ -157,7 +157,7 @@ function getMusic(query, selected) {
                 appendToPageSongResults(resultsTrack);
             }
         }
-    })
+    });
 
 }
 
@@ -350,7 +350,7 @@ function appendToPageAlbums(data) {
                 </div>
             </div>
         </div>`
-    })
+    });
 
 }
 
@@ -380,7 +380,7 @@ function getAlbumTracks(albumId) {
             appendToPageAlbumTracks(data);
             console.log(data);
         }
-    })
+    });
 }
 
 // TRACKS of a specific album will be displayed on the page
@@ -408,7 +408,7 @@ function appendToPageAlbumTracks(data) {
                 </div>
             </div>
         </div>`
-    })
+    });
 
 }
 

@@ -213,16 +213,6 @@ input.placeholder {
     background-size: contain;
 }
 
-
-/* Arrow icon will trigger the function to search for lyrics */
-
-.expand-arrow {
-    width: 15px;
-    height: 15px;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
 .music-container {
     margin-bottom: 8px;
     background-color: #85858548;
@@ -236,6 +226,16 @@ input.placeholder {
     position: relative;
     text-align: center;
     color: #fcfcfc;
+}
+
+
+/* Arrow icon will trigger the function to search for lyrics */
+
+.expand-arrow {
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .getLyrics,

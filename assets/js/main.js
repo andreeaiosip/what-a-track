@@ -102,7 +102,6 @@ $('#query-music').keypress(function(e) {
     }
 });
 
-
 function getMusic(query, selected) {
 
     // If ARTIST radio button option is selected

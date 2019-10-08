@@ -9,8 +9,9 @@ function success() {
     const i = document.getElementById("query-music");
     if (i.value == "") {
         document.getElementById("searchButton").disabled = true;
-    } else
+    } else {
         document.getElementById("searchButton").disabled = false;
+    }
 }
 
 // My colleague Villius Dzemyda helped me with the chart music display 

@@ -9,6 +9,7 @@ body:before {
     content: "";
     display: block;
     position: fixed;
+    font-family: "Open Sans", sans-serif;
     left: 0;
     top: 0;
     width: 100%;

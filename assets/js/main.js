@@ -6,7 +6,7 @@ const apiURL = "https://api.musixmatch.com/ws/1.1/";
 // This code prevents automatic search when the button is pressed without any query typed in the search box
 // Code source https://stackoverflow.com/questions/7067005/disable-button-whenever-a-text-field-is-empty-dynamically
 function success() {
-    var i = document.getElementById("query-music");
+    const i = document.getElementById("query-music");
     if (i.value == "") {
         document.getElementById("searchButton").disabled = true;
     } else
@@ -289,7 +289,7 @@ $('#lyricsModalContainer').on('show.bs.modal', function(e) {
 
 // Print lyrics results on the page
 function appendToPageLyrics(data) {
-    var container = document.getElementById("lyricsModalContainer");
+    const container = document.getElementById("lyricsModalContainer");
     container.innerHTML = "<p>" + data + "</p>";
 }
 
@@ -414,7 +414,7 @@ function appendToPageAlbumTracks(data) {
 
 // Scroll to top when arrow up clicked 
 $(window).scroll(function() {
-    var height = $(window).scrollTop();
+    let height = $(window).scrollTop();
     if (height > 100) {
         $('#back2Top').fadeIn();
     } else {

@@ -89,9 +89,9 @@ searchButton.addEventListener('click', () => {
 
     let selected;
     radio.forEach(item => {
-            if (item.checked) selected = item.id;
-        })
-        // Radio button plus keyword will form the search values
+        if (item.checked) selected = item.id;
+    });
+    // Radio button plus keyword will form the search values
     getMusic(query, selected);
 });
 

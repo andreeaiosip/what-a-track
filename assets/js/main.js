@@ -119,11 +119,11 @@ function getMusic(query, selected) {
             callback: "jsonp_callback"
         }
 
-        // API method for the artist lookup
+        // API method for the ARTIST lookup
         urlExt = "artist.search";
 
 
-        // If song radio button option is selected
+        // If SONG radio button option is selected
     } else if (selected == "song") {
         data = {
             apikey: apiKey,
@@ -136,7 +136,7 @@ function getMusic(query, selected) {
             callback: "jsonp_callback"
         }
 
-        // API method for the song lookup
+        // API method for the SONG lookup
         urlExt = "track.search";
     }
 
@@ -161,7 +161,11 @@ function getMusic(query, selected) {
 
 }
 
-// Print results for the SONG results
+/**
+ * Print results for the SONG search
+ * @param resultsTrack 
+ */
+
 function appendToPageSongResults(resultsTrack) {
 
     const container = document.querySelector("#container");
@@ -192,7 +196,10 @@ function appendToPageSongResults(resultsTrack) {
 
 }
 
-// Print results for the ARTIST search
+/**
+ * Print results for the ARTIST search
+ * @param resultsArtist 
+ */
 function appendToPageArtistResults(resultsArtist) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
@@ -223,8 +230,12 @@ function appendToPageArtistResults(resultsArtist) {
 }
 
 
-// Search for lyrics when clicked on a song
 // My mentor Simen Daehlin helped with how to pass the id to the function
+
+/** 
+ * Search for LYRICS when clicked on a song
+ * @param trackId
+ */
 function getLyrics(trackId) {
 
     urlExt = "track.lyrics.get";
@@ -313,7 +324,7 @@ function getAlbums(artistId) {
         }
     })
 }
-// Print albums results on the page
+// Print ALBUMS results on the page
 function appendToPageAlbums(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
@@ -372,7 +383,7 @@ function getAlbumTracks(albumId) {
     })
 }
 
-// Tracks of a specific album will be displayed on the page
+// TRACKS of a specific album will be displayed on the page
 function appendToPageAlbumTracks(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";

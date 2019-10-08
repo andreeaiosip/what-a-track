@@ -113,7 +113,7 @@ label.form-check-label {
 }
 
 
-/* Styling for placeholder text in the search box */
+/* Placeholder text in the search box */
 
 input.placeholder {
     color: rgba(166, 200, 207, 0.788) !important;
@@ -123,7 +123,7 @@ input.placeholder {
 /* Search button styling */
 
 
-/* I have used https://www.bestcssbuttongenerator.com/ to create the button*/
+/* I have used https://www.bestcssbuttongenerator.com/ to create the search button*/
 
 .btn-success {
     box-shadow: 0px 0px 0px 2px #7485b8;
@@ -151,7 +151,7 @@ input.placeholder {
 }
 
 
-/* Styling for the music containers displayed */
+/* Music containers printed on the page */
 
 
 /* Chart 10 top songs on the homepage*/

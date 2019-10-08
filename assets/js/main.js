@@ -285,7 +285,7 @@ function getLyrics(trackId) {
 //Code from Stackoverflow
 $('#lyricsModalContainer').on('show.bs.modal', function(e) {
     if (!data) return e.preventDefault()
-})
+});
 
 // Print lyrics results on the page
 function appendToPageLyrics(data) {

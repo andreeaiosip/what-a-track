@@ -1,7 +1,24 @@
 ## What a Track
+*** 
+This project is created for the Interactive Frontend Development module at the **Full Stack Software Development Course** with **Code Institute**.
+
+**The brief:** 
+_Project purpose_: Presentation of interactive data
+In this project, you'll build an interactive front-end site. The site should respond to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals.
+
+_Main Technologies Required_: HTML, CSS, JavaScript.
+
+_Optional_: jQuery, d3.js, crossfilter and/or dc.js, any other JavaScript libraries, SaSS, external APIs.
+
+_Value provided_:
+Users are able to interact with the site in their particular way, to achieve their personal goals and derive answers to their specific questions.
+The site owner advances their own goals by providing this functionality, potentially by being a regular user themselves.
+
+*** 
+**THE IDEA**
 I’ve always been interested in discovering new music, so I choose to bring my passion for music into this project.
 
-What a Track is a lyrics finder website created with the API’s data from Musixmatch.com. 
+**What a Track is a lyrics finder website created with the API’s data from Musixmatch.com.**
 Musixmatch is world’s largest lyrics database with more than 14 million lyrics in over 50 distinct languages. 
 
 I had to sign up and register my app on their website to get an API key. I have signed up for the Not Commercial Use plan, free to use version (personal use and beta testing). 

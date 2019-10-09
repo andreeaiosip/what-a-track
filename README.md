@@ -61,7 +61,7 @@ I have decided to make a simple lyrics search app and not have the gigs list dis
 #### EXISTING FEATURES
 
 ##### Back to top button
-The link has a unique identifier, a tooltip title and contains a special arrow character (➤), so I didn’t have to use an image to display the arrow. Code found here https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/
+The link has a unique identifier, a tooltip title and contains a special arrow character (➤), so I didn’t have to use an image to display the arrow. Code found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 
 #### Navbar
 ...

@@ -51,10 +51,10 @@ I have decided to make a simple lyrics search app and not have the gigs list dis
 
 #### Client stories:
 
-* As **a user** I want to easily look up for the lyrics of a song.
-* As **a user** I want to be able to read clearly the lyrics on mobile and desktop.
-* As **a user** I want to able to find the title of a song from an artist I know, so I can get the lyrics.
-* As **a user** I want to able to connect on social media to keep me updated on what new lyrics are added to their site.*
+* As _a user_ I want to easily look up for the lyrics of a song.
+* As _a user_ I want to be able to read clearly the lyrics on mobile and desktop.
+* As _a user_  I want to able to find the title of a song from an artist I know, so I can get the lyrics.
+* As _a user_  I want to able to connect on social media to keep me updated on what new lyrics are added to their site.
 
 ***
 ### FEATURES

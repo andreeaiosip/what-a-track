@@ -81,6 +81,7 @@ I have created this website with the help of a multiple technologies:
 * Google Fonts 
 * AdobeXD 
 * PhotoPad Photo editor 
+* Boostnote
 ***
 ### TESTING
 ...

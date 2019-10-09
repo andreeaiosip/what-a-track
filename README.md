@@ -102,8 +102,8 @@ There are no differences between the deployed version and the development versio
 ##### Media
 ##### Acknowledgement
 
-This website wouldn’t have not been live without the help of my mentor Simen Daehlin, my colleagues Heather Olcot and Sean Murphy, tutors Stephen and Hailey from the Code Institute and numerous colleagues from Code Institute from Slack channels. 
-##### License
+This website wouldn’t have not been live without the help of my mentor [Simen Daehlin](https://www.github.com/Eventyret), my colleagues [Heather Olcot](https://github.com/hfolcot) and [Sean Murphy](https://github.com/nazarja), tutors Stephen and Hailey from the Code Institute and numerous colleagues from Code Institute from Slack channels. 
+#### License
 #### Disclaimer
 The content of this Website is for educational purposes only.
 

@@ -1,8 +1,9 @@
 ## What a Track
-*** 
+***
 This project is created for the Interactive Frontend Development module at the **Full Stack Software Development Course** with **Code Institute**.
+***
+**The brief** 
 
-**The brief:** 
 _Project purpose_: Presentation of interactive data
 In this project, you'll build an interactive front-end site. The site should respond to the users' actions, allowing users to actively engage with data, alter the way the site displays the information to achieve their preferred goals.
 
@@ -16,6 +17,7 @@ The site owner advances their own goals by providing this functionality, potenti
 
 *** 
 **THE IDEA**
+
 I’ve always been interested in discovering new music, so I choose to bring my passion for music into this project.
 
 **What a Track is a lyrics finder website created with the API’s data from Musixmatch.com.**
@@ -33,16 +35,16 @@ Music lovers who want to know the exact lyrics of a song. Could be just as a cur
 ***
 ###  UX Design
 Common characteristics of a user:
-* Music lover;
-* Computer literate;
+* Music lover
+* Computer literate
 
-#### Initial design wire-frames / mock-ups:
+#### Initial design wireframes / mock-ups:
 
-##### Mobile view
-##### Desktop view
+##### Initial Mobile view
+##### Initial Desktop view
 
 I had to change from the initial design concept of wireframes and structure because the initial concept was very complex and would've taken more time to implement all the APIs I wanted to use: Musixmatch and Songkick.
-I have decided to make a simple lyrics search app and not have the gigs list displayed for the artists.
+I have decided to make a simple lyrics search app and not have the gig list displayed for the artists.
 
 ##### Final Mobile View
 
@@ -100,6 +102,7 @@ There are no differences between the deployed version and the development versio
 ***
 ## Credits
 ##### Content
+The code for the _Back to the top button_ was found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 ##### Media
 ##### Acknowledgement
 

@@ -1,7 +1,8 @@
 ## What a Track
-***
+
 This project is created for the Interactive Frontend Development module at the **Full Stack Software Development Course** with **Code Institute**.
-***
+
+*** 
 **The brief** 
 
 _Project purpose_: Presentation of interactive data

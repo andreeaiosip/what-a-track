@@ -95,10 +95,10 @@ I have used two radio buttons which will trigger the type of search will be perf
 #####  Generic image 
 I have used a generic, relevant image to visually represent and align each result. It makes it easier to read and the colors in the image matches the color scheme of the website.
 
-#### Features left to implement
-* Back button - when looking for a song through the _Artist Search_ route, will be useful to have a back button if you want to go back and look at a different album or different artist.
-* Advanced filter - will be useful to be able to filter more through the results, such as: display only the original version of a song or only show the songs in an album who have lyrics. 
-***
+#### FEATURES left to implement
+* **Back button** - when looking for a song through the _Artist Search_ route, will be useful to have a back button if you want to go back and look at a different album or different artist.
+* **Advanced filter** - will be useful to be able to filter more through the results, such as: display only the original version of a song or only show the songs in an album who have lyrics. 
+* **Songkick APIs** - I would like to be able to see if the artist who's playing the song has any upcoming concerts in my area.
 
 ### Technologies Used
 I have created this website with the help of a multiple technologies:

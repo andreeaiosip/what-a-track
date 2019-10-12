@@ -81,6 +81,8 @@ The radio buttons will direct which search to be performed:
 * Song Search - this is a very straighforward search. When the user knows the song name or part of it, can look up for that and gets back a list of songs which will match the keywords inserted.
 
 
+* Artist Search - this search route is used when the user doesn't know the name of the songs, but knows the name of the artist. When using this search the user will go on a longer route to get to a list of songs. Artist Search -> Artists list -> Albums of an artist -> Tracks of an album -> Choose the song to get the lyrics.
+
 ##### Search area
 I have used two radio buttons which will trigger the type of search will be performed using the keywords inserted in the search bar.
 

@@ -20,8 +20,9 @@ The site owner advances their own goals by providing this functionality, potenti
 
 I’ve always been interested in discovering new music, so I choose to bring my passion for music into this project.
 
+The name for the website, _What a Track_ was born trough a brainstorming session with my friends. They were delighted to take part in choosing the name for my project.
+
 **What a Track is a lyrics finder website created with the API’s data from Musixmatch.com.**
-Musixmatch is world’s largest lyrics database with more than 14 million lyrics in over 50 distinct languages. 
 [Musixmatch](https://www.musixmatch.com/) is world’s largest lyrics database with more than 14 million lyrics in over 50 distinct languages. 
 
 I had to sign up and register my app on their website to get an API key. I have signed up for the Not Commercial Use plan, free to use version (personal use and beta testing). 

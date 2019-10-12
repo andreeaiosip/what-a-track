@@ -1,10 +1,10 @@
 const apiKey = "e422a6beda4a794b4e5e2a03ad47ae5c";
 const apiURL = "https://api.musixmatch.com/ws/1.1/";
 
-// My colleague Sean Murphy helped me with the first API call
+/* My colleague Sean Murphy helped me with the first API call
 
-// This code prevents automatic search when the button is pressed without any query typed in the search box
-// Code source https://stackoverflow.com/questions/7067005/disable-button-whenever-a-text-field-is-empty-dynamically
+This code prevents automatic search when the button is pressed without any query typed in the search box
+Code source https://stackoverflow.com/questions/7067005/disable-button-whenever-a-text-field-is-empty-dynamically */
 function success() {
     const i = document.getElementById("query-music");
     if (i.value == "") {
@@ -14,8 +14,8 @@ function success() {
     }
 }
 
-// My colleague Villius Dzemyda helped me with the chart music display 
-// When page loads, print CHART top 10 tracks from Ireland
+/* My colleague Villius Dzemyda helped me with the chart music display 
+   When page loads, print CHART top 10 tracks from Ireland */
 $(window).bind("load", function() {
 
     urlExt = "chart.tracks.get";
@@ -42,12 +42,12 @@ $(window).bind("load", function() {
         },
     });
 
-    // My colleague, Heather Olcot helped me with displaying results from an API call
-    // Top 10 tracks in Ireland are printed on the page
+    /* My colleague, Heather Olcot helped me with displaying results from an API call
+       Top 10 tracks in Ireland are printed on the page */
     function appendToPageChartResults(resultsChart) {
         const container = document.querySelector("#container");
         container.innerHTML = "";
-        console.log(resultsChart);
+
         resultsChart.forEach(item => {
             container.innerHTML +=
                 `<div class="container mx-auto">
@@ -71,8 +71,8 @@ $(window).bind("load", function() {
 });
 
 
-// Show loader while searching content
-// Code from https://makitweb.com/display-loading-image-when-ajax-call-is-in-progress/
+/* Show loader while searching content
+   Code from https://makitweb.com/display-loading-image-when-ajax-call-is-in-progress/ */
 $(document).ajaxStart(function() {
     // Show image container
     $("#loader").show();
@@ -82,8 +82,8 @@ $(document).ajaxComplete(function() {
     $("#loader").hide();
 });
 
-// My colleague Sean Murphy helped me with the conditional for the radio buttons option
-// Add event listener to the search button to trigger the search for the value typed in the search box
+/* My colleague Sean Murphy helped me with the conditional for the radio buttons option
+   Add event listener to the search button to trigger the search for the value typed in the search box */
 searchButton.addEventListener('click', () => {
     const query = document.querySelector('#query-music').value; // Keyword typed in the search bar
     const radio = document.querySelectorAll('[type="radio"]'); // Radio button picked
@@ -96,7 +96,7 @@ searchButton.addEventListener('click', () => {
     getMusic(query, selected);
 });
 
-// Enter key pressed, triggers search button click event - suggestion from mentor Simen Daehlin
+/* Enter key pressed, triggers search button click event - suggestion from mentor Simen Daehlin */
 $('#query-music').keypress(function(e) {
     if (e.which == 13) {
         $('#searchButton').click();
@@ -170,7 +170,7 @@ function appendToPageSongResults(resultsTrack) {
 
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(resultsTrack);
+
     if (resultsTrack.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no song found with this title.</p></div>
@@ -203,7 +203,7 @@ function appendToPageSongResults(resultsTrack) {
 function appendToPageArtistResults(resultsArtist) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(resultsArtist);
+
     if (resultsArtist.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no artist found with this name.</p></div>
@@ -230,7 +230,7 @@ function appendToPageArtistResults(resultsArtist) {
 }
 
 
-// My mentor Simen Daehlin helped with how to pass the id to the function
+/* My mentor Simen Daehlin helped with how to pass the id to the function */
 
 /** 
  * Search for LYRICS when clicked on a song
@@ -255,12 +255,12 @@ function getLyrics(trackId) {
         contentType: "application/json",
         success: function(data) {
 
-            // Tutor Stephen and Hailey helped me with this conditional and modal display
-            // If there are no lyrics found, the user will receive a message on the screen. 
+            /* Tutor Stephen and Hailey helped me with this conditional and modal display
+               If there are no lyrics found, the user will receive a message on the screen. */
             if ((data.message.body) == 0) {
                 const container = document.querySelector("#container");
                 container.innerHTML = "";
-                console.log(data);
+
                 container.innerHTML += `<p class="error">Sorry, no lyrics found.</p>`
 
             } else {
@@ -281,8 +281,8 @@ function getLyrics(trackId) {
     });
 
 }
-// Stops modal from being shown if no lyrics are found
-//Code from Stackoverflow
+/* Stops modal from being shown if no lyrics are found
+   Code from Stackoverflow */
 $('#lyricsModalContainer').on('show.bs.modal', function(e) {
     if (!data) return e.preventDefault()
 });
@@ -294,7 +294,7 @@ function appendToPageLyrics(data) {
 }
 
 
-// API method for the ALBUMS lookup when clicked on ARTIST results
+/* API method for the ALBUMS lookup when clicked on ARTIST results */
 
 function getAlbums(artistId) {
     urlExt = 'artist.albums.get';
@@ -320,7 +320,7 @@ function getAlbums(artistId) {
         success: function(results) {
             let data = results.message.body.album_list;
             appendToPageAlbums(data);
-            console.log(data);
+
         }
     })
 }
@@ -328,7 +328,7 @@ function getAlbums(artistId) {
 function appendToPageAlbums(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(data);
+
     if (data.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no albums available.</p></div>
@@ -378,7 +378,7 @@ function getAlbumTracks(albumId) {
         success: function(results) {
             let data = results.message.body.track_list;
             appendToPageAlbumTracks(data);
-            console.log(data);
+
         }
     });
 }
@@ -387,7 +387,7 @@ function getAlbumTracks(albumId) {
 function appendToPageAlbumTracks(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
-    console.log(data);
+
     if (data.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no tracks available.</p></div>

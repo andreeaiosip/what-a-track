@@ -271,7 +271,7 @@ input.placeholder {
 /* x button to close the modal */
 
 .close {
-    color: none;
+    color: #fafafa;
 }
 
 #printLyrics {

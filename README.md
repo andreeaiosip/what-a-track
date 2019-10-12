@@ -62,6 +62,8 @@ I have decided to make a simple lyrics search app and not have the gig list disp
 ### FEATURES
 #### EXISTING FEATURES
 
+##### Logo 
+I have created the logo for What a Track website with [Canva](https://www.canva.com/). 
 ##### Back to top button
 The link has a unique identifier, a tooltip title and contains a special arrow character (➤), so I didn’t have to use an image to display the arrow. Code found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 
@@ -117,6 +119,7 @@ The code for the _Back to the top button_ was found [here](https://html-online.c
 This website wouldn’t have not been live without the help of my mentor [Simen Daehlin](https://www.github.com/Eventyret), my colleagues [Heather Olcot](https://github.com/hfolcot) and [Sean Murphy](https://github.com/nazarja), tutors Stephen and Hailey from the Code Institute and numerous colleagues from Code Institute from Slack channels. 
 
 Heather Olcot was big help to me because she was the only student I knew who worked with Musixmatch APIs, so she could give me more straighforward answers. Here is her project [lyrics-finder](https://github.com/hfolcot/lyrics-finder) based on Musixmatch APIs.
+
 #### Disclaimer
 The content of this Website is for educational purposes only.
 

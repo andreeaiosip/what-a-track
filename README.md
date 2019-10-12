@@ -22,6 +22,7 @@ I’ve always been interested in discovering new music, so I choose to bring my 
 
 **What a Track is a lyrics finder website created with the API’s data from Musixmatch.com.**
 Musixmatch is world’s largest lyrics database with more than 14 million lyrics in over 50 distinct languages. 
+[Musixmatch](https://www.musixmatch.com/) is world’s largest lyrics database with more than 14 million lyrics in over 50 distinct languages. 
 
 I had to sign up and register my app on their website to get an API key. I have signed up for the Not Commercial Use plan, free to use version (personal use and beta testing). 
 The Not Commercial Use plan allows 2000 API Calls per day, 500 Lyrics display per day and after I've reached those limit I'll get a 401 Error. Only 30% of the lyrics will be displayed. In order to get the full view I’ll need to buy a Licensing Data Package.

@@ -1,8 +1,7 @@
 ## What a Track
-
+***
 This project is created for the Interactive Frontend Development module at the **Full Stack Software Development Course** with **Code Institute**.
-
-*** 
+***
 **The brief** 
 
 _Project purpose_: Presentation of interactive data
@@ -41,17 +40,24 @@ Common characteristics of a user:
 * Music lover
 * Computer literate
 
-#### Initial design wireframes / mock-ups:
+#### Design wireframes / mock-ups:
 
-##### Initial Mobile view
-##### Initial Desktop view
-
-I had to change from the initial design concept of wireframes and structure because the initial concept was very complex and would've taken more time to implement all the APIs I wanted to use: Musixmatch and Songkick.
+I had to change from the initial design concept of wireframes and structure because the initial concept was very complex and would've taken more time to implement all the APIs I wanted to use: Musixmatch and Songkick.These features can be implented at a later stage.
 I have decided to make a simple lyrics search app and not have the gig list displayed for the artists.
 
-##### Final Mobile View
+At the beggining I wanted to have the content of each song/artist/album on a relevant image, such as an album cover picture or an artist picture. The response I was getting back from Musixmatch didn't allow me to do that, only for the albums display, when searching for an artists, so I have decided to leave a general image everywhere on the right hand side of the music content.
 
-##### Final Desktop View
+Click on the below links to see the wireframes, saved in a separate folder.
+
+##### Initial Wireframes
+* **[Mobile view](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/initial-design/initial-mobile-view.pdf)**
+* **[Desktop view](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/initial-design/initial-desktop-view.pdf)**
+
+##### Final Wireframes
+
+* **Mobile View**
+
+* **Desktop View**
 
 
 #### Client stories:

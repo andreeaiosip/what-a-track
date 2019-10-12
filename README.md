@@ -90,7 +90,8 @@ I have used two radio buttons which will trigger the type of search will be perf
 ...
 
 ##### Features left to implement
-......
+* Back button - when looking for a song through the _Artist Search_ route, will be useful to have a back button if you want to go back and look at a different album or different artist.
+* Advanced filter - will be useful to be able to filter more through the results, such as: display only the original version of a song or only show the songs in an album who have lyrics. 
 ***
 
 ### Technologies Used

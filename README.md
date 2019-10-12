@@ -65,7 +65,10 @@ I have decided to make a simple lyrics search app and not have the gig list disp
 ##### Back to top button
 The link has a unique identifier, a tooltip title and contains a special arrow character (➤), so I didn’t have to use an image to display the arrow. Code found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 
-#### Navbar
+##### Search area
+I have used two radio buttons which will trigger the type of search will be performed using the keywords inserted in the search bar.
+
+
 ...
 
 ##### Features left to implement

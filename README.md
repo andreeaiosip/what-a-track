@@ -76,6 +76,11 @@ I have created the logo for What a Track website with [Canva](https://www.canva.
 ##### Back to top button
 The link has a unique identifier, a tooltip title and contains a special arrow character (➤), so I didn’t have to use an image to display the arrow. Code found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 
+#### Radio buttons
+The radio buttons will direct which search to be performed:
+* Song Search - this is a very straighforward search. When the user knows the song name or part of it, can look up for that and gets back a list of songs which will match the keywords inserted.
+
+
 ##### Search area
 I have used two radio buttons which will trigger the type of search will be performed using the keywords inserted in the search bar.
 

@@ -47,7 +47,7 @@ I have decided to make a simple lyrics search app and not have the gig list disp
 
 At the beggining I wanted to have the content of each song/artist/album on a relevant image, such as an album cover picture or an artist picture. The response I was getting back from Musixmatch didn't allow me to do that, only for the albums display, when searching for an artists, so I have decided to leave a general image everywhere on the right hand side of the music content.
 
-Click on the below links to see the wireframes, saved in a separate folder.
+Click on the below links to see the wireframes or you can view them in the separate folder where are saved called [wireframes](https://github.com/andreeaiosip/what-a-track/tree/master/wireframes).
 
 ##### Initial Wireframes
 * **[Mobile view](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/initial-design/initial-mobile-view.pdf)**
@@ -57,7 +57,7 @@ Click on the below links to see the wireframes, saved in a separate folder.
 
 * **Mobile View**
 
-* **Desktop View**
+* **[Desktop View](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-desktop-view.pdf)**
 
 
 #### Client stories:

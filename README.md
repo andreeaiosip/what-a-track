@@ -49,11 +49,11 @@ At the beggining I wanted to have the content of each song/artist/album on a rel
 
 Click on the below links to see the wireframes or you can view them in the separate folder where are saved called [wireframes](https://github.com/andreeaiosip/what-a-track/tree/master/wireframes).
 
-##### Initial Wireframes
+#### Initial Wireframes
 * **[Mobile view](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/initial-design/initial-mobile-view.pdf)**
 * **[Desktop view](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/initial-design/initial-desktop-view.pdf)**
 
-##### Final Wireframes
+#### Final Wireframes
 
 * **Mobile View**
 
@@ -145,6 +145,5 @@ Heather Olcot was big help to me because she was the only student I knew who wor
 
 #### Disclaimer
 The content of this Website is for educational purposes only.
-
 
 

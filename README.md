@@ -76,26 +76,26 @@ I have created the logo for What a Track website with [Canva](https://www.canva.
 ##### Back to top button
 The link has a unique identifier, a tooltip title and contains a special arrow character (➤), so I didn’t have to use an image to display the arrow. Code found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 
-#### Radio buttons
+##### Radio buttons
 The radio buttons will direct which search to be performed:
-* Song Search - this is a very straighforward search. When the user knows the song name or part of it, can look up for that and gets back a list of songs which will match the keywords inserted.
+* **Song Search** - this is a very straighforward search. When the user knows the song name or part of it, can look up for that and gets back a list of songs which will match the keywords inserted.
 
 
-* Artist Search - this search route is used when the user doesn't know the name of the songs, but knows the name of the artist. When using this search the user will go on a longer route to get to a list of songs. Artist Search -> Artists list -> Albums of an artist -> Tracks of an album -> Choose the song to get the lyrics.
+* **Artist Search** - this search route is used when the user doesn't know the name of the songs, but knows the name of the artist. When using this search the user will go on a longer route to get to a list of songs. Artist Search -> Artists list -> Albums of an artist -> Tracks of an album -> Choose the song to get the lyrics.
 
-##### Automatic song filter
+
+#####  Automatic song filter
 When using the _Song Search_ option, only the songs who have lyrics will be displayed.
 
-##### Search area
+
+#####  Search area 
 I have used two radio buttons which will trigger the type of search will be performed using the keywords inserted in the search bar.
 
-#### Generic image
+
+#####  Generic image 
 I have used a generic, relevant image to visually represent and align each result. It makes it easier to read and the colors in the image matches the color scheme of the website.
 
-
-...
-
-##### Features left to implement
+#### Features left to implement
 * Back button - when looking for a song through the _Artist Search_ route, will be useful to have a back button if you want to go back and look at a different album or different artist.
 * Advanced filter - will be useful to be able to filter more through the results, such as: display only the original version of a song or only show the songs in an album who have lyrics. 
 ***

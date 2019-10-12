@@ -83,8 +83,14 @@ The radio buttons will direct which search to be performed:
 
 * Artist Search - this search route is used when the user doesn't know the name of the songs, but knows the name of the artist. When using this search the user will go on a longer route to get to a list of songs. Artist Search -> Artists list -> Albums of an artist -> Tracks of an album -> Choose the song to get the lyrics.
 
+##### Automatic song filter
+When using the _Song Search_ option, only the songs who have lyrics will be displayed.
+
 ##### Search area
 I have used two radio buttons which will trigger the type of search will be performed using the keywords inserted in the search bar.
+
+#### Generic image
+I have used a generic, relevant image to visually represent and align each result. It makes it easier to read and the colors in the image matches the color scheme of the website.
 
 
 ...
@@ -139,5 +145,6 @@ Heather Olcot was big help to me because she was the only student I knew who wor
 
 #### Disclaimer
 The content of this Website is for educational purposes only.
+
 
 

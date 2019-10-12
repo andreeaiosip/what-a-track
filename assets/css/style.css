@@ -263,6 +263,15 @@ input.placeholder {
 .modal-header {
     padding-top: 5px !important;
     padding-bottom: 5px !important;
+    background: #26042a;
+    border-bottom: none;
+}
+
+
+/* x button to close the modal */
+
+.close {
+    color: none;
 }
 
 #printLyrics {

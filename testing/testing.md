@@ -9,7 +9,7 @@ W3C was used to validate the HTML and CSS code. All code is valid.
 
 I have user  Responsinator to see how the site looks like on different screen. Please see here [Responsinator](andreeaiosip.github.io/what-a-track/](http://www.responsinator.com/?url=https%3A%2F%2Fandreeaiosip.github.io%2Fwhat-a-track%2F)). 
 
-I have performed various tests on what actions the user might take onhe site and the results can be found in this [table](https://andreeaiosip.github.io/what-a-track/).
+I have performed various tests on what actions the user might take on the site and the results can be found in this [table](https://andreeaiosip.github.io/what-a-track/).
 
 _Interesting bugs:__
 I had issue with the background image, which doesn't look the same on all devices. Sometimes it's streches out. I did lots of research and I have tried out a few variations of code, but it didn't fix the problem 100%.

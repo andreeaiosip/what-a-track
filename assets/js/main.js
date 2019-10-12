@@ -47,7 +47,6 @@ $(window).bind("load", function() {
     function appendToPageChartResults(resultsChart) {
         const container = document.querySelector("#container");
         container.innerHTML = "";
-
         resultsChart.forEach(item => {
             container.innerHTML +=
                 `<div class="container mx-auto">
@@ -308,7 +307,6 @@ function getAlbums(artistId) {
             artist_id: artistId,
             g_album_name: 1, // Common albums will be grouped together
             s_release_date: "desc", // Displayed by the newest to the oldest release
-
             format: "jsonp",
             callback: "jsonp_callback"
 
@@ -328,7 +326,6 @@ function getAlbums(artistId) {
 function appendToPageAlbums(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
-
     if (data.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no albums available.</p></div>
@@ -387,7 +384,6 @@ function getAlbumTracks(albumId) {
 function appendToPageAlbumTracks(data) {
     const container = document.querySelector("#container");
     container.innerHTML = "";
-
     if (data.length === 0) {
         container.innerHTML += `
         <div class="error"><p>Sorry, no tracks available.</p></div>

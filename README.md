@@ -102,16 +102,18 @@ There are no differences between the deployed version and the development versio
 
 ***
 ## Credits
-##### Content
+#### Content
 The code for the _Back to the top button_ was found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
-##### Media
 #### Media
 **Background picture** was taken from [Adobe Stock](https://stock.adobe.com/uk/). I have signed up for the 1 month free trial which gives you 10 lincesed images.
+
+**Musixmatch logo**  - In order to use the free version of the API for Musixmatch, I had to credit them on my page with ther logo.
 
 ##### Acknowledgement
 
 This website wouldn’t have not been live without the help of my mentor [Simen Daehlin](https://www.github.com/Eventyret), my colleagues [Heather Olcot](https://github.com/hfolcot) and [Sean Murphy](https://github.com/nazarja), tutors Stephen and Hailey from the Code Institute and numerous colleagues from Code Institute from Slack channels. 
-#### License
+
+Heather Olcot was big help to me because she was the only student I knew who worked with Musixmatch APIs, so she could give me more straighforward answers. Here is her project [lyrics-finder](https://github.com/hfolcot/lyrics-finder) based on Musixmatch APIs.
 #### Disclaimer
 The content of this Website is for educational purposes only.
 

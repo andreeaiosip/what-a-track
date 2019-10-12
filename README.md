@@ -86,6 +86,7 @@ I have created this website with the help of a multiple technologies:
 * Boostnote
 ***
 ### TESTING
+When I have first started the project, I thought I could use the _fetch_ method. After lots of research and two full weeks of trying to make it work through _fetch_ method, I have started asking more people if they could help me. My colleague Sean Murphy told me I should use AJAX instead, because is a better tool for the response Musixmatch is sending back.
 ...
 ***
 ### Deployment

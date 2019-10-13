@@ -73,7 +73,7 @@ Click on the below links to see the wireframes or you can view them in the separ
 
 #### Final Wireframes
 
-* **Mobile View**
+* **[Mobile View]((https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-mobile-view.png))**
 
 * **[Desktop View](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-desktop-view.pdf)**
 
@@ -115,7 +115,6 @@ I have used a generic, relevant image to visually represent and align each resul
 
 #### FEATURES left to implement
 * **Back button** - when looking for a song through the _Artist Search_ route, will be useful to have a back button if you want to go back and look at a different album or different artist.
-* **Release Date** to be displayed only as year, not the full date.
 * **Advanced filter** - will be useful to be able to filter more through the results, such as: display only the original version of a song or only show the songs in an album who have lyrics. 
 * **Songkick APIs** - I would like to be able to see if the artist who's playing the song has any upcoming concerts in my area.
 

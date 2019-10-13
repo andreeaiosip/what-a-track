@@ -162,11 +162,19 @@ I have used a few branches to help me with installing features and fix bugs, but
 ***
 ## Credits
 #### Content
+The code which helped me to fix part of the background image movement/stretch issue was found on [Stackoverflow](https://stackoverflow.com/questions/26372127/background-fixed-no-repeat-not-working-on-mobile).
+
+The code for creating the _Search Button_ was created on [bestcssbuttongenerator.com](https://www.bestcssbuttongenerator.com/).
+
+Part of the code for creating the _modal_ was taken from [getbootstrap.com](https://getbootstrap.com/docs/4.3/components/modal/#modalshow).
+
 The code for the _Back to the top button_ was found on [html-online.com](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 #### Media
-**Background picture** was taken from [Adobe Stock](https://stock.adobe.com/uk/). I have signed up for the 1 month free trial which gives you 10 lincesed images.
+_Background picture_ was taken from [Adobe Stock](https://stock.adobe.com/uk/). I have signed up for the 1 month free trial which gives you 10 lincesed images.
 
-**Musixmatch logo**  - In order to use the free version of the API for Musixmatch, I had to credit them on my website with ther logo.
+_Musixmatch logo_  - In order to use the free version of the API for Musixmatch, I had to credit them on my website with ther logo. 
+
+_Social media icons_ were taken from Google Images and recolored to match the website, no copyrights required.
 
 ##### Acknowledgement
 

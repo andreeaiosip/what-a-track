@@ -1,7 +1,7 @@
 ### TESTING
 When I have first started the project, I thought I could use the _fetch_ method. After lots of research and two full weeks of trying to make it work through _fetch_ method, I have started asking more people if they could help me. My colleague Sean Murphy told me I should use AJAX instead, because is a better tool for the response Musixmatch is sending back.
 
-I have read all the documentation from Musixmatch website, where they also have a _Playground Area_ where you can test various parameters and see the response.
+I have read all the documentation from Musixmatch website, where they also have a [Playground Area](https://playground.musixmatch.com/#/)  where you can test various parameters and see the response.
 My mentor, Simen Daehlin told me about an application called POSTMAN to work with APIs and their responses. I have started using that as well, to see what parameters are allowed and what works, before saving and pushing my work to Github.
 
 During development I have used constantly the console in Google Chrome to check for errors, so I can fix them before I save my work.

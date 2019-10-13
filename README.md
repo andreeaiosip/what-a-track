@@ -72,7 +72,7 @@ Click on the below links to see the wireframes or you can view them in the separ
 
 #### Final Wireframes
 
-* **[Mobile View]((https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-mobile-view.png))**
+* **[Mobile View](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-mobile-view.png)**
 
 * **[Desktop View](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-desktop-view.pdf)**
 

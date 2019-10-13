@@ -158,12 +158,11 @@ Also more help with how to clone a repository can be found on GitHub [here](http
 
 I have used a few branches to help me with installing features and fix bugs, but there are no differences between the deployed version and the development version.
 
-There are no differences between the deployed version and the development version.
 
 ***
 ## Credits
 #### Content
-The code for the _Back to the top button_ was found [here](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
+The code for the _Back to the top button_ was found on [html-online.com](https://html-online.com/articles/dynamic-scroll-back-top-page-button-javascript/).
 #### Media
 **Background picture** was taken from [Adobe Stock](https://stock.adobe.com/uk/). I have signed up for the 1 month free trial which gives you 10 lincesed images.
 
@@ -174,6 +173,8 @@ The code for the _Back to the top button_ was found [here](https://html-online.c
 This website wouldn’t have not been live without the help of my mentor [Simen Daehlin](https://www.github.com/Eventyret), my colleagues [Heather Olcot](https://github.com/hfolcot) and [Sean Murphy](https://github.com/nazarja), tutors Stephen and Hailey from the Code Institute and numerous colleagues from Code Institute from Slack channels. 
 
 Heather Olcot was big help to me because she was the only student I knew who worked with Musixmatch APIs, so she could give me more straighforward answers. Here is her project [lyrics-finder](https://github.com/hfolcot/lyrics-finder) based on Musixmatch APIs.
+
+For this readme.md document I have got my inspiration for the layout from my colleagues at Code Institute - [Anna Greaves](https://github.com/AJGreaves), [Zoli Varro](https://github.com/varroz56) and [Alan McGee](https://github.com/alimgee).
 
 #### Disclaimer
 The content of this Website is for educational purposes only.

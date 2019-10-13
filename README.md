@@ -41,7 +41,7 @@ Music lovers who want to know the exact lyrics of a song. Could be just as a cur
 * Offer a wide range of lyrics to the user;
 
 ***
-###  UX Design
+###  UX
 Common characteristics of a user:
 * Music lover
 * Computer literate
@@ -140,7 +140,7 @@ The code for the _Back to the top button_ was found [here](https://html-online.c
 #### Media
 **Background picture** was taken from [Adobe Stock](https://stock.adobe.com/uk/). I have signed up for the 1 month free trial which gives you 10 lincesed images.
 
-**Musixmatch logo**  - In order to use the free version of the API for Musixmatch, I had to credit them on my page with ther logo.
+**Musixmatch logo**  - In order to use the free version of the API for Musixmatch, I had to credit them on my website with ther logo.
 
 ##### Acknowledgement
 

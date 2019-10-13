@@ -144,9 +144,26 @@ To deploy [What a Track](https://andreeaiosip.github.io/what-a-track/) to GitHub
 8. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
 
 
+This project was project made use of several branches for development, testing and bug fixing. 
+The Master Branch has always been the one deployed to GitHUb Pages. When displaying the website life, the developer tries to keep the master branch to optimal code only.
+
+
 ##### How to run this project locally:
 To clone this project from GitHub:
-...
+
+1. Follow this link to the **[what-a-track](https://github.com/andreeaiosip/what-a-track)** repository
+2. Under the repository name, click "Clone or download".
+3. In the Clone with HTTPs section, copy the clone URL for the repository. 
+4. In your local IDE open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type ```git clone```, and then paste the URL you copied in Step 3.
+```console
+git clone https://github.com/USERNAME/REPOSITORY
+```
+7. Press Enter. Your local clone will be created.
+
+Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
+
 There are no differences between the deployed version and the development version.
 
 ***

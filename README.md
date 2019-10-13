@@ -1,8 +1,9 @@
 
+<h1 align="center">
 <a  href=""  target="_blank"><img  src="/assets/images/desktop-view.png"  alt="What a Track desktop screen"/></a>
 <a  href=""  target="_blank"><img  src="/assets/images/mobile-preview.gif"  alt="What a Track mobile Screen"/></a>
-
-## WHAT A TRACK
+</h1>
+<h2 align="center"> WHAT A TRACK</h2>
 
 This project is created for the Interactive Frontend Development module at the **Full Stack Software Development Course** with **Code Institute**.
 ***
@@ -132,37 +133,30 @@ Please see [HERE](/testing/testing.md) documentation made on testing, saved as a
 ***
 ### Deployment
 This project was developed using the Visual Studio Code, committed to git and pushed to GitHub using GitHub Desktop.
-
 To deploy [What a Track](https://andreeaiosip.github.io/what-a-track/) to GitHub Pages from its GitHub repository, the following steps were taken:
-1. Log into GitHub. 
-2. Go to my GitHub account [andreeaiosip](https://github.com/andreeaiosip)
-3. From the list of repositories on the screen, select **[what-a-track](https://github.com/andreeaiosip/what-a-track)**.
-4. From the menu items near the top of the page, select **Settings**.
-5. Scroll down to the **GitHub Pages** section.
-6. Under **Source** click the drop-down menu labelled **None** and select **Master Branch**
-7. On selecting Master Branch the page is automatically refreshed, [what-a-track](https://github.com/andreeaiosip/what-a-track) is now deployed. 
-8. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
+  
+1. From my list of repositories, select [what-a-track](https://github.com/andreeaiosip/what-a-track).
+2. From the menu items near the top of the page, select _Settings_.
+3. Scroll down to the _GitHub Pages_ section.
+4. On _Source_ click the drop-down menu labelled _None_ and select _Master Branch_
+5. When selecting Master Branch the page is loading, [what-a-track](https://github.com/andreeaiosip/what-a-track) is now deployed on GitHub Pages.
 
-
-This project was project made use of several branches for development, testing and bug fixing. 
-The Master Branch has always been the one deployed to GitHUb Pages. When displaying the website life, the developer tries to keep the master branch to optimal code only.
 
 
 ##### How to run this project locally:
 To clone this project from GitHub:
 
-1. Follow this link to the **[what-a-track](https://github.com/andreeaiosip/what-a-track)** repository
+1. Go to my repository [what-a-track](https://github.com/andreeaiosip/what-a-track) 
 2. Under the repository name, click "Clone or download".
 3. In the Clone with HTTPs section, copy the clone URL for the repository. 
 4. In your local IDE open Git Bash.
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type ```git clone```, and then paste the URL you copied in Step 3.
-```console
-git clone https://github.com/USERNAME/REPOSITORY
-```
+5. Select the location where you want the cloned directory to be saved.
+6. Type _git clone_, and then paste the URL you copied in Step 3.
 7. Press Enter. Your local clone will be created.
 
-Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
+Also more help with how to clone a repository can be found on GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
+
+I have used a few branches to help me with installing features and fix bugs, but there are no differences between the deployed version and the development version.
 
 There are no differences between the deployed version and the development version.
 

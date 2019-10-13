@@ -52,7 +52,6 @@ Common characteristics of a user:
 I have used two fonts, Open Sans for general text displayed on the site. It's easy to read and looks good on all devices.
 For the title of the website I have used a more unconventional font - Sarpanch. Because is a music related website, I think it fits well with the theme.
 
-
 ##### Color Scheme
 I wanted the user to get a sense of joy and happiness when opens the website, so I chose a happy, colorful background from [Adobe Stock](https://stock.adobe.com).
 
@@ -96,7 +95,7 @@ The link has a unique identifier, a tooltip title and contains a special arrow c
 
 #### Radio buttons
 The radio buttons will direct which search to be performed:
-* **Song Search** - this is a very straighforward search. When the user knows the song name or part of it, can look up for that and gets back a list of songs which will match the keywords inserted.
+* **Song Search** - this is a very straighforward search. When the user knows the song name or part of it, can look up for that and gets back a list of songs which will match the keywords inserted. I have made the text responsive as well, so on mobile you can easily select the wanted option.
 
 
 * **Artist Search** - this search route is used when the user doesn't know the name of the songs, but knows the name of the artist. When using this search the user will go on a longer route to get to a list of songs. Artist Search -> Artists list -> Albums of an artist -> Tracks of an album -> Choose the song to get the lyrics.

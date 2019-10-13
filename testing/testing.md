@@ -10,7 +10,7 @@ During development I have used constantly the console in Google Chrome to check 
 
 W3C was used to validate the HTML and CSS code. All code is valid.
 
-I have user  Responsinator to see how the site looks like on different screen. Please see here [Responsinator](andreeaiosip.github.io/what-a-track/](http://www.responsinator.com/?url=https%3A%2F%2Fandreeaiosip.github.io%2Fwhat-a-track%2F)). 
+I have used  Responsinator to see how the site looks like on different screens. Please see here [Responsinator](andreeaiosip.github.io/what-a-track/](http://www.responsinator.com/?url=https%3A%2F%2Fandreeaiosip.github.io%2Fwhat-a-track%2F)). 
 
 I have performed various tests on what actions the user might take on the site and the results can be found in this table.
 <p align="center">

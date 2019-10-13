@@ -1,5 +1,5 @@
 
-<a  href=""  target="_blank"><img  src="/assets/imagesdesktop-view.png"  alt="What a Track desktop screen"/></a>
+<a  href=""  target="_blank"><img  src="/assets/images/desktop-view.png"  alt="What a Track desktop screen"/></a>
 <a  href=""  target="_blank"><img  src="/assets/images/mobile-preview.gif"  alt="What a Track mobile Screen"/></a>
 
 ## WHAT A TRACK
@@ -45,8 +45,13 @@ Common characteristics of a user:
 * Computer literate
 
 #### Design and colors
+
+##### Fonts
+##### Color Scheme
+I wanted the user to get a sense of joy and happiness when opens the website, so I chose a happy, colorful background from [Adobe Stock](https://stock.adobe.com).
+
 After I have decided the background, I have started trying different colors for the text.
-I have use [Color Wheel - Color Calculator](https://www.sessions.edu/color-calculator/) to create the color scheme. I have used #a0385b as base color, taken with color and worked with analagous color to complement the color scheme.
+I have used [Color Wheel - Color Calculator](https://www.sessions.edu/color-calculator/) to create the color scheme. I have used #a0385b ![#a0385b](https://placehold.it/15/a0385b/000000?text=+)   as base color, taken from the image background with colorpicker extension [ColorZilla ](https://www.colorzilla.com/chrome/)on Google Chrome and worked with analagous color to complement the color scheme.
 #### Design wireframes / mock-ups:
 
 I had to change from the initial design concept of wireframes and structure because the initial concept was very complex and would've taken more time to implement all the APIs I wanted to use: Musixmatch and Songkick.These features can be implented at a later stage.

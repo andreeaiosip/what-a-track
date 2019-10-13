@@ -72,7 +72,7 @@ Click on the below links to see the wireframes or you can view them in the separ
 
 #### Final Wireframes
 
-* **[Mobile View]((https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-mobile-view.png))**
+* **[Mobile View](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-mobile-view.png)**
 
 * **[Desktop View](https://github.com/andreeaiosip/what-a-track/blob/master/wireframes/final-design/final-desktop-view.pdf)**
 
@@ -190,5 +190,4 @@ For this readme.md document I have got my inspiration for the layout from my col
 
 #### Disclaimer
 The content of this Website is for educational purposes only.
-
 

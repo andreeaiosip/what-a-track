@@ -48,6 +48,11 @@ Common characteristics of a user:
 #### Design and colors
 
 ##### Fonts
+
+I have used two fonts, Open Sans for general text displayed on the site. It's easy to read and looks good on all devices.
+For the title of the website I have used a more unconventional font - Sarpanch. Because is a music related website, I think it fits well with the theme.
+
+
 ##### Color Scheme
 I wanted the user to get a sense of joy and happiness when opens the website, so I chose a happy, colorful background from [Adobe Stock](https://stock.adobe.com).
 
@@ -110,6 +115,7 @@ I have used a generic, relevant image to visually represent and align each resul
 
 #### FEATURES left to implement
 * **Back button** - when looking for a song through the _Artist Search_ route, will be useful to have a back button if you want to go back and look at a different album or different artist.
+* **Release Date** to be displayed only as year, not the full date.
 * **Advanced filter** - will be useful to be able to filter more through the results, such as: display only the original version of a song or only show the songs in an album who have lyrics. 
 * **Songkick APIs** - I would like to be able to see if the artist who's playing the song has any upcoming concerts in my area.
 

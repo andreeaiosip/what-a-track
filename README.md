@@ -1,11 +1,9 @@
 
-<h1  align="center">
-  <a  href=""  target="_blank"><img  src="/assets/images/desktop-view.png"  alt="What a Track desktop screen"/></a>
-  <a  href=""  target="_blank"><img  src="/assets/images/mobile-preview.gif"  alt="What a Track mobile Screen"/></a>
-</h1>
+<a  href=""  target="_blank"><img  src="/assets/imagesdesktop-view.png"  alt="What a Track desktop screen"/></a>
+<a  href=""  target="_blank"><img  src="/assets/images/mobile-preview.gif"  alt="What a Track mobile Screen"/></a>
 
-## What a Track
-***
+## WHAT A TRACK
+
 This project is created for the Interactive Frontend Development module at the **Full Stack Software Development Course** with **Code Institute**.
 ***
 **The brief** 
@@ -46,6 +44,9 @@ Common characteristics of a user:
 * Music lover
 * Computer literate
 
+#### Design and colors
+After I have decided the background, I have started trying different colors for the text.
+I have use [Color Wheel - Color Calculator](https://www.sessions.edu/color-calculator/) to create the color scheme. I have used #a0385b as base color, taken with color and worked with analagous color to complement the color scheme.
 #### Design wireframes / mock-ups:
 
 I had to change from the initial design concept of wireframes and structure because the initial concept was very complex and would've taken more time to implement all the APIs I wanted to use: Musixmatch and Songkick.These features can be implented at a later stage.
@@ -118,14 +119,24 @@ I have created this website with the help of a multiple technologies:
 * AdobeXD 
 * PhotoPad Photo editor 
 * Boostnote
+* Postman
 ***
 ### TESTING
+Please see [HERE](/testing/testing.md) documentation made on testing, saved as a separate file.
 
 ***
 ### Deployment
 This project was developed using the Visual Studio Code, committed to git and pushed to GitHub using GitHub Desktop.
 
-To deploy What a Track to GitHub Pages from its GitHub repository, the following steps were taken:
+To deploy [What a Track](https://andreeaiosip.github.io/what-a-track/) to GitHub Pages from its GitHub repository, the following steps were taken:
+1. Log into GitHub. 
+2. Go to my GitHub account [andreeaiosip](https://github.com/andreeaiosip)
+3. From the list of repositories on the screen, select **[what-a-track](https://github.com/andreeaiosip/what-a-track)**.
+4. From the menu items near the top of the page, select **Settings**.
+5. Scroll down to the **GitHub Pages** section.
+6. Under **Source** click the drop-down menu labelled **None** and select **Master Branch**
+7. On selecting Master Branch the page is automatically refreshed, [what-a-track](https://github.com/andreeaiosip/what-a-track) is now deployed. 
+8. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
 
 
 ##### How to run this project locally:

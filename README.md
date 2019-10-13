@@ -1,4 +1,7 @@
-<a  href=""  target="_blank"><img  src="/assets/imagesdesktop-view.png"  alt="What a Track desktop screen"/></a>
+<h1  align="center">
+  <a  href=""  target="_blank"><img  src="/assets/images/desktop-view.png"  alt="What a Track desktop screen"/></a>
+  <a  href=""  target="_blank"><img  src="/assets/images/mobile-preview.gif"  alt="What a Track mobile Screen"/></a>
+</h1>
 ## What a Track
 ***
 This project is created for the Interactive Frontend Development module at the **Full Stack Software Development Course** with **Code Institute**.

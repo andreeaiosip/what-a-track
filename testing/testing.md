@@ -14,7 +14,7 @@ I have user  Responsinator to see how the site looks like on different screen. P
 
 I have performed various tests on what actions the user might take on the site and the results can be found in this table.
 <p align="center">
-<a  href=""  target="_blank"><img  src="/testing/tests1.png"  alt="What a Track tests"/></a>
+<a  href=""  target="_blank"><img  src="../assets/images/tests.JPG"  alt="What a Track tests"/></a>
 </p>
 
 _Interesting bugs:__

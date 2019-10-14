@@ -23,7 +23,7 @@ I wanted to check how the page looks on different browsers for Windows and iOS, 
 <a  href=""  target="_blank"><img  src="../assets/images/windows-mob.png"  alt="What a Track tests"/></a>
 </p>
 <p align="center">
-<a  href=""  target="_blank"><img  src="../assets/images/mobile-ios.jpg"  alt="What a Track tests"/></a>
+<a  href=""  target="_blank"><img  src="../assets/images/iOS-mob.png"  alt="What a Track tests"/></a>
 </p>
 After checking all browsers on mobile and desktop for Windows and iOS, the only issue I have found was the background image was streching a little bit. Thanks to the pattern the background image has, the background is not affected visually very much.
 

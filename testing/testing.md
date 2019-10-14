@@ -27,6 +27,8 @@ I wanted to check how the page looks on different browsers for Windows and iOS, 
 </p>
 After checking all browsers on mobile and desktop for Windows and iOS, the only issue I have found was the background image was streching a little bit. Thanks to the pattern the background image has, the background is not affected visually very much.
 
+
+
 I have performed various tests on what actions the user might take on the site and the results can be found in this table.
 <p align="center">
 <a  href=""  target="_blank"><img  src="../assets/images/tests.JPG"  alt="What a Track tests"/></a>

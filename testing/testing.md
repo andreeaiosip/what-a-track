@@ -33,6 +33,6 @@ I have performed various tests on what actions the user might take on the site a
 <a  href=""  target="_blank"><img  src="../assets/images/tests.JPG"  alt="What a Track tests"/></a>
 </p>
 
-_Interesting bugs:__
+_Interesting bugs:_
 I had issue with the background image, which doesn't look the same on all devices. Sometimes it's streches out. I did lots of research and I have tried out a few variations of code, but it didn't fix the problem 100%.
 When the modal opens to show the lyrics, the background image does move a little. Again, I have tried many times to fix this, but I couldn't find the bug.

@@ -120,15 +120,16 @@ I have used a generic, relevant image to visually represent and align each resul
 I have created this website with the help of a multiple technologies:
 * HTML 
 * CSS 
-* JavaScript
-* jQuery 
-* Visual Studio Code
-* Bootstrap 
-* Google Fonts 
-* AdobeXD 
-* PhotoPad Photo editor 
-* Boostnote
-* Postman
+* [JavaScript](https://www.javascript.com/)
+* [jQuery](https://jquery.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Bootstrap](https://getbootstrap.com/)
+* [Google Fonts](https://fonts.google.com/) 
+* [GitHub Desktop](https://desktop.github.com/)
+* [AdobeXD](https://www.adobe.com/ie/products/xd.html)
+* [PhotoPad](https://www.nchsoftware.com/photoeditor/index.html)
+* [Boostnote](https://boostnote.io/)
+* [Postman](https://www.getpostman.com/)
 ***
 ### TESTING
 Please see [HERE](/testing/testing.md) documentation made on testing, saved as a separate file.

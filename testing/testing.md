@@ -10,7 +10,7 @@ During development I have used constantly the console in Google Chrome to check 
 
 W3C was used to validate the HTML and CSS code. All code is valid.
 
-I have used  Responsinator to see how the site looks like on different screens. Please see here [Responsinator](andreeaiosip.github.io/what-a-track/](http://www.responsinator.com/?url=https%3A%2F%2Fandreeaiosip.github.io%2Fwhat-a-track%2F). 
+I have used  Responsinator to see how the site looks like on different screens. Please see here [Responsinator](http://www.responsinator.com/?url=https%3A%2F%2Fandreeaiosip.github.io%2Fwhat-a-track%2F). 
 
 I wanted to check how the page looks on different browsers for Windows and iOS, so I have used [crossbrowsertesting.com](https://app.crossbrowsertesting.com/test-center). I have only been able to take screenshots of what test I have performed, because you need to buy a licence to be able to download the results. Please see below the types of test I have performed.
 <p align="center">
